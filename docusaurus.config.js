@@ -12,8 +12,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://adversarial-design-thinking.github.io',
-  baseUrl: '/',
+  url: 'https://LuisLadino.github.io',
+  baseUrl: '/adversarial-design-thinking/',
 
   onBrokenLinks: 'throw',
 
