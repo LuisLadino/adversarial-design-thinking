@@ -12,7 +12,7 @@ const config = {
     v4: true,
   },
 
-  url: 'https://adversarial-design-framework.github.io',
+  url: 'https://adversarial-design-thinking.github.io',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
