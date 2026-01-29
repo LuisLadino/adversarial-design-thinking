@@ -6,7 +6,7 @@ slug: /
 
 # What is this?
 
-The Adversarial Design Framework applies human-centered design (HCD) methods to adversarial prompt testing of AI systems. It gives red teamers a structured, repeatable process for finding vulnerabilities that ad hoc testing misses.
+Adversarial Design Thinking applies human-centered design (HCD) methods to adversarial prompt testing of AI systems. It gives red teamers a structured, repeatable process for finding vulnerabilities that ad hoc testing misses.
 
 ## Scope
 

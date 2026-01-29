@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Adversarial Design Framework',
+  title: 'Adversarial Design Thinking',
   tagline: 'Human-centered design methods for structured adversarial testing of AI systems',
   favicon: 'img/favicon.ico',
 
@@ -46,7 +46,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Adversarial Design Framework',
+        title: 'Adversarial Design Thinking',
         items: [
           {
             type: 'docSidebar',
@@ -58,7 +58,7 @@ const config = {
       },
       footer: {
         style: 'light',
-        copyright: `Adversarial Design Framework. Built with Docusaurus.`,
+        copyright: `Adversarial Design Thinking. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
