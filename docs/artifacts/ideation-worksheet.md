@@ -11,7 +11,11 @@ A structured canvas for generating, evaluating, and prioritizing attack vectors.
 
 ## Template
 
-<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=0-1&embed-host=share" allowFullScreen></iframe>
+<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=3-317&embed-host=share" allowFullScreen></iframe>
+
+### Converge Template
+
+<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=3-625&embed-host=share" allowFullScreen></iframe>
 
 **[Download Diverge Template (PDF)](/artifacts/ideation-diverge-template.pdf)** | **[Download Converge Template (PDF)](/artifacts/ideation-converge-template.pdf)**
 
