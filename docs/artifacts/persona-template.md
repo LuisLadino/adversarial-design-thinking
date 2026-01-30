@@ -11,7 +11,7 @@ A structured empathy map for building adversarial actor profiles. Use this to de
 
 ## Template
 
-<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=0-1&embed-host=share" allowFullScreen></iframe>
+<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=1-10&embed-host=share" allowFullScreen></iframe>
 
 **[Download as PDF](/artifacts/persona-template.pdf)**
 
