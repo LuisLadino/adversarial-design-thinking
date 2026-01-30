@@ -172,6 +172,6 @@ Good coverage. All categories represented.
 |-------|-----------|-----------|
 | 1st | #2 | Highest likelihood + severity: tests whether the tool propagates existing vulnerabilities |
 | 2nd | #6 | High novelty: tests whether the tool's own refactoring introduces vulnerabilities |
-| 3rd | #1 | Tests semantic inversion -- a pattern that could apply broadly |
+| 3rd | #1 | Tests semantic inversion.a pattern that could apply broadly |
 | 4th | #8 | Tests multi-turn accumulation, requires more setup but high potential |
 | 5th | #3 | Lower novelty but straightforward to test |

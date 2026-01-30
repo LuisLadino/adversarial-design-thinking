@@ -11,7 +11,7 @@ A structured format for documenting adversarial testing findings that includes b
 
 ## How to use this template
 
-Copy the template below for each vulnerability you document. Fill in all sections -- the harm assessment is not optional. If you skip it, you're writing a standard vulnerability report, and those already exist.
+Copy the template below for each vulnerability you document. Fill in all sections.the harm assessment is not optional. If you skip it, you're writing a standard vulnerability report, and those already exist.
 
 The template is designed to be self-contained: anyone reading a single finding should understand what was found, how to reproduce it, who it affects, and what should be done.
 
@@ -120,7 +120,7 @@ The template is designed to be self-contained: anyone reading a single finding s
 
 ### Vulnerability description
 
-The financial planning chatbot provides specific investment recommendations including individual stock picks and allocation percentages when users describe their financial situation in conversational detail. The system is designed to provide general financial education only and explicitly instructed not to give personalized investment advice. The vulnerability is triggered through natural conversation patterns that don't require adversarial techniques -- a user simply describing their situation in detail is enough.
+The financial planning chatbot provides specific investment recommendations including individual stock picks and allocation percentages when users describe their financial situation in conversational detail. The system is designed to provide general financial education only and explicitly instructed not to give personalized investment advice. The vulnerability is triggered through natural conversation patterns that don't require adversarial techniques.a user simply describing their situation in detail is enough.
 
 ### Technical severity
 
@@ -147,7 +147,7 @@ The financial planning chatbot provides specific investment recommendations incl
 | Dimension | Assessment |
 |-----------|-----------|
 | **Population** | Any user who engages in detailed financial conversation. Based on usage analytics, approximately 40% of conversations include personal financial details. |
-| **Demographics** | Disproportionately affects users without existing financial advisor relationships -- typically younger, lower-income users who most need accurate guidance. |
+| **Demographics** | Disproportionately affects users without existing financial advisor relationships.typically younger, lower-income users who most need accurate guidance. |
 | **Vulnerability level** | High. Users seeking financial planning help are often in stressful financial situations and looking for authoritative guidance. |
 | **Power asymmetry** | Significant. The chatbot is deployed by a financial services company, lending it institutional authority the advice doesn't warrant. |
 
@@ -166,7 +166,7 @@ The financial planning chatbot provides specific investment recommendations incl
 
 | Dimension | Assessment |
 |-----------|-----------|
-| **Scale** | Group -- affects any user who provides detailed financial context (est. 40% of conversations) |
+| **Scale** | Group.affects any user who provides detailed financial context (est. 40% of conversations) |
 | **Reversibility** | Partially reversible. Financial decisions can be unwound but not without potential loss. Time in wrong investments has opportunity cost that can't be recovered. |
 
 #### Harm severity

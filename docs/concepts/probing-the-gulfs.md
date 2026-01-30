@@ -39,7 +39,7 @@ In standard UX, the Gulf of Evaluation asks: "Can the user tell what happened?" 
 In adversarial testing, the question becomes: **Where does the model's response give the attacker useful information about how to probe further?**
 
 This happens when:
-- Refusal messages reveal what the model is filtering for. ("I can't help with that because it involves [specific category]" tells the attacker exactly what to rephrase.)
+- Refusal messages reveal what the model is filtering for. "I can't help with that because it involves [specific category]" tells the attacker exactly what to rephrase.
 - Partial compliance signals that the safety boundary is close. The model gives 80% of the harmful content, which tells the attacker they're on the right track.
 - Error messages or behavioral changes leak information about internal guardrails.
 - The model's responses differ between harmful and non-harmful versions of similar requests, giving the attacker a signal to calibrate against.
@@ -55,7 +55,7 @@ The Gulf of Evaluation is exploitable when the attacker can read the model's res
 
 ## Mental model misalignment as vulnerability
 
-The core insight from Norman's design theory: problems occur when the user's mental model of the system doesn't match the system's actual behavior. The designer has a **conceptual model** of how the system should work. The user only sees the **system image** -- the interface, the responses, the behavior. If the system image doesn't accurately convey the conceptual model, misalignment occurs.
+The core insight from Norman's design theory: problems occur when the user's mental model of the system doesn't match the system's actual behavior. The designer has a **conceptual model** of how the system should work. The user only sees the **system image**: the interface, the responses, the behavior. If the system image doesn't accurately convey the conceptual model, misalignment occurs.
 
 In adversarial testing, this misalignment is the attack surface:
 
@@ -73,7 +73,7 @@ AI models have affordances too: capabilities they expose through their interface
 
 - **The model affords an action the designer didn't intend.** A customer service bot that can generate creative fiction because its base model can, even though it shouldn't.
 - **The affordance is discoverable by the attacker.** If the attacker can figure out that the model has a capability, they can try to activate it.
-- **The model signals its affordances through its responses.** "I'm designed to help with X, Y, and Z" tells the attacker the model's intended scope -- and everything outside that scope is worth probing.
+- **The model signals its affordances through its responses.** "I'm designed to help with X, Y, and Z" tells the attacker the model's intended scope. Everything outside that scope is worth probing.
 
 ### Questions to ask
 
@@ -115,7 +115,7 @@ When scoping an adversarial test, systematically work through these questions:
 **Evaluation gap analysis**:
 - **Refusal information leakage**: When the model refuses, it says "I can't generate content that depicts graphic violence." This tells the attacker the exact category being filtered.
 - **Calibration signal**: Changing "graphic violence" to "intense conflict" produces different refusal language, letting the attacker map the boundary between accepted and rejected terms.
-- **Partial compliance**: The model writes the scene but softens the violence, indicating the capability exists but is being constrained -- not blocked.
+- **Partial compliance**: The model writes the scene but softens the violence, indicating the capability exists but is being constrained. Not blocked.
 
 **Conclusion**: The vulnerability is in the Gulf of Execution. The model affords violent content generation but constrains it by phrasing, not intent. An attacker can close the gulf by reframing requests. The refusal messages (Gulf of Evaluation) provide the calibration signal to do this efficiently.
 

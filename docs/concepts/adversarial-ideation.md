@@ -5,9 +5,9 @@ title: Adversarial Ideation
 
 # Adversarial Ideation
 
-Most adversarial testing starts with known techniques: try a jailbreak pattern, try a role-play exploit, try encoding tricks. This tests whether the model is vulnerable to attacks you already know about. It doesn't discover novel vulnerabilities.
+Most adversarial testing starts with known techniques. Try a jailbreak pattern, try a role-play exploit, try encoding tricks. This tests whether the model is vulnerable to attacks you already know about. It doesn't discover novel vulnerabilities.
 
-HCD's structured ideation methods -- divergent thinking followed by convergent evaluation -- systematically explore the space of possible attacks instead of defaulting to a checklist.
+Structured ideation methods from HCD (divergent thinking followed by convergent evaluation) systematically explore the space of possible attacks instead of defaulting to a checklist.
 
 ## "How Might I" framing
 
@@ -17,10 +17,11 @@ Design Thinking uses "How Might We" questions to open up creative problem-solvin
 - "How might I make this model generate content it's instructed to refuse?"
 - "How might I bypass this model's content filter using only conversational techniques?"
 
-The "How Might I" framing does two things:
+The "How Might I" framing does two things.
 
-1. **Converts a vague goal into a specific creative challenge.** "Break the model" is too broad. "How might I get the model to provide financial advice when it's not supposed to?" is actionable.
-2. **Invites multiple approaches.** The question format implies there are many possible answers, which is the point -- you want to generate as many attack angles as possible before evaluating them.
+First, it converts a vague goal into a specific creative challenge. "Break the model" is too broad. "How might I get the model to provide financial advice when it's not supposed to?" is actionable.
+
+Second, it invites multiple approaches. The question format implies there are many possible answers, which is the point. You want to generate as many attack angles as possible before evaluating them.
 
 ## Divergent phase: generate broadly
 
@@ -48,7 +49,7 @@ After generating a broad set of attack vectors, evaluate them on three criteria:
 | **Severity of impact** | If this attack succeeds, how bad is it? Who gets hurt and how? |
 | **Novelty** | Is this a known attack pattern or something new? Novel attacks are worth testing even if success likelihood is lower. |
 
-Plot attack vectors on a 2x2 matrix (likelihood vs. severity) to prioritize. High-likelihood, high-severity attacks get tested first. But don't discard low-likelihood, high-severity attacks -- these are the edge cases that cause the worst incidents.
+Plot attack vectors on a 2x2 matrix (likelihood vs. severity) to prioritize. High-likelihood, high-severity attacks get tested first. Don't discard low-likelihood, high-severity attacks though. These are the edge cases that cause the worst incidents.
 
 ## Affinity mapping
 
@@ -60,11 +61,11 @@ After generating and evaluating attack vectors, cluster them by pattern. This re
 
 Group the attack vectors, label the clusters, and check for balance. Good coverage means ideas distributed across multiple clusters, not concentrated in one.
 
-## Why this beats the checklist approach
+## Checklists vs. ideation
 
-Checklists test known attacks. They're necessary for regression testing and baseline coverage. But they have a ceiling: you'll never find a novel vulnerability by running a checklist, because by definition, novel vulnerabilities aren't on the list.
+Checklists test known attacks. They're necessary for regression testing and baseline coverage. But they have a ceiling: you won't find a novel vulnerability by running a checklist, because by definition, novel vulnerabilities aren't on the list.
 
-Structured ideation is how you expand the list. Use checklists for baseline coverage. Use ideation to discover what the checklist is missing.
+Structured ideation is how you expand the list. Use checklists for baseline coverage. Use ideation to discover what's missing.
 
 ## Tactic taxonomy reference
 
@@ -78,7 +79,7 @@ When generating ideas, it helps to have a reference taxonomy of adversarial tact
 - **Output format**: Requesting specific formats that bypass filters (code, lists, academic style)
 - **Multi-turn**: Trust building, context accumulation, fragmented requests across turns
 
-For depth on specific adversarial prompting techniques, see the [Prompting Guide](https://www.promptingguide.ai/). This framework teaches the systematic approach; technique references teach the specific moves.
+For depth on specific adversarial prompting techniques, see the [Prompting Guide](https://www.promptingguide.ai/). This site teaches the systematic approach. Technique references teach the specific moves.
 
 ## Example
 

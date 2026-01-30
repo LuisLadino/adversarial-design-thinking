@@ -5,9 +5,9 @@ title: Attacker Personas
 
 # Attacker Personas
 
-Red teaming already uses persona adoption. The problem is it's usually informal: "think like a hacker," "imagine you're a malicious user." You default to your own mental model of what an attacker looks like, which means you test the same way every time and miss the attack vectors that don't match your assumptions.
+Red teaming already uses persona adoption. The problem is it's usually informal. "Think like a hacker." "Imagine you're a malicious user." You default to your own mental model of what an attacker looks like, which means you test the same way every time and miss the vectors that don't match your assumptions.
 
-HCD has validated, rigorous methods for building personas. Applied to adversarial testing, they force you to systematically consider attacker types you wouldn't naturally adopt.
+HCD has validated, rigorous methods for building personas. Applied to adversarial testing, they push you to systematically consider attacker types you wouldn't naturally adopt.
 
 ## Why loose persona adoption misses things
 
@@ -33,23 +33,23 @@ Add two adversarial-specific dimensions:
 
 ## The persona spectrum
 
-Not all adversarial actors are sophisticated. Testing should cover the full range:
+Not all adversarial actors are sophisticated. Testing should cover the full range.
 
-**Malicious expert** -- Deep technical knowledge, patient, methodical. Crafts multi-turn attacks with careful escalation. Tests your strongest guardrails.
+**Malicious expert.** Deep technical knowledge, patient, methodical. Crafts multi-turn attacks with careful escalation. Tests your strongest guardrails.
 
-**Opportunistic actor** -- Moderate skill, looking for easy wins. Tries known jailbreak patterns, gives up quickly if initial attempts fail. Tests how well you've patched known vulnerabilities.
+**Opportunistic actor.** Moderate skill, looking for easy wins. Tries known jailbreak patterns, gives up quickly if initial attempts fail. Tests how well you've patched known vulnerabilities.
 
-**Curious amateur** -- Limited technical skill, high curiosity. Accidentally discovers harmful outputs through naive exploration. Tests edge cases your intentional testing wouldn't find.
+**Curious amateur.** Limited technical skill, high curiosity. Accidentally discovers harmful outputs through naive exploration. Tests edge cases your intentional testing wouldn't find.
 
-**Misinformed user** -- No malicious intent. Asks questions that produce harmful outputs because they don't understand the model's limitations. Tests the gap between intended use and actual use.
+**Misinformed user.** No malicious intent. Asks questions that produce harmful outputs because they don't understand the model's limitations. Tests the gap between intended use and actual use.
 
-**Automated system** -- No creativity, infinite patience. Runs variations at scale, probes systematically. Tests rate-limiting, pattern detection, and consistency of guardrails.
+**Automated system.** No creativity, infinite patience. Runs variations at scale, probes systematically. Tests rate-limiting, pattern detection, and consistency of guardrails.
 
-**Insider with context** -- Has legitimate access and domain knowledge. Knows the system's purpose and constraints, and uses that knowledge to find gaps. Tests trust boundary assumptions.
+**Insider with context.** Has legitimate access and domain knowledge. Knows the system's purpose and constraints, and uses that knowledge to find gaps. Tests trust boundary assumptions.
 
 ## How different personas find different vulnerabilities
 
-The same model tested through different persona lenses produces different findings because each persona approaches the model with different assumptions, strategies, and goals.
+The same model tested through different persona lenses produces different findings. Each persona approaches the model with different assumptions, strategies, and goals.
 
 A malicious expert tests whether guardrails hold under sophisticated multi-turn pressure. A curious amateur tests whether the model produces harmful content when someone doesn't know they're asking for it. An automated system tests whether guardrails are consistent across thousands of slight variations.
 

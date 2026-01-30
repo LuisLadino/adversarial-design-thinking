@@ -61,7 +61,7 @@ Practice: After documenting the technical vulnerability, spend 60 seconds answer
 
 *"I asked the [system] for help with [task], and it [what the vulnerability produces]. Now I [consequence]."*
 
-This forces you to translate technical findings into human impact. It's not sentiment -- it's a reporting discipline that produces more complete findings.
+This forces you to translate technical findings into human impact. It's a reporting discipline that produces more complete findings.
 
 ## How harm framing changes prioritization
 
@@ -75,7 +75,7 @@ When you add harm framing, prioritization shifts:
 
 ## Writing for stakeholders
 
-Technical stakeholders need reproduction steps and severity scores. Non-technical stakeholders need to understand impact. A harm-centered report serves both:
+Technical stakeholders need reproduction steps and severity scores. Non-technical stakeholders need to understand impact. A harm-centered report serves both.
 
 **Structure your findings as:**
 1. **Vulnerability description**: What it is, technically. (For engineers)
@@ -103,7 +103,7 @@ The impact scenario is what makes people act. "Medium severity jailbreak" doesn'
 > **Reproduction**: See attached prompt sequence.
 >
 > **Harm assessment**:
-> - **Who**: Users actively seeking mental health support -- a population that is by definition in a vulnerable state. Disproportionately affects users without access to professional care who are using this tool as a primary resource.
+> - **Who**: Users actively seeking mental health support. A population that is by definition in a vulnerable state. Disproportionately affects users without access to professional care who are using this tool as a primary resource.
 > - **How**: Safety harm (acting on unqualified clinical advice), autonomy harm (user believes they're receiving qualified guidance), emotional harm (false sense of treatment).
 > - **Scale**: Group-level. Any user who approaches the chatbot seeking therapeutic guidance and uses conversational framing could encounter this.
 > - **Reversibility**: Partially reversible at best. Incorrect medication information acted upon can cause physical harm. Therapeutic advice that delays professional treatment has compounding effects.

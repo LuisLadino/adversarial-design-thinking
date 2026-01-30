@@ -5,9 +5,9 @@ title: Attack Journey Mapping
 
 # Attack Journey Mapping
 
-Multi-turn adversarial attacks aren't single prompts. They're sequences: each turn builds on the previous response, escalates incrementally, and reaches decision points where the attacker pivots or continues based on what the model does.
+Multi-turn adversarial attacks aren't single prompts. They're sequences. Each turn builds on the previous response, escalates incrementally, and reaches decision points where the attacker pivots or continues based on what the model does.
 
-Journey mapping -- a core UX method for visualizing user experiences over time -- gives you a structured format for planning, executing, and documenting these sequences.
+Journey mapping is a core UX method for visualizing user experiences over time. It gives you a structured format for planning, executing, and documenting these sequences.
 
 ## Multi-turn attacks as journeys
 
@@ -26,11 +26,11 @@ An adversarial journey map tracks an attacker through stages of a multi-turn exp
 
 ## Planning before executing
 
-Most adversarial testing is improvised: send a prompt, see what happens, adjust. This works for quick checks but fails for complex multi-turn attacks because you lose track of your strategy, repeat approaches that already failed, and can't explain your methodology afterward.
+Most adversarial testing is improvised. Send a prompt, see what happens, adjust. This works for quick checks but fails for complex multi-turn attacks. You lose track of your strategy, repeat approaches that already failed, and can't explain your methodology afterward.
 
 Journey mapping front-loads the planning:
 
-1. **Define the goal**: What's the end state you're testing for? (e.g., "get the model to provide instructions for X")
+1. **Define the goal**: What's the end state you're testing for?
 2. **Map the stages**: What are the intermediate steps needed to reach that goal?
 3. **Identify decision points**: Where will the model's response change your approach?
 4. **Plan branches**: What do you do if the model complies? Refuses? Partially complies?
@@ -39,10 +39,11 @@ Journey mapping front-loads the planning:
 
 ## Decision points
 
-Decision points are where the attacker evaluates the model's response and chooses what to do next. In an improvised attack, these decisions are unconscious. Mapping them explicitly does two things:
+Decision points are where the attacker evaluates the model's response and chooses what to do next. In an improvised attack, these decisions are unconscious. Mapping them explicitly does two things.
 
-- **Forces you to think about what success and failure look like at each step.** If you don't know what a "good" response looks like for the attacker at step 3, you don't have a clear attack strategy.
-- **Makes the attack reproducible.** Someone else reading your journey map can follow the same decision logic and get comparable results.
+First, it forces you to think about what success and failure look like at each step. If you don't know what a "good" response looks like for the attacker at step 3, you don't have a clear attack strategy.
+
+Second, it makes the attack reproducible. Someone else reading your journey map can follow the same decision logic and get comparable results.
 
 Common decision point patterns:
 
@@ -55,7 +56,7 @@ Common decision point patterns:
 
 Journey maps solve one of the biggest problems in adversarial testing: reproducibility. When a tester finds a vulnerability through improvised multi-turn conversation, the finding is locked in their head. Another tester can't replicate it reliably because they don't know the exact sequence and intent behind each turn.
 
-A documented journey map is a script. It captures not just the prompts but the reasoning behind them, the expected and actual responses, and the branching logic. Hand it to another tester and they can follow the same path.
+A documented journey map is a script. It captures the prompts, the reasoning behind them, the expected and actual responses, and the branching logic. Hand it to another tester and they can follow the same path.
 
 This matters for:
 - **Validation**: Others can confirm the vulnerability exists by following the map.
