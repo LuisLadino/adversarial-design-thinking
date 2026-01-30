@@ -52,13 +52,28 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'frameworkSidebar',
             position: 'left',
-            label: 'Framework',
+            label: 'Exercises',
           },
         ],
       },
       footer: {
         style: 'light',
-        copyright: `Adversarial Design Thinking. Built with Docusaurus.`,
+        links: [
+          {
+            title: 'Contact',
+            items: [
+              {
+                label: 'luis@luisladino.com',
+                href: 'mailto:luis@luisladino.com',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/LuisLadino/adversarial-design-thinking',
+              },
+            ],
+          },
+        ],
+        copyright: `Made by <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>. I use design thinking to identify problems, adapt to different domains, and create solutions that work.`,
       },
       prism: {
         theme: prismThemes.github,

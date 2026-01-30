@@ -1,32 +1,37 @@
 ---
 sidebar_position: 1
-title: What is this?
+title: Overview
 slug: /
 ---
 
-# What is this?
+# Adversarial Design Thinking
 
-Adversarial Design Thinking applies human-centered design methods to adversarial prompt testing of AI systems. It gives red teamers a structured, repeatable process for finding vulnerabilities that ad hoc testing misses.
+This is a set of exercises adapted from human-centered design for use in adversarial testing of AI systems. They help you generate better attack ideas, document what you tried, and communicate what you found.
 
-## Scope
+They're not a replacement for your existing process. They're workshop tools that plug into it.
 
-This covers adversarial prompting against AI models: testing how models respond to adversarial inputs, evaluating safety guardrails, identifying harmful outputs, and crafting adversarial prompts systematically.
+## Why empathy matters here
 
-The focus is the part of red teaming that's fundamentally about understanding human behavior and intent. How people interact with AI systems, and where those interactions break down.
+Human-centered design starts with empathy. Understanding the people who use a system, what they need, and where their experience breaks down. In adversarial testing, the "users" are attackers.
 
-## What this adds
+The same methods that help designers understand legitimate users help red teamers understand adversarial ones. Empathy mapping, journey mapping, structured ideation, and gap analysis are all standard HCD tools. Applied to adversarial testing, they help you move from intuition to something more deliberate. You stop guessing what an attacker might do and start modeling how different attackers think, plan, and adapt.
 
-HCD brings four things to adversarial testing:
+## The exercises
 
-1. **Formal persona methodology.** Structured attacker profiles using empathy mapping instead of loosely "thinking like a hacker."
-2. **Journey mapping for multi-turn attacks.** Planning and documenting attack chains as sequences with intent, escalation, and decision points.
-3. **Systematic ideation.** Generating attack vectors through structured brainstorming rather than defaulting to known techniques.
-4. **A lens for identifying where to probe.** Norman's Gulf of Execution and Gulf of Evaluation provide precise language for describing where AI models are vulnerable.
+**Attacker personas.** Empathy maps adapted for adversarial actors. Instead of loosely "thinking like a hacker," you build specific profiles with defined motivations, capabilities, and constraints.
+
+**Attack journey maps.** Multi-turn attack chains documented as sequences with intent, escalation, and decision points. Another tester can pick up your map and replicate what you tried.
+
+**Adversarial ideation.** Structured brainstorming for generating attack vectors. Divergent thinking surfaces approaches you wouldn't reach by scrolling through jailbreak lists.
+
+**Vulnerability framing.** Norman's Gulf of Execution and Gulf of Evaluation applied to AI systems. A way to identify where the gap between intended behavior and actual behavior creates openings.
+
+**Harm-centered reporting.** Findings documented with both technical severity and human impact. Useful for communicating with stakeholders who don't think in CVSS scores.
 
 ## How to use this site
 
-**Read the [Concepts](/concepts/attacker-personas) section** to understand the methods. Each concept page explains one HCD method adapted for adversarial testing, with a worked example.
+**Read the [Concepts](/concepts/attacker-personas) section** to understand the thinking behind each exercise. Each page explains one HCD method adapted for adversarial testing, with a worked example.
 
-**Grab the [Artifacts](/artifacts/persona-template)** to apply the methods. Each artifact is a template or worksheet you can use immediately in your existing workflow. No process overhaul required.
+**Grab the [Artifacts](/artifacts/persona-template)** to run the exercises. Each artifact is a template or worksheet you can use immediately. No process overhaul required.
 
-The concepts explain why the methods work. The artifacts let you use them without reading the theory.
+The concepts explain the reasoning. The artifacts let you skip straight to doing the work.
