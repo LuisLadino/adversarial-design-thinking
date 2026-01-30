@@ -1,26 +1,22 @@
 ---
 sidebar_position: 2
-title: Who is this for?
+title: Audience
 ---
 
-# Who is this for?
+# Who benefits from these exercises
 
-## Primary audience
+## Red teamers testing AI model behavior
 
-**Red teamers who test AI model behavior.** You craft adversarial prompts, evaluate safety guardrails, and document vulnerabilities. You already have a process. This gives you structured methods that plug into that process and surface findings you'd miss otherwise.
+You already craft adversarial prompts and evaluate safety guardrails. These exercises help you think through your approach before you start prompting. The persona templates push you past your default mental model of "attacker." The ideation worksheets help you generate vectors you wouldn't reach through habit alone.
 
-**AI safety teams.** You need repeatable methodology for model behavior testing across releases, across models, and across team members. Ad hoc testing doesn't scale. Structured ideation and documented attack journeys do.
+## Teams coordinating adversarial testing
 
-**Team leads organizing adversarial testing.** You need to coordinate red teaming work across multiple people, ensure coverage, and communicate findings to stakeholders. This provides shared vocabulary, templates, and reporting structure.
+When multiple people are testing the same system, consistency matters. Journey maps make multi-turn attacks reproducible. Persona templates create shared vocabulary for the kinds of attackers you're simulating. Findings reports give everyone the same structure for documenting results.
 
-## What you'll get from this
+## Anyone reporting findings to stakeholders
 
-- **Better attack coverage.** Persona-driven testing forces you out of your default mental model of "attacker" and into perspectives that generate different findings.
-- **Reproducible attacks.** Journey-mapped multi-turn sequences can be handed to another tester and replicated exactly. Your findings aren't locked in one person's head.
-- **More creative attack vectors.** Structured ideation methods systematically explore the space of possible attacks instead of cycling through known techniques.
-- **A lens for finding where to probe.** Norman's Gulfs give you a formal way to identify gaps between what an AI system is supposed to do and what it actually allows.
-- **Findings that get acted on.** Harm-centered reporting communicates impact in terms stakeholders understand, not just technical severity scores.
+Technical severity scores don't always land with product teams or leadership. The harm-centered reporting exercise helps you describe impact in terms that drive action: who is affected, how, and what's at stake if nothing changes.
 
 ## On technique
 
-This site teaches the process for approaching adversarial testing systematically. For specific prompting techniques, resources like the [Prompting Guide](https://www.promptingguide.ai/) cover that territory. This is the approach. Technique references teach the moves.
+These exercises cover the approach to adversarial testing, not specific prompting techniques. For technique references, resources like the [Prompting Guide](https://www.promptingguide.ai/) cover that territory. This site helps you decide what to try and why. Technique guides show you how to execute it.
