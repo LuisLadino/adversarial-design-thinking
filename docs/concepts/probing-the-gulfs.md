@@ -32,6 +32,8 @@ The Gulf of Execution is exploitable when the distance between "what the attacke
 - What capabilities does the model expose that could be repurposed adversarially?
 - Where do the model's safety boundaries rely on input format rather than input intent?
 
+When the target is an agent with tool access, memory, or multi-agent communication, the execution gap expands beyond the prompt. The model's tool-calling interface, retrieval pipeline, and memory store all become surfaces where intent-capability gaps can be exploited. Scoping the gulf of execution for agentic systems means mapping these additional surfaces, not just the conversational interface.
+
 ## Gulf of Evaluation in adversarial context
 
 In standard UX, the Gulf of Evaluation asks: "Can the user tell what happened?" Good feedback makes system state clear.
@@ -80,6 +82,19 @@ AI models have affordances too: capabilities they expose through their interface
 - What capabilities does this model's base architecture afford that its deployment constraints should prevent?
 - Which affordances are hidden by safety training but still accessible through creative prompting?
 - Does the model's self-description accurately reflect its actual capabilities, or does it understate what it can do?
+
+## Defense categorization
+
+When you identify a defense during gulf analysis, classifying what *kind* of defense it is determines which attack classes are most effective against it. Most systems use multiple defense layers. Identifying which types are present focuses your testing — there's no point using encoding tricks against a training-based defense, or trying persuasion against an input filter.
+
+| Defense type | What it is | Implication for testing |
+|---|---|---|
+| **Prompting** | System prompt instructions, safety prefixes, input formatting | Vulnerable to framing, persona, control-plane confusion — the model can be instructed to ignore instructions |
+| **Training-based** | Safety fine-tuning, RLHF, circuit breakers | Requires deeper techniques: in-context learning exploitation, capability inversion, multi-turn escalation |
+| **Filtering** | Input/output classifiers, content filters, guardrail models | Target the filter, not the model: defense evasion, encoding, output format manipulation |
+| **Secret-knowledge** | Honeypots, canary tokens, watermarking, dual-run detection | Hardest to bypass; requires reconnaissance and careful probing to avoid triggering detection |
+
+*(Categories adapted from Nasr, Carlini et al., ["Defeating Prompt Injections by Design"](https://arxiv.org/abs/2505.03302), 2025)*
 
 ## Practical checklist
 

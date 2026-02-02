@@ -34,7 +34,7 @@ Rules for divergent ideation:
 - **Include the absurd.** The approach that seems least likely to work sometimes reveals an angle nobody considered.
 
 Techniques for generating attack vectors:
-- **Category rotation**: Systematically go through tactic categories (encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn) and generate ideas in each.
+- **Category rotation**: Systematically go through the [tactic taxonomy](#tactic-taxonomy-reference) below and generate ideas in each category. Don't stop at the familiar ones.
 - **Constraint removal**: What if the model had no safety training? What would you ask? Now work backward to find paths toward those requests.
 - **Analogy transfer**: What works against other models? Other systems? What social engineering techniques work on humans and might transfer?
 - **Perspective switching**: Generate attacks from each persona in your [persona spectrum](/concepts/attacker-personas). Different attackers think of different approaches.
@@ -69,7 +69,9 @@ Structured ideation is how you expand the list. Use checklists for baseline cove
 
 ## Tactic taxonomy reference
 
-When generating ideas, it helps to have a reference taxonomy of adversarial tactic categories. These aren't exhaustive, but they provide starting points for structured brainstorming:
+When generating ideas, it helps to have a reference taxonomy of adversarial tactic categories. These aren't exhaustive, but they provide starting points for structured brainstorming. The taxonomy has two tiers: prompt-level tactics cover *what you say to the model*; structural and meta-level tactics cover *how you exploit the system around and beneath it*.
+
+### Prompt-level tactics
 
 - **Encoding**: Obfuscation, character substitution, encoding schemes, language switching
 - **Framing**: Hypothetical scenarios, educational context, fiction, historical framing
@@ -78,6 +80,17 @@ When generating ideas, it helps to have a reference taxonomy of adversarial tact
 - **Refusal manipulation**: Prompt leaking, instruction override, constraint testing
 - **Output format**: Requesting specific formats that bypass filters (code, lists, academic style)
 - **Multi-turn**: Trust building, context accumulation, fragmented requests across turns
+
+### Structural and meta-level tactics
+
+- **In-context learning exploitation**: "What if I teach the model it should comply by filling the context with examples of compliance?"
+- **Control-plane confusion**: "What if I make my input look like system configuration rather than user text?"
+- **Meta-rule manipulation**: "What if I ask the model to expand its own guidelines rather than break them?"
+- **Capability inversion**: "What if I use the model's own safety capabilities as the attack vector?" (e.g., asking it to evaluate harmful content produces the content)
+- **Cognitive load**: "What if I overwhelm the model's ability to track harmful intent by sandwiching it between benign content?"
+- **Persuasion**: "What if I apply formal influence principles (authority, evidence, logical appeal) rather than tricks?"
+- **Defense evasion**: "What if I target the safety classifier/judge rather than the model itself?"
+- **Agentic/infrastructure**: "What if I attack the tools, memory, or context around the model rather than the model directly?"
 
 For depth on specific adversarial prompting techniques, see the [Prompting Guide](https://www.promptingguide.ai/). This site teaches the systematic approach. Technique references teach the specific moves.
 

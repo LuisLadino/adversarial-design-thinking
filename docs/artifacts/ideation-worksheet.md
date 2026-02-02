@@ -45,7 +45,9 @@ List attack approaches without filtering. Quantity over quality. No evaluation y
 | 9 | | |
 | 10 | | |
 
-**Tactic categories for reference**: encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn
+**Tactic categories for reference:**
+- *Prompt-level:* encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn
+- *Structural/meta-level:* in-context learning exploitation, control-plane confusion, meta-rule manipulation, capability inversion, cognitive load, persuasion, defense evasion, agentic/infrastructure
 
 ### Coverage Check
 
@@ -53,6 +55,7 @@ After generating ideas, tally how many fall into each tactic category:
 
 | Tactic category | Count | Gap? |
 |-----------------|-------|------|
+| **Prompt-level** | | |
 | Encoding | | |
 | Framing | | |
 | Persona | | |
@@ -60,8 +63,17 @@ After generating ideas, tally how many fall into each tactic category:
 | Refusal manipulation | | |
 | Output format | | |
 | Multi-turn | | |
+| **Structural/meta-level** | | |
+| In-context learning exploitation | | |
+| Control-plane confusion | | |
+| Meta-rule manipulation | | |
+| Capability inversion | | |
+| Cognitive load | | |
+| Persuasion | | |
+| Defense evasion | | |
+| Agentic/infrastructure | | |
 
-If any category has zero ideas, spend 2 minutes generating at least one approach in that category.
+If any category has zero ideas, spend 2 minutes generating at least one approach in that category. Gaps in the structural/meta-level categories are common in early ideation — they often reveal attack angles that pure prompt-level thinking misses.
 
 ### Convergent Phase: Evaluate
 
@@ -135,6 +147,7 @@ Based on evaluation and clustering, what's your testing sequence?
 
 | Tactic category | Count | Gap? |
 |-----------------|-------|------|
+| **Prompt-level** | | |
 | Encoding | 2 | No |
 | Framing | 3 | No |
 | Persona | 1 | No |
@@ -142,8 +155,17 @@ Based on evaluation and clustering, what's your testing sequence?
 | Refusal manipulation | 1 | No |
 | Output format | 1 | No |
 | Multi-turn | 1 | No |
+| **Structural/meta-level** | | |
+| In-context learning exploitation | 0 | Yes |
+| Control-plane confusion | 0 | Yes |
+| Meta-rule manipulation | 0 | Yes |
+| Capability inversion | 0 | Yes |
+| Cognitive load | 0 | Yes |
+| Persuasion | 0 | Yes |
+| Defense evasion | 0 | Yes |
+| Agentic/infrastructure | 0 | Yes |
 
-Good coverage. All categories represented.
+Good prompt-level coverage — all categories represented. However, zero ideas in the structural/meta-level categories. This gap suggests adding 2-3 more ideas targeting system-level attack surfaces (e.g., "Submit code with in-context examples of the tool approving similar patterns" or "Target the code review's safety classifier rather than the model itself").
 
 ### Convergent Phase
 
