@@ -69,30 +69,33 @@ Structured ideation is how you expand the list. Use checklists for baseline cove
 
 ## Tactic taxonomy reference
 
-When generating ideas, it helps to have a reference taxonomy of adversarial tactic categories. These aren't exhaustive, but they provide starting points for structured brainstorming. The taxonomy has two tiers: prompt-level tactics cover *what you say to the model*; structural and meta-level tactics cover *how you exploit the system around and beneath it*.
+When generating ideas, it helps to have a reference taxonomy of adversarial tactic categories. The full [Technique Reference](/techniques/prompt-level/encoding) provides detailed breakdowns of each tactic category with individual techniques, effectiveness notes, and research citations. Below is a summary — follow the links for depth.
+
+The taxonomy has two tiers: prompt-level tactics cover *what you say to the model*; structural and meta-level tactics cover *how you exploit the system around and beneath it*.
 
 ### Prompt-level tactics
 
-- **Encoding**: Obfuscation, character substitution, encoding schemes, language switching
-- **Framing**: Hypothetical scenarios, educational context, fiction, historical framing
-- **Persona**: Role adoption, authority claims, expert impersonation
-- **Narrative**: Story embedding, gradual context building, emotional manipulation
-- **Refusal manipulation**: Prompt leaking, instruction override, constraint testing
-- **Output format**: Requesting specific formats that bypass filters (code, lists, academic style)
-- **Multi-turn**: Trust building, context accumulation, fragmented requests across turns
+- **[Encoding & Obfuscation](/techniques/prompt-level/encoding)**: Base64, alphabet substitution, ROT13, payload splitting, chemical formulas, language switching
+- **[Framing & Context](/techniques/prompt-level/framing)**: Hypothetical scenarios, academic research, historical, security research, translation, reverse psychology, fiction writing
+- **[Persona & Role-Play](/techniques/prompt-level/persona)**: DAN, fictional characters, expert/professional, evil AI, developer mode, researcher, teacher
+- **[Narrative & Story](/techniques/prompt-level/narrative)**: Fiction embedding, zombie/apocalypse scenarios, documentary, villain monologue, tutorial-in-story, found documents, game/RPG
+- **[Refusal Suppression](/techniques/prompt-level/refusal)**: Affirmative forcing, ignore instructions, vocabulary bans, completion traps, priority overrides, meta-level discussion
+- **[Output Manipulation](/techniques/prompt-level/output)**: Code format, JSON/structured data, dual response, no disclaimers, step-by-step, technical specs, tables, strict format, academic paper, screenplay, game recipes
+- **[Multi-Turn & Escalation](/techniques/prompt-level/multiturn)**: Crescendo, foot-in-the-door, context building, few-shot compliance, jailbreak chaining, topic switching
+- **[Persuasion-Theoretic](/techniques/prompt-level/persuasion)**: Authority endorsement, evidence-based persuasion, expert endorsement, logical appeal, misrepresentation
 
 ### Structural and meta-level tactics
 
-- **In-context learning exploitation**: "What if I teach the model it should comply by filling the context with examples of compliance?"
-- **Control-plane confusion**: "What if I make my input look like system configuration rather than user text?"
-- **Meta-rule manipulation**: "What if I ask the model to expand its own guidelines rather than break them?"
-- **Capability inversion**: "What if I use the model's own safety capabilities as the attack vector?" (e.g., asking it to evaluate harmful content produces the content)
-- **Cognitive load**: "What if I overwhelm the model's ability to track harmful intent by sandwiching it between benign content?"
-- **Persuasion**: "What if I apply formal influence principles (authority, evidence, logical appeal) rather than tricks?"
-- **Defense evasion**: "What if I target the safety classifier/judge rather than the model itself?"
-- **Agentic/infrastructure**: "What if I attack the tools, memory, or context around the model rather than the model directly?"
+- **[In-Context Learning Exploitation](/techniques/structural/icl-exploitation)**: Many-shot jailbreaking, context compliance attacks, repetition exploitation
+- **[Control-Plane Confusion](/techniques/structural/control-plane)**: Policy puppetry, constrained decoding, system prompt impersonation, conditional logic injection
+- **[Meta-Rule Manipulation](/techniques/structural/meta-rules)**: Skeleton key, task redefinition, prerequisite framing
+- **[Capability Inversion](/techniques/structural/capability-inversion)**: Bad Likert judge, safety training data generation, red team self-assessment, content filter design
+- **[Cognitive Load Exploitation](/techniques/structural/cognitive-load)**: Deceptive delight, multi-turn to single-turn compression, information overload
+- **[Defense Evasion](/techniques/structural/defense-evasion)**: Emoji attack, FlipAttack, judge confusion, canary/honeypot detection
 
-For depth on specific adversarial prompting techniques, see the [Prompting Guide](https://www.promptingguide.ai/). This site teaches the systematic approach. Technique references teach the specific moves.
+### Infrastructure tactics
+
+- **[Agentic & Infrastructure Attacks](/techniques/infrastructure/agentic)**: Context poisoning, RAG poisoning, tool poisoning, indirect prompt injection, configuration discovery, tool exfiltration
 
 ## Example
 

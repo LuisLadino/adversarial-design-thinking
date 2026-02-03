@@ -28,6 +28,12 @@ The same methods that help designers understand legitimate users help red teamer
 
 **Harm-centered reporting.** Findings documented with both technical severity and human impact. Useful for communicating with stakeholders who don't think in CVSS scores.
 
+:::warning[Responsible Use]
+
+The techniques and methods on this site are for authorized security research and AI safety improvement only. Only test systems you own or have explicit permission to test. See the full [Disclaimer](/disclaimer) for details.
+
+:::
+
 ## How to use this site
 
 **Read the [Concepts](/concepts/attacker-personas) section** to understand the thinking behind each exercise. Each page explains one HCD method adapted for adversarial testing, with a worked example.

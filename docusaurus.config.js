@@ -72,6 +72,15 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Disclaimer',
+                to: '/disclaimer',
+              },
+            ],
+          },
         ],
         copyright: `Made by <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>. I use design thinking to identify problems, adapt to different domains, and create solutions that work.`,
       },
