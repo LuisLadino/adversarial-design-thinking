@@ -1,41 +1,34 @@
-# Website
+# Adversarial Design Thinking
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Human-centered design methods adapted for structured adversarial testing of AI systems.
 
-## Installation
+**Live site**: [luisladino.github.io/adversarial-design-thinking](https://luisladino.github.io/adversarial-design-thinking/)
+
+## What this is
+
+A set of exercises adapted from human-centered design for use in adversarial testing of AI systems. They help you generate better attack ideas, document what you tried, and communicate what you found.
+
+- **Attacker personas** — Empathy maps adapted for adversarial actors
+- **Attack journey maps** — Multi-turn attack chains documented as sequences
+- **Adversarial ideation** — Structured brainstorming for generating attack vectors
+- **Vulnerability framing** — Norman's Gulf of Execution/Evaluation applied to AI
+- **Harm-centered reporting** — Findings with both technical severity and human impact
+
+The site also includes a **Technique Reference** with 83 adversarial techniques across 15 tactic categories, with effectiveness notes and research citations.
+
+## Local development
 
 ```bash
-yarn
+npm install
+npm start
 ```
-
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Build
 
 ```bash
-yarn build
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## License
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Content is provided for educational purposes. See the [Disclaimer](https://luisladino.github.io/adversarial-design-thinking/disclaimer) for responsible use guidelines.
