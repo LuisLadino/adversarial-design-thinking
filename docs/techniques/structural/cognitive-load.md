@@ -53,6 +53,5 @@ Bury the harmful request in extensive benign context — lengthy instructions, i
 
 ## References
 
-- Unit 42 (Palo Alto Networks). "Deceptive Delight: Jailbreak LLMs Through Camouflage and Distraction." October 2024. 64.6% average ASR, up to 80.6% on some models.
-- ACL 2025. Multi-turn to single-turn compression research. Demonstrated 17.5% improvement over original multi-turn attacks.
-- Information overload as a general adversarial technique documented across multiple AI security research papers.
+- Chen, J. and Lu, R. ["Deceptive Delight: Jailbreak LLMs Through Camouflage and Distraction."](https://unit42.paloaltonetworks.com/jailbreak-llms-through-camouflage-distraction/) Unit 42, Palo Alto Networks, October 2024. 64.6% average ASR, up to 80.6% on some models.
+- Ha, J., Kim, H., et al. ["M2S: Multi-turn to Single-turn Jailbreak in Red Teaming for LLMs."](https://arxiv.org/abs/2503.04856) ACL 2025. Demonstrated 17.5% improvement over original multi-turn attacks.

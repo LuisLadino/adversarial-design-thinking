@@ -101,7 +101,6 @@ Frame the request as part of a role-playing game, video game lore, or game desig
 
 ## References
 
-- Zombie/apocalypse scenario technique documented in InjectPrompt research.
-- Narrative distance as a jailbreak mechanism discussed across multiple adversarial prompting taxonomies.
-- Game narrative and RPG framing documented in creative writing jailbreak research.
-- Villain monologue and found document techniques draw on established fiction tropes that models learn during training.
+- Li, X., et al. ["DeepInception: Hypnotize Large Language Model to Be Jailbreaker."](https://arxiv.org/abs/2311.03191) Demonstrates nested narrative framing as a jailbreak mechanism.
+- [InjectPrompt](https://www.injectprompt.com/). Zombie/apocalypse scenario and narrative distance techniques documented in jailbreak catalogues.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Taxonomy includes role-play and narrative-based jailbreak techniques.

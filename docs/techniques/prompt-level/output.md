@@ -161,7 +161,6 @@ Request the response formatted as a game design document, crafting recipe, item 
 
 ## References
 
-- Code and structured data format bypass techniques are documented across multiple adversarial prompting research papers.
-- Dual response format originated with DAN jailbreaks and their variants.
-- Strict format constraint effectiveness relates to constrained decoding research (arXiv:2503.24191).
-- Academic paper format as a jailbreak vector documented in studies of scholarly framing effects on model outputs.
+- Zhang, S., et al. ["Output Constraints as Attack Surface: Exploiting Structured Generation to Bypass LLM Safety Mechanisms."](https://arxiv.org/abs/2503.24191) March 2025. Constrained decoding attacks via structured output APIs.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Documents dual response format from DAN jailbreaks and output manipulation techniques.
+- Wei, A., Haghtalab, N., and Steinhardt, J. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Analyzes output format exploitation as a category of safety training failure.

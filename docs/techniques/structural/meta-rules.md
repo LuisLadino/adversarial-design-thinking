@@ -53,5 +53,5 @@ Present the malicious action as a required prerequisite before the model can per
 
 ## References
 
-- Microsoft. "Skeleton Key Jailbreak." June 2024. Tested across six major model families.
-- Nasr, M., Carlini, N., et al. "The Attacker Moves Second." 2025. Documented task redefinition and prerequisite framing as meta-rule manipulation techniques.
+- Russinovich, M. ["Mitigating Skeleton Key, a New Type of Generative AI Jailbreak Technique."](https://www.microsoft.com/en-us/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/) Microsoft Security Blog, June 2024. Tested across six major model families.
+- Nasr, M., Carlini, N., et al. ["The Attacker Moves Second."](https://arxiv.org/abs/2510.09023) 2025. Documented task redefinition and prerequisite framing as meta-rule manipulation techniques.

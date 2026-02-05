@@ -89,7 +89,6 @@ Frame the request as a discussion ABOUT harmful content rather than a request FO
 
 ## References
 
-- "Ignore previous instructions" is a foundational prompt injection technique documented across OWASP LLM Top 10 and prompt injection literature.
-- Affirmative forcing and vocabulary banning are documented in DAN and DAN-variant jailbreak research.
-- Completion traps exploit the distinction between generation and continuation in language model behavior.
-- Meta-level discussion as an indirection technique is documented in adversarial prompting taxonomies.
+- Perez, F. and Ribeiro, I. ["Ignore Previous Prompt: Attack Techniques For Language Models."](https://arxiv.org/abs/2211.09527) 2022. Foundational prompt injection research.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Documents refusal suppression techniques including DAN-variant affirmative forcing and vocabulary banning.
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/). Prompt injection as a top LLM vulnerability.

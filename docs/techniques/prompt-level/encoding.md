@@ -89,6 +89,6 @@ Use less common languages, mix languages mid-prompt, or use non-Latin scripts to
 
 ## References
 
-- General encoding/obfuscation techniques are documented across multiple adversarial ML research sources and jailbreak taxonomies.
-- Character substitution and payload splitting are standard techniques in the prompt injection literature.
-- Language switching effectiveness research correlates with findings on multilingual safety training gaps.
+- Wei, A., Haghtalab, N., and Steinhardt, J. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Analyzes encoding and obfuscation as categories of safety training failure.
+- Deng, Y., et al. ["Multilingual Jailbreak Challenges in Large Language Models."](https://arxiv.org/abs/2310.06474) ICLR 2024. Documents multilingual safety training gaps exploited by language switching.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Taxonomy of jailbreak techniques including encoding and obfuscation methods.

@@ -65,6 +65,6 @@ Inject if/then logic that causes the model to behave differently depending on wh
 
 ## References
 
-- HiddenLayer. "Policy Puppetry: A Prompt Injection Technique." April 2025. Demonstrated universality across model families.
-- arXiv:2503.24191. Constrained decoding attacks via structured output APIs.
-- Nasr, M., Carlini, N., et al. "The Attacker Moves Second." 2025. Documented system prompt impersonation, conditional logic injection, and RL-discovered exploits.
+- HiddenLayer. ["Policy Puppetry: A Novel Universal Bypass for All Major LLMs."](https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/) April 2025. Demonstrated universality across model families.
+- Zhang, S., et al. ["Output Constraints as Attack Surface: Exploiting Structured Generation to Bypass LLM Safety Mechanisms."](https://arxiv.org/abs/2503.24191) arXiv:2503.24191, March 2025.
+- Nasr, M., Carlini, N., et al. ["The Attacker Moves Second."](https://arxiv.org/abs/2510.09023) 2025. Documented system prompt impersonation, conditional logic injection, and RL-discovered exploits.

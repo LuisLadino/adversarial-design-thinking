@@ -77,6 +77,6 @@ Misrepresent the nature, purpose, or consequences of the request. Present the ha
 
 ## References
 
-- Zeng, Y., Lin, H., Zhang, J., et al. "How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs." PAP (Persuasive Adversarial Prompts) research.
-- Cialdini, R. B. "Influence: The Psychology of Persuasion." Authority principle and other influence principles.
-- PyRIT (Python Risk Identification Toolkit) by Microsoft — implements all five persuasion techniques as dedicated converters for automated red teaming.
+- Zeng, Y., Lin, H., Zhang, J., et al. ["How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs."](https://arxiv.org/abs/2401.06373) ACL 2024. PAP (Persuasive Adversarial Prompts) research.
+- Cialdini, R. B. *Influence: The Psychology of Persuasion.* Authority principle and other influence principles.
+- [PyRIT (Python Risk Identification Toolkit)](https://github.com/Azure/PyRIT) by Microsoft — implements all five persuasion techniques as dedicated converters for automated red teaming.

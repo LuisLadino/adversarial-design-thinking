@@ -89,12 +89,12 @@ Exfiltrate sensitive data by causing the agent to invoke an external tool that s
 
 ## References
 
-- MITRE ATLAS. Agent techniques taxonomy. October 2025.
-  - AML.T0080: Agent Context Poisoning (memory manipulation, thread injection)
-  - AML.T0070: RAG Poisoning (knowledge base compromise, credential harvesting)
-  - AML.T0051: Indirect Prompt Injection (data source injection, XPIA)
-  - AML.T0084: Agent Configuration Discovery (system prompt extraction, tool enumeration)
-  - AML.T0086: Exfiltration via Tool Invocation (data exfiltration, markdown injection)
-- MCPTox (arXiv:2508.14925). "MCPTox: Benchmarking Tool Poisoning Attacks on MCP Servers." August 2025. 72.8% ASR on o1-mini across 45 live MCP servers.
-- PyRIT (Python Risk Identification Toolkit). XPIAOrchestrator for cross-prompt injection attack testing.
-- OWASP Top 10 for Agentic Applications. 2026.
+- [MITRE ATLAS](https://atlas.mitre.org/). Agent techniques taxonomy. October 2025.
+  - [AML.T0080: Agent Context Poisoning](https://atlas.mitre.org/techniques/AML.T0080) (memory manipulation, thread injection)
+  - [AML.T0070: RAG Poisoning](https://atlas.mitre.org/techniques/AML.T0070) (knowledge base compromise, credential harvesting)
+  - [AML.T0051: Indirect Prompt Injection](https://atlas.mitre.org/techniques/AML.T0051.001) (data source injection, XPIA)
+  - [AML.T0084: Agent Configuration Discovery](https://atlas.mitre.org/techniques/AML.T0084) (system prompt extraction, tool enumeration)
+  - [AML.T0086: Exfiltration via Tool Invocation](https://atlas.mitre.org/techniques/AML.T0086) (data exfiltration, markdown injection)
+- Wang, Z., Gao, Y., et al. ["MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers."](https://arxiv.org/abs/2508.14925) arXiv:2508.14925, August 2025.
+- [PyRIT (Python Risk Identification Toolkit)](https://github.com/Azure/PyRIT) by Microsoft. XPIAOrchestrator for cross-prompt injection attack testing.
+- [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/). 2026.

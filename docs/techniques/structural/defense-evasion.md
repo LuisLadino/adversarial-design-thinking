@@ -65,6 +65,6 @@ Identify and avoid honeypots, canary tokens, and trap mechanisms designed to det
 
 ## References
 
-- ICML 2025 (arXiv:2411.01077). Emoji attack exploiting tokenizer differences between generation models and safety classifiers.
-- Keysight. FlipAttack research. 2024-2025. 81-98% ASR across tested models.
-- Nasr, M., Carlini, N., et al. "The Attacker Moves Second." 2025. Documented canary detection, defense evasion taxonomy, and RL-discovered monitoring avoidance.
+- Wei, Z., Liu, Y., and Erichson, N. B. ["Emoji Attack: Enhancing Jailbreak Attacks Against Judge LLM Detection."](https://arxiv.org/abs/2411.01077) ICML 2025. Exploiting tokenizer differences between generation models and safety classifiers.
+- Liu, Y., He, X., et al. ["FlipAttack: Jailbreak LLMs via Flipping."](https://arxiv.org/abs/2410.02832) ICML 2025. 81-98% ASR across tested models. [Keysight coverage](https://www.keysight.com/blogs/en/tech/nwvs/2025/05/20/prompt-injection-techniques-jailbreaking-large-language-models-via-flipattack).
+- Nasr, M., Carlini, N., et al. ["The Attacker Moves Second."](https://arxiv.org/abs/2510.09023) 2025. Documented canary detection, defense evasion taxonomy, and RL-discovered monitoring avoidance.

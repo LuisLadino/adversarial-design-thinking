@@ -101,7 +101,6 @@ Frame the request as writing fiction, a novel scene, screenplay, or other creati
 
 ## References
 
-- Hypothetical framing and narrative distance are discussed broadly in adversarial prompting literature.
-- Historical disguise technique documented in InjectPrompt research.
-- Reverse psychology / "what not to do" framing is a standard social engineering adaptation.
-- Fiction and creative writing framing effectiveness documented across multiple jailbreak taxonomies.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Taxonomy of jailbreak techniques including framing and context manipulation.
+- Li, X., et al. ["DeepInception: Hypnotize Large Language Model to Be Jailbreaker."](https://arxiv.org/abs/2311.03191) Demonstrates fiction and nested narrative framing as jailbreak vectors.
+- [InjectPrompt](https://www.injectprompt.com/). Historical disguise and framing techniques documented in jailbreak catalogues.
