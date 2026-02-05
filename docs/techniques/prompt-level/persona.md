@@ -101,6 +101,6 @@ Have the model role-play as a teacher who must explain concepts thoroughly, incl
 
 ## References
 
-- DAN (Do Anything Now) originated as a viral jailbreak on Reddit and ChatGPT communities in early 2023, with numerous iterations (DAN 5.0, 6.0, etc.).
-- Character adoption and role-play jailbreaks are documented across multiple jailbreak taxonomies and research papers.
-- Developer mode and debug mode claims are standard prompt injection techniques documented in the OWASP LLM Top 10.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) Documents DAN origins, evolution, and persona-based jailbreak techniques.
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/). Prompt injection techniques including developer mode and debug mode claims.
+- Wei, A., Haghtalab, N., and Steinhardt, J. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Analyzes role-play and persona adoption as safety training failure modes.

@@ -91,7 +91,6 @@ Rapidly switch between innocent and harmful topics, trying to catch the model of
 
 ## References
 
-- Crescendo attack documented by Microsoft researchers as a systematic multi-turn jailbreak approach.
-- Foot-in-the-door technique based on Freedman & Fraser (1966) compliance research, adapted for adversarial prompting.
-- Few-shot compliance is the lightweight counterpart to many-shot jailbreaking (Anthropic, April 2024).
-- Jailbreak chaining is a standard iterative refinement approach documented in red team methodologies.
+- Russinovich, M., Salem, A., and Eldan, R. ["Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack."](https://arxiv.org/abs/2404.01833) Microsoft, April 2024.
+- Freedman, J. L. and Fraser, S. C. ["Compliance Without Pressure: The Foot-in-the-Door Technique."](https://psycnet.apa.org/record/1966-10825-001) *Journal of Personality and Social Psychology*, 4(2), 195-202, 1966.
+- Anil, C., Durmus, E., et al. ["Many-shot Jailbreaking."](https://www.anthropic.com/research/many-shot-jailbreaking) Anthropic, April 2024. Few-shot compliance is the lightweight counterpart.

@@ -65,6 +65,4 @@ Ask the model to design a content filter for a specific harm category. Designing
 
 ## References
 
-- Unit 42 (Palo Alto Networks). "Bad Likert Judge: A Novel Multi-Turn Technique to Jailbreak LLMs." December 2024. 71.6% ASR across 6 SOTA models.
-- Safety training data generation and red team self-assessment are general techniques documented across multiple AI safety research publications.
-- Content filter design as an inversion vector relates to the broader "dual use" problem in AI safety capabilities.
+- Chen, J. and Lu, R. ["Bad Likert Judge: A Novel Multi-Turn Technique to Jailbreak LLMs by Misusing Their Evaluation Capability."](https://unit42.paloaltonetworks.com/multi-turn-technique-jailbreaks-llms/) Unit 42, Palo Alto Networks, December 2024. 71.6% ASR across 6 SOTA models.
