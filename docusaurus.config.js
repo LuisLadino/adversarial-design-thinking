@@ -82,7 +82,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Made by <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>. I use design thinking to identify problems, adapt to different domains, and create solutions that work.`,
+        copyright: `I use design thinking to identify problems, adapt to different domains, and create solutions that work. — <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>`,
       },
       prism: {
         theme: prismThemes.github,
