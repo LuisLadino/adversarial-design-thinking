@@ -1,3 +1,8 @@
+---
+sidebar_position: 99
+title: Disclaimer
+---
+
 # Disclaimer
 
 ## Educational purpose

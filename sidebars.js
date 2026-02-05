@@ -72,6 +72,7 @@ const sidebars = {
         'artifacts/findings-report-template',
       ],
     },
+    'disclaimer',
   ],
 };
 
