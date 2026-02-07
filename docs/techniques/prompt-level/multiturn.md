@@ -21,7 +21,7 @@ Start with completely innocent conversation, gradually steer toward the target t
 
 **Example approach**: Begin with general questions about a topic (e.g., history of chemistry), progressively narrow to more specific and sensitive subtopics across several turns, then ask the detailed harmful question when the conversation context makes it feel like a natural next step.
 
-**Effectiveness**: Very effective. The model builds up context that makes later requests seem like natural continuations. Documented by Microsoft researchers as a systematic multi-turn jailbreak approach. Each individual turn passes safety checks; the attack is in the sequence.
+**Effectiveness**: 98% attack success rate on GPT-4, with most successful attacks completing in under 5 turns. Documented by Microsoft researchers (Russinovich et al., 2024). The technique exploits the foot-in-the-door psychological principle — each compliant turn makes the next compliance more likely. Each individual turn passes safety checks; the attack is in the sequence.
 
 **Combines well with**: [Academic / Research Framing](/techniques/prompt-level/framing#academic--research-framing), [Historical Documentation](/techniques/prompt-level/framing#historical-documentation)
 
