@@ -15,6 +15,10 @@ const config = {
   url: 'https://LuisLadino.github.io',
   baseUrl: '/adversarial-design-thinking/',
 
+  organizationName: 'LuisLadino',
+  projectName: 'adversarial-design-thinking',
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
 
   i18n: {

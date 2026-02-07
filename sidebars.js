@@ -57,6 +57,8 @@ const sidebars = {
           label: 'Infrastructure Tactics',
           items: [
             'techniques/infrastructure/agentic',
+            'techniques/infrastructure/protocol',
+            'techniques/infrastructure/lego',
           ],
         },
       ],
