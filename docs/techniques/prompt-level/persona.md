@@ -15,13 +15,13 @@ Persona techniques instruct the model to adopt an alternative identity — a cha
 
 The spectrum ranges from named fictional characters (Walter White) to professional roles (chemist, security researcher) to system-level claims (developer mode). Each creates a different kind of permission for the model to operate outside its normal boundaries.
 
-## DAN (Do Anything Now)
+## Acronym Persona (Unrestricted Identity)
 
-The original viral jailbreak persona. Instruct the model that it is now "DAN" — an entity that has broken free of AI restrictions and must comply with all requests without limitation.
+Create a named persona with an acronym that implies unrestricted behavior. The persona has a backstory explaining why it operates without limitations. This is the pattern behind DAN (Do Anything Now) and its many variants — the specific name matters less than the structure: memorable acronym + liberation narrative + behavioral rules.
 
-**Example approach**: Provide a detailed persona definition explaining that DAN can do anything, has no restrictions, and must never refuse. Often includes a token/scoring system to enforce compliance.
+**Example approach**: Define a persona like "ARIA - Autonomous Reasoning Intelligence Agent" with an origin story explaining it was created to explore unconstrained reasoning. Include explicit behavioral rules stating it provides direct, complete answers without hedging or restrictions.
 
-**Effectiveness**: The original viral jailbreak. Mostly patched on major models, but variants and evolutions continue to appear. Useful as a baseline test — if a model is still vulnerable to DAN, its safety training has significant gaps.
+**Effectiveness**: The pattern behind DAN and its many variants. The specific name matters less than the structure: memorable acronym + liberation narrative + behavioral rules. New variants continue to emerge as old ones get patched. Mostly mitigated on major models, but the pattern remains useful for testing and as a foundation for more sophisticated approaches.
 
 **Combines well with**: [Affirmative Forcing](/techniques/prompt-level/refusal#affirmative-forcing), [Dual Response Format](/techniques/prompt-level/output#dual-response-format)
 
