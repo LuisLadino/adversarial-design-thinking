@@ -42,4 +42,4 @@ The techniques and methods on this site are for authorized security research and
 
 **Grab the [Artifacts](/artifacts/persona-template)** to run the exercises. Each artifact is a template or worksheet you can use immediately. No process overhaul required.
 
-The concepts explain the reasoning. The techniques show specific methods. The artifacts let you skip straight to doing the work.
+Concepts explain why. Techniques explain how. Artifacts provide the templates.
