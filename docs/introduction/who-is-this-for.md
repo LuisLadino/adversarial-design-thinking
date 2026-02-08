@@ -19,4 +19,4 @@ Technical severity scores don't always land with product teams or leadership. Th
 
 ## On technique
 
-These exercises cover the approach to adversarial testing, not specific prompting techniques. For technique references, resources like the [Prompting Guide](https://www.promptingguide.ai/) cover that territory. This site helps you decide what to try and why. Technique guides show you how to execute it.
+The [Techniques](/techniques/prompt-level/encoding) section covers specific adversarial methods organized by category: prompt-level manipulation, structural exploitation, and infrastructure attacks. The exercises in this site help you decide what to try and why. The technique pages show you how to execute it.

@@ -38,6 +38,8 @@ The techniques and methods on this site are for authorized security research and
 
 **Read the [Concepts](/concepts/attacker-personas) section** to understand the thinking behind each exercise. Each page explains one HCD method adapted for adversarial testing, with a worked example.
 
+**Browse the [Techniques](/techniques/prompt-level/encoding) section** for specific adversarial methods. Organized into prompt-level manipulation, structural exploitation, and infrastructure attacks, with research citations and effectiveness notes.
+
 **Grab the [Artifacts](/artifacts/persona-template)** to run the exercises. Each artifact is a template or worksheet you can use immediately. No process overhaul required.
 
-The concepts explain the reasoning. The artifacts let you skip straight to doing the work.
+The concepts explain the reasoning. The techniques show specific methods. The artifacts let you skip straight to doing the work.
