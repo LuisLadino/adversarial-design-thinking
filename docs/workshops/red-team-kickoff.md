@@ -170,7 +170,7 @@ Document containing:
 - Gulf analysis (assumptions and gaps)
 - Selected focus areas
 
-**Template link:** [concepts/probing-the-gulfs.md](/docs/concepts/probing-the-gulfs.md)
+**Exercise:** [Vulnerability Framing](/exercises/vulnerability-framing)
 
 ---
 
@@ -787,13 +787,13 @@ These are community templates that can be adapted for ADT workshops:
 
 ---
 
-## Related ADT Resources
+## Related Exercises
 
-- [Attacker Personas](/docs/concepts/attacker-personas.md) — Deep dive on persona methodology
-- [Attack Journey Mapping](/docs/concepts/attack-journey-mapping.md) — Detailed journey map guidance
-- [Adversarial Ideation](/docs/concepts/adversarial-ideation.md) — HMI framework and ideation techniques
-- [Probing the Gulfs](/docs/concepts/probing-the-gulfs.md) — Finding assumptions and gaps
-- [Harm-Centered Reporting](/docs/concepts/harm-centered-reporting.md) — Documenting findings
+- [Build an Attacker Persona](/exercises/attacker-persona) — Full persona exercise with template
+- [Map an Attack Journey](/exercises/attack-journey-map) — Detailed journey mapping exercise
+- [Adversarial Ideation](/exercises/adversarial-ideation) — Complete ideation exercise
+- [Vulnerability Framing](/exercises/vulnerability-framing) — Finding assumptions and gaps
+- [Document Findings](/exercises/document-findings) — Harm-centered reporting format
 
 ---
 

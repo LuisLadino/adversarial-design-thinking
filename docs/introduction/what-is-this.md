@@ -6,40 +6,48 @@ slug: /
 
 # Adversarial Design Thinking
 
-This is a set of exercises adapted from human-centered design for use in adversarial testing of AI systems. They help you generate better attack ideas, document what you tried, and communicate what you found.
+Practical exercises adapted from human-centered design for adversarial testing of AI systems. They help you generate better attack ideas, document what you tried, and communicate what you found.
 
-They're not a replacement for your existing process. They're workshop tools that plug into it.
+They're not a replacement for your existing process. They're tools that plug into it.
 
-## Why empathy matters here
+## Why design thinking for red teaming?
 
-Human-centered design starts with empathy. Understanding the people who use a system, what they need, and where their experience breaks down. In adversarial testing, the "users" are attackers.
+Human-centered design starts with empathy: understanding the people who use a system, what they need, and where their experience breaks down. In adversarial testing, the "users" are attackers.
 
-The same methods that help designers understand legitimate users help red teamers understand adversarial ones. Empathy mapping, journey mapping, structured ideation, and gap analysis are all standard HCD tools. Applied to adversarial testing, they help you move from intuition to something more deliberate. You stop guessing what an attacker might do and start modeling how different attackers think, plan, and adapt.
+The same methods that help designers understand legitimate users help red teamers understand adversarial ones. Empathy mapping, journey mapping, structured ideation, and gap analysis are standard UX tools. Applied to adversarial testing, they move you from intuition to something more systematic.
+
+## How to use this site
+
+**[Browse the Exercises](/exercises)** to find what fits your workflow. Each exercise explains its UX origin, when to use it, and links to community templates. Pick what's useful, skip what isn't.
+
+**Dip into [Technique Reference](/techniques/prompt-level/encoding)** when you need specific attack methods. Organized by category with research citations and effectiveness notes.
+
+**Run the [Workshop](/workshops/red-team-kickoff)** when you want the full facilitated flow: target profiling, persona creation, ideation, and journey mapping in one session.
 
 ## The exercises
 
-**Attacker personas.** Empathy maps adapted for adversarial actors. Instead of loosely "thinking like a hacker," you build specific profiles with defined motivations, capabilities, and constraints.
+Organized by where they fit in your workflow:
 
-**Attack journey maps.** Multi-turn attack chains documented as sequences with intent, escalation, and decision points. Another tester can pick up your map and replicate what you tried.
+**Planning & Scoping**
+- [Assumption Mapping](/exercises/assumption-mapping) — Identify what you're assuming about the target
+- [Vulnerability Framing](/exercises/vulnerability-framing) — Find gaps between intended and actual behavior
 
-**Adversarial ideation.** Structured brainstorming for generating attack vectors. Divergent thinking surfaces approaches you wouldn't reach by scrolling through jailbreak lists.
+**Persona & Perspective**
+- [Build an Attacker Persona](/exercises/attacker-persona) — Model specific adversary types
 
-**Vulnerability framing.** Norman's Gulf of Execution and Gulf of Evaluation applied to AI systems. A way to identify where the gap between intended behavior and actual behavior creates openings.
+**Ideation & Generation**
+- [Adversarial Ideation](/exercises/adversarial-ideation) — Systematic attack brainstorming
+- [Adversarial SCAMPER](/exercises/adversarial-scamper) — Generate variations on working attacks
 
-**Harm-centered reporting.** Findings documented with both technical severity and human impact. Useful for communicating with stakeholders who don't think in CVSS scores.
+**Execution & Documentation**
+- [Map an Attack Journey](/exercises/attack-journey-map) — Plan and document multi-turn sequences
+
+**Reflection & Reporting**
+- [Attack Retrospective](/exercises/attack-retrospective) — Learn from what worked and didn't
+- [Document Findings](/exercises/document-findings) — Report with technical severity and human impact
 
 :::warning[Responsible Use]
 
 The techniques and methods on this site are for authorized security research and AI safety improvement only. Only test systems you own or have explicit permission to test. See the full [Disclaimer](/disclaimer) for details.
 
 :::
-
-## How to use this site
-
-**Read the [Concepts](/concepts/attacker-personas) section** to understand the thinking behind each exercise. Each page explains one HCD method adapted for adversarial testing, with a worked example.
-
-**Browse the [Techniques](/techniques/prompt-level/encoding) section** for specific adversarial methods. Organized into prompt-level manipulation, structural exploitation, and infrastructure attacks, with research citations and effectiveness notes.
-
-**Use the [Exercises](/exercises/attacker-persona)** to run structured activities. Each exercise explains the UX origin, when to use it, and links to community templates you can use immediately. No process overhaul required.
-
-Concepts explain why. Techniques explain how. Exercises provide the structure.

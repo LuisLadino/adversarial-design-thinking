@@ -7,8 +7,6 @@ title: Build an Attacker Persona
 
 Create a structured profile of an adversarial actor before testing. Personas prevent you from defaulting to your own mental model and help you systematically cover perspectives you'd otherwise miss.
 
-**Concept reference**: [Attacker Personas](/concepts/attacker-personas)
-
 ## UX Origin
 
 **Empathy Mapping (Dave Gray / XPLANE)** — Originally developed to help teams understand users by mapping what they think, feel, say, and do. The format forces you to consider perspectives beyond your own assumptions.

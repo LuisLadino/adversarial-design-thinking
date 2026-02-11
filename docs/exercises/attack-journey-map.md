@@ -7,8 +7,6 @@ title: Map an Attack Journey
 
 Plan, execute, and document a multi-turn attack sequence. Journey mapping forces you to think through the full attack chain before executing, and creates a reproducible record of what happened.
 
-**Concept reference**: [Attack Journey Mapping](/concepts/attack-journey-mapping)
-
 ## UX Origin
 
 **Customer Journey Mapping** — A UX research method for visualizing every touchpoint in a user's experience with a product. Maps typically include stages, actions, thoughts, emotions, and pain points across time.

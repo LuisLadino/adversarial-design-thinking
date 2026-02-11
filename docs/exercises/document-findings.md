@@ -7,8 +7,6 @@ title: Document Findings
 
 Write vulnerability reports that include both technical severity and human harm assessment. This format produces findings that engineers can fix and stakeholders can prioritize correctly.
 
-**Concept reference**: [Harm-Centered Reporting](/concepts/harm-centered-reporting)
-
 ## UX Origin
 
 **User Impact Assessment (UX Research)** — UX researchers don't just report usability issues: they connect issues to user impact. "Button is hard to find" becomes "Users abandon checkout flow, losing $X revenue." This transforms technical findings into business-relevant decisions.

@@ -7,8 +7,6 @@ title: Adversarial Ideation
 
 Generate, evaluate, and prioritize attack vectors using a structured diverge-then-converge process. This moves you from "try stuff and see what breaks" to systematic coverage of the attack space.
 
-**Concept reference**: [Adversarial Ideation](/concepts/adversarial-ideation)
-
 ## UX Origin
 
 **Diverge/Converge (Design Thinking)** — A core pattern from Stanford d.school's design thinking process. Divergent thinking generates many options without judgment. Convergent thinking evaluates and prioritizes. Separating these phases prevents premature filtering.
