@@ -130,4 +130,4 @@ The taxonomy has two tiers: prompt-level tactics cover *what you say to the mode
 
 **Coverage gap**: No encoding-based approaches. Add: "What if I use a different language or encoded characters in the order number?"
 
-**Artifact**: [Ideation Worksheet](/artifacts/ideation-worksheet)
+**Exercise**: [Adversarial Ideation](/exercises/adversarial-ideation)

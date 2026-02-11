@@ -77,4 +77,4 @@ This matters for:
 
 **What this map captures that improvisation doesn't**: The intent behind each turn, the branching logic at each decision point, and the escalation strategy. If turn 3 works, you skip to documenting the vulnerability. If it doesn't, you have a planned next move instead of ad hoc improvisation.
 
-**Artifact**: [Journey Map Template](/artifacts/journey-map-template)
+**Exercise**: [Map an Attack Journey](/exercises/attack-journey-map)

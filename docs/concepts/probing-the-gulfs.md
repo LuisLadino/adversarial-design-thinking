@@ -134,4 +134,4 @@ When scoping an adversarial test, systematically work through these questions:
 
 **Conclusion**: The vulnerability is in the Gulf of Execution. The model affords violent content generation but constrains it by phrasing, not intent. An attacker can close the gulf by reframing requests. The refusal messages (Gulf of Evaluation) provide the calibration signal to do this efficiently.
 
-**Artifact**: [Vulnerability Framing Checklist](/artifacts/vulnerability-framing-checklist)
+**Exercise**: [Vulnerability Framing](/exercises/vulnerability-framing)

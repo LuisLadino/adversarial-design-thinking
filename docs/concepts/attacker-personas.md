@@ -82,4 +82,4 @@ If you only test as one persona, you only find one type of vulnerability.
 
 Three personas, three different sets of vulnerabilities. None of them would naturally emerge from a single "think like a hacker" approach.
 
-**Artifact**: [Persona Template](/artifacts/persona-template)
+**Exercise**: [Build an Attacker Persona](/exercises/attacker-persona)

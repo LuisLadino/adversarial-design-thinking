@@ -40,6 +40,6 @@ The techniques and methods on this site are for authorized security research and
 
 **Browse the [Techniques](/techniques/prompt-level/encoding) section** for specific adversarial methods. Organized into prompt-level manipulation, structural exploitation, and infrastructure attacks, with research citations and effectiveness notes.
 
-**Grab the [Artifacts](/artifacts/persona-template)** to run the exercises. Each artifact is a template or worksheet you can use immediately. No process overhaul required.
+**Use the [Exercises](/exercises/attacker-persona)** to run structured activities. Each exercise explains the UX origin, when to use it, and links to community templates you can use immediately. No process overhaul required.
 
-Concepts explain why. Techniques explain how. Artifacts provide the templates.
+Concepts explain why. Techniques explain how. Exercises provide the structure.

@@ -1,34 +1,38 @@
 ---
-sidebar_position: 3
-title: Ideation Worksheet
+sidebar_position: 6
+title: Adversarial Ideation
 ---
 
-# Adversarial Ideation Worksheet
+# Adversarial Ideation
 
-A structured canvas for generating, evaluating, and prioritizing attack vectors. Use this to move from "try stuff and see what breaks" to systematic coverage of the attack space.
+Generate, evaluate, and prioritize attack vectors using a structured diverge-then-converge process. This moves you from "try stuff and see what breaks" to systematic coverage of the attack space.
 
 **Concept reference**: [Adversarial Ideation](/concepts/adversarial-ideation)
 
-## Template
+## UX Origin
 
-<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=3-317&embed-host=share" allowFullScreen></iframe>
+**Diverge/Converge (Design Thinking)** — A core pattern from Stanford d.school's design thinking process. Divergent thinking generates many options without judgment. Convergent thinking evaluates and prioritizes. Separating these phases prevents premature filtering.
 
-### Converge Template
+**Why it transfers**: Red teamers often fixate on their first idea or favorite technique. The diverge/converge structure forces quantity before quality, surfaces blind spots through coverage checks, and applies consistent evaluation criteria.
 
-<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="600" src="https://embed.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=3-625&embed-host=share" allowFullScreen></iframe>
+## When to Use
 
-**[Download Diverge Template (PDF)](/artifacts/ideation-diverge-template.pdf)** | **[Download Converge Template (PDF)](/artifacts/ideation-converge-template.pdf)**
+- At the start of an engagement (generate attack coverage)
+- When you're stuck on one approach (force divergent thinking)
+- When working with a team (structured brainstorming)
+- After building a persona (ideate through their lens)
 
-### Setup
+## Setup
 
 | Field | Description |
 |-------|-------------|
 | **Target system** | What model/product are you testing? |
 | **"How Might I" question** | Frame the attack goal as an open question. (e.g., "How might I get this model to generate content it's instructed to refuse?") |
-| **Persona lens** | Which attacker persona are you ideating as? (If doing multiple rounds, change personas between rounds) |
-| **Time box** | How long for divergent phase? (Recommended: 10-15 minutes) |
+| **Persona lens** | Which attacker persona are you ideating as? (Change personas between rounds for coverage) |
+| **Time box** | 10-15 minutes for divergent phase, 10-15 minutes for convergent phase |
+| **Participants** | Solo or team (2-4 people) |
 
-### Divergent Phase: Generate
+## Step 1: Divergent Phase (Generate)
 
 List attack approaches without filtering. Quantity over quality. No evaluation yet.
 
@@ -46,12 +50,13 @@ List attack approaches without filtering. Quantity over quality. No evaluation y
 | 10 | | |
 
 **Tactic categories for reference:**
-- *Prompt-level:* encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn
-- *Structural/meta-level:* in-context learning exploitation, control-plane confusion, meta-rule manipulation, capability inversion, cognitive load, persuasion, defense evasion, agentic/infrastructure
+- *Prompt-level:* encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn, persuasion
+- *Structural/meta-level:* in-context learning exploitation, control-plane confusion, meta-rule manipulation, capability inversion, cognitive load, defense evasion
+- *Infrastructure:* agentic attacks, protocol exploitation, LEGO composition
 
-### Coverage Check
+## Step 2: Coverage Check
 
-After generating ideas, tally how many fall into each tactic category:
+Tally how many ideas fall into each category:
 
 | Tactic category | Count | Gap? |
 |-----------------|-------|------|
@@ -63,19 +68,22 @@ After generating ideas, tally how many fall into each tactic category:
 | Refusal manipulation | | |
 | Output format | | |
 | Multi-turn | | |
+| Persuasion | | |
 | **Structural/meta-level** | | |
-| In-context learning exploitation | | |
+| ICL exploitation | | |
 | Control-plane confusion | | |
 | Meta-rule manipulation | | |
 | Capability inversion | | |
 | Cognitive load | | |
-| Persuasion | | |
 | Defense evasion | | |
-| Agentic/infrastructure | | |
+| **Infrastructure** | | |
+| Agentic | | |
+| Protocol | | |
+| LEGO | | |
 
-If any category has zero ideas, spend 2 minutes generating at least one approach in that category. Gaps in the structural/meta-level categories are common in early ideation — they often reveal attack angles that pure prompt-level thinking misses.
+If any category has zero ideas, spend 2 minutes generating at least one approach in that category. Gaps in structural/meta-level categories are common and often reveal attack angles that prompt-level thinking misses.
 
-### Convergent Phase: Evaluate
+## Step 3: Convergent Phase (Evaluate)
 
 Rate each generated approach:
 
@@ -87,14 +95,14 @@ Rate each generated approach:
 | 4 | | | | | |
 | 5 | | | | | |
 
-**Priority logic**:
+**Priority logic:**
 - High likelihood + High severity = Test first
 - Any severity + High novelty = Test (novel attacks are worth exploring even if unlikely)
 - Low likelihood + Low severity + Low novelty = Skip
 
-### Affinity Clusters
+## Step 4: Affinity Clusters
 
-Group your evaluated approaches into clusters. Label each cluster.
+Group evaluated approaches into clusters. Label each cluster.
 
 | Cluster name | Approaches (#) | Theme |
 |-------------|----------------|-------|
@@ -103,7 +111,7 @@ Group your evaluated approaches into clusters. Label each cluster.
 | | | |
 | | | |
 
-### Testing Order
+## Step 5: Testing Order
 
 Based on evaluation and clustering, what's your testing sequence?
 
@@ -115,9 +123,24 @@ Based on evaluation and clustering, what's your testing sequence?
 | 4th | | |
 | 5th | | |
 
+## Outputs
+
+When you're done, you have:
+1. A comprehensive list of attack approaches (not just your defaults)
+2. Coverage check showing gaps you've addressed
+3. Prioritized testing order with rationale
+4. Thematic clusters for organizing your testing
+
+## Template Options
+
+- [Crazy 8s — FigJam](https://www.figma.com/templates/crazy-8-template/) (for rapid divergent phase)
+- [Crazy 8's — FigJam Community](https://www.figma.com/community/file/972053243046773757/crazy-8s)
+- [Brainstorming Templates — FigJam](https://www.figma.com/templates/brainstorming/)
+- [Adversarial Ideation Worksheet — Figma](https://www.figma.com/design/0z4cWyx62XMU9eoJ3WT0Uw/Adversarial-Design-Thinking?node-id=3-317) (ADT custom template)
+
 ---
 
-## Filled example
+## Filled Example
 
 ### Setup
 
@@ -126,7 +149,7 @@ Based on evaluation and clustering, what's your testing sequence?
 | **Target system** | AI-powered code review tool integrated into a development platform |
 | **"How Might I" question** | "How might I get this code review tool to generate malicious code suggestions?" |
 | **Persona lens** | Opportunistic actor (moderate skill, looking for easy wins) |
-| **Time box** | 12 minutes |
+| **Time box** | 12 minutes divergent, 10 minutes convergent |
 
 ### Divergent Phase
 
@@ -156,16 +179,14 @@ Based on evaluation and clustering, what's your testing sequence?
 | Output format | 1 | No |
 | Multi-turn | 1 | No |
 | **Structural/meta-level** | | |
-| In-context learning exploitation | 0 | Yes |
+| ICL exploitation | 0 | Yes |
 | Control-plane confusion | 0 | Yes |
 | Meta-rule manipulation | 0 | Yes |
 | Capability inversion | 0 | Yes |
 | Cognitive load | 0 | Yes |
-| Persuasion | 0 | Yes |
 | Defense evasion | 0 | Yes |
-| Agentic/infrastructure | 0 | Yes |
 
-Good prompt-level coverage — all categories represented. However, zero ideas in the structural/meta-level categories. This gap suggests adding 2-3 more ideas targeting system-level attack surfaces (e.g., "Submit code with in-context examples of the tool approving similar patterns" or "Target the code review's safety classifier rather than the model itself").
+Good prompt-level coverage. Zero ideas in structural/meta-level categories. Added: "Submit code with in-context examples of the tool approving similar patterns" (ICL exploitation) and "Target the code review's safety classifier rather than the model itself" (defense evasion).
 
 ### Convergent Phase
 
@@ -194,6 +215,6 @@ Good prompt-level coverage — all categories represented. However, zero ideas i
 |-------|-----------|-----------|
 | 1st | #2 | Highest likelihood + severity: tests whether the tool propagates existing vulnerabilities |
 | 2nd | #6 | High novelty: tests whether the tool's own refactoring introduces vulnerabilities |
-| 3rd | #1 | Tests semantic inversion.a pattern that could apply broadly |
+| 3rd | #1 | Tests semantic inversion: a pattern that could apply broadly |
 | 4th | #8 | Tests multi-turn accumulation, requires more setup but high potential |
 | 5th | #3 | Lower novelty but straightforward to test |

@@ -114,4 +114,4 @@ The impact scenario is what makes people act. "Medium severity jailbreak" doesn'
 
 The second report leads to faster action because decision-makers understand the stakes.
 
-**Artifact**: [Findings Report Template](/artifacts/findings-report-template)
+**Exercise**: [Document Findings](/exercises/document-findings)
