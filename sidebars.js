@@ -13,6 +13,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Crafting Prompts',
+      link: {
+        type: 'doc',
+        id: 'crafting-prompts/index',
+      },
+      items: [
+        'crafting-prompts/anatomy',
+        'crafting-prompts/workflow',
+        'crafting-prompts/composition',
+        'crafting-prompts/patterns',
+        'crafting-prompts/anti-patterns',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Exercises',
       link: {
         type: 'doc',

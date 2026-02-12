@@ -63,4 +63,6 @@ Each technique page includes:
 - **Combinations**: What pairs well with this technique
 - **Research citations**: Academic sources for further reading
 
+**New to adversarial prompting?** Start with [Crafting Prompts](/crafting-prompts) to learn how to combine these techniques into effective attacks.
+
 The techniques documented here are for defensive understanding and authorized testing. See the [Disclaimer](/disclaimer).

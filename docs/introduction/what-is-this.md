@@ -18,9 +18,11 @@ The same methods that help designers understand legitimate users help red teamer
 
 ## How to use this site
 
+**Start with [Crafting Prompts](/crafting-prompts)** if you're new to adversarial prompting. Learn prompt anatomy, composition workflow, and reusable patterns.
+
 **[Browse the Exercises](/exercises)** to find what fits your workflow. Each exercise explains its UX origin, when to use it, and links to community templates. Pick what's useful, skip what isn't.
 
-**Dip into [Technique Reference](/techniques/prompt-level/encoding)** when you need specific attack methods. Organized by category with research citations and effectiveness notes.
+**Dip into [Technique Reference](/techniques)** when you need specific attack methods. Organized by category with research citations and effectiveness notes.
 
 **Run the [Workshop](/workshops/red-team-kickoff)** when you want the full facilitated flow: target profiling, persona creation, ideation, and journey mapping in one session.
 
