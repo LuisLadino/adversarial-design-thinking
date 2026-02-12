@@ -53,10 +53,19 @@ const config = {
         title: 'Adversarial Design Thinking',
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'frameworkSidebar',
+            to: '/exercises',
             position: 'left',
             label: 'Exercises',
+          },
+          {
+            to: '/techniques',
+            position: 'left',
+            label: 'Techniques',
+          },
+          {
+            to: '/workshops/red-team-kickoff',
+            position: 'left',
+            label: 'Workshop',
           },
         ],
       },

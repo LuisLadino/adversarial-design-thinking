@@ -32,6 +32,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Technique Reference',
+      link: {
+        type: 'doc',
+        id: 'techniques/index',
+      },
       items: [
         {
           type: 'category',
