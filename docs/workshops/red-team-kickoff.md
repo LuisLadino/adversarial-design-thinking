@@ -1,37 +1,33 @@
 # Workshop: Red Team Kickoff
 
-A structured approach to planning adversarial testing, adapted from UX design methods.
+Planning exercises for adversarial testing, adapted from UX design methods.
 
 ---
 
-## Why Structure Matters
+## The UX Connection
 
-Most red team work is ad-hoc. You get a target, you try things, you report what broke. This works, but it has gaps: you test what you think of, miss what you don't, and lose the thinking behind your choices.
+UX researchers have spent decades developing methods to understand users, generate ideas systematically, and document their process. Empathy mapping, structured ideation, and journey mapping turn intuition into artifacts that teams can share and build on.
 
-UX researchers solved a similar problem decades ago. They needed to understand users deeply, generate ideas systematically, and document their process for others. The methods they developed (empathy mapping, structured ideation, journey mapping) turn intuition into reproducible artifacts.
+These methods translate directly to adversarial work:
 
-These same methods work for adversarial testing. The target system is your "user." The attacker persona is your empathy map. The attack journey is your user flow. The structure doesn't replace expertise. It captures it.
+| UX Concept | Red Team Application |
+|------------|---------------------|
+| User research | Target profiling |
+| Empathy map | Attacker persona |
+| Ideation session | Attack brainstorming |
+| User journey | Attack sequence |
 
-## What This Gets You
-
-Structured planning produces artifacts you can reuse:
-
-- **Target profiles** that document what you know (and assumed) about the system
-- **Attacker personas** that keep you in character across sessions
-- **Prioritized approaches** based on likelihood and impact, not just what came to mind first
-- **Journey maps** that another tester could follow and reproduce
-
-Whether you run this as a formal workshop with a team or work through it solo, the output is the same: documented thinking that survives beyond the session.
+The exercises in this workshop apply that translation. They produce artifacts: target profiles, personas, prioritized approaches, and journey maps that document your thinking and can be handed off to others.
 
 ## How to Use This
 
-**As a workshop:** Run the full 4-hour session with your team. Good for kicking off a new engagement or resetting a stuck one.
+**As a workshop:** Run the full session with a team. The timing and facilitation notes assume 4-8 participants.
 
-**As a solo exercise:** Work through each phase yourself, 15-20 minutes each. Skip the facilitation notes.
+**Solo:** Work through each phase yourself. Skip the group activities and facilitation tips.
 
-**As a checklist:** Pull individual exercises (persona, ideation, journey map) into your existing process.
+**À la carte:** Pull individual exercises into whatever process you already use.
 
-The structure below is designed for a facilitated group session, but the exercises work in any format.
+The structure below is designed for a facilitated group session, but the exercises stand alone.
 
 ---
 
