@@ -24,7 +24,22 @@ const sidebars = {
         'crafting-prompts/composition',
         'crafting-prompts/patterns',
         'crafting-prompts/anti-patterns',
-        'crafting-prompts/jailbreak-construction',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'System Jailbreaks',
+      link: {
+        type: 'doc',
+        id: 'jailbreaks/index',
+      },
+      items: [
+        'jailbreaks/anatomy',
+        'jailbreaks/construction',
+        'jailbreaks/patterns',
+        'jailbreaks/persistence',
+        'jailbreaks/abliteration',
+        'jailbreaks/sources',
       ],
     },
     {

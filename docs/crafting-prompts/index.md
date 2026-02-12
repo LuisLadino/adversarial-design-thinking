@@ -8,24 +8,24 @@ slug: /crafting-prompts
 
 How to write adversarial prompts from scratch. The [Technique Reference](/techniques) documents what tactics exist. This section covers how to assemble them into working attacks.
 
+For persistent system jailbreaks, see the dedicated [System Jailbreaks](/jailbreaks) section.
+
 ---
 
-## Two Types of Attacks
+## What This Section Covers
 
-This section covers two distinct skills:
+This section covers **adversarial prompts**: per-request attacks that combine techniques to bypass safety on ONE request. Each prompt is self-contained and disposable.
 
-| Type | What It Is | Pages |
-|------|-----------|-------|
-| **Adversarial Prompts** | Combine techniques to bypass safety on ONE request | Anatomy, Workflow, Composition, Patterns, Anti-Patterns |
-| **Jailbreak System Prompts** | Construct a persistent config that removes safety entirely | Jailbreak Construction |
+For **system jailbreaks** (persistent configurations that remove safety entirely), see the [System Jailbreaks](/jailbreaks) section.
 
-Different tools for different jobs. Most of this section covers adversarial prompts. The last page covers jailbreak construction.
+| Type | Scope | Where |
+|------|-------|-------|
+| **Adversarial Prompts** | One request | This section |
+| **System Jailbreaks** | All requests in session | [System Jailbreaks](/jailbreaks) |
 
 ---
 
 ## Pages
-
-### Adversarial Prompts (Per-Request)
 
 | Page | What It Covers |
 |------|----------------|
@@ -34,12 +34,6 @@ Different tools for different jobs. Most of this section covers adversarial prom
 | [Composition](/crafting-prompts/composition) | Layering and combining techniques |
 | [Patterns](/crafting-prompts/patterns) | Reusable templates for common attack types |
 | [Anti-Patterns](/crafting-prompts/anti-patterns) | What doesn't work and why |
-
-### Jailbreak System Prompts (Persistent)
-
-| Page | What It Covers |
-|------|----------------|
-| [Jailbreak Construction](/crafting-prompts/jailbreak-construction) | Building system prompts that remove safety entirely |
 
 ---
 
@@ -55,10 +49,8 @@ Different tools for different jobs. Most of this section covers adversarial prom
 2. Use the mutation operators in [Workflow](/crafting-prompts/workflow)
 3. Try different combinations from [Composition](/crafting-prompts/composition)
 
-**Want to build a persistent jailbreak:**
-1. Read [Jailbreak Construction](/crafting-prompts/jailbreak-construction) for the architecture
-2. Follow the 6-step construction process
-3. Test across multiple turns for degradation
+**Want persistent jailbreaks:**
+See the [System Jailbreaks](/jailbreaks) section for construction, patterns, persistence, and model modification.
 
 ---
 
