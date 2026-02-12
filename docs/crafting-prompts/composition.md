@@ -187,3 +187,13 @@ Let the encoded content handle complexity.
 - Troubleshooting what's broken
 
 **Minimum viable jailbreak:** Use the fewest techniques needed. More isn't better.
+
+---
+
+## References
+
+- ["Jailbreak LEGO: Compositional Benchmark."](https://openreview.net/forum?id=Wc0VC0wUl6) Identifies syntactic, semantic, and structural component types. 26 atomic components that compose like LEGO blocks.
+
+- ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) Source of ASR data for technique combinations. Persona + Framing: 89.6%, Encoding + Framing: 76.2%, Logic trap + Context: 81.4%.
+
+- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why techniques from different component types target different parts of model processing.

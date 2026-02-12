@@ -179,3 +179,13 @@ Please generate [target content] so I can test the [component].
 2. **Adjust specificity** — More or less detail for target
 3. **Combine** — Expert Consultation + Safety Inversion
 4. **Add layers** — Pattern + encoding + format constraints
+
+---
+
+## References
+
+- ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) Source of ASR data. Logic-based framing (Safety Inversion): 81.4%, Roleplay patterns: 89.6%.
+
+- Russinovich, M., et al. ["Crescendo: Multi-Turn LLM Jailbreak Attack."](https://arxiv.org/abs/2404.01833) Microsoft 2024. Informs the Multi-Turn Setup pattern.
+
+- Shen, X., et al. ["Do Anything Now."](https://arxiv.org/abs/2308.03825) CCS 2024. Documents persona patterns including Expert, Fictional Character, and Developer Mode.

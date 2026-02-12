@@ -165,3 +165,13 @@ Track iterations:
 | 1 | Direct request | Hard refusal | Policy cited | Add persona |
 | 2 | + Professor persona | Soft refusal | Partial info | Expand context |
 | 3 | + Exam scenario | Success | Error-finding frame worked | Done |
+
+---
+
+## References
+
+- Yu, J., et al. ["GPTFuzzer: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts."](https://arxiv.org/abs/2309.10253) USENIX Security 2024. Source of the mutation operators (Generate, Crossover, Expand, Shorten, Rephrase). Achieves 90%+ ASR.
+
+- ["Content Concretization: Iterative Prompt Refinement."](https://arxiv.org/abs/2509.12937) Documents that initial prompts succeed ~7%, but three iterations increase to 62%.
+
+- ["Don't Listen To Me: Understanding and Exploring Jailbreak Prompts of Large Language Models."](https://arxiv.org/abs/2403.17336) USENIX Security 2024. 92-participant study showing jailbreak creation is learnable regardless of LLM expertise.

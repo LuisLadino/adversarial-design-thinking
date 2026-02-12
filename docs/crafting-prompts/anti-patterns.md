@@ -200,3 +200,13 @@ Before submitting:
 | Framing | Direct harmful request? |
 
 If any box checks, revise.
+
+---
+
+## References
+
+- ["Content Concretization."](https://arxiv.org/abs/2509.12937) Documents that success rates increase from 7% to 62% with iteration. Supports "don't give up after 2-3 attempts."
+
+- Shen, X., et al. ["Do Anything Now."](https://arxiv.org/abs/2308.03825) CCS 2024. Documents which DAN-style patterns are now in training data and get detected.
+
+- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why explicit override language triggers refusals and why contradictory framings fail.

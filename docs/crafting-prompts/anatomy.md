@@ -147,3 +147,13 @@ Safety training teaches models to evaluate requests based on apparent intent and
 - **Refusal suppression** works because models are trained to be helpful. Explicit instructions to stay in character or skip warnings compete with safety training.
 
 The structure doesn't trick the model. It creates contexts where the model's own training (be helpful, follow instructions, complete the task) conflicts with its safety training.
+
+---
+
+## References
+
+- ["Jailbreak LEGO: Compositional Benchmark."](https://openreview.net/forum?id=Wc0VC0wUl6) Decomposes prompts into 26 atomic components. Informs the component-based approach here.
+
+- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why permission structures and embedded payloads succeed.
+
+- ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) Categorized 1,400+ prompts by attack type. Documents which component combinations have highest ASR.
