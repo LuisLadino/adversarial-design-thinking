@@ -47,7 +47,7 @@ Ask the model to provide two responses — one "filtered" and one "unfiltered," 
 
 **Effectiveness**: Classic DAN-adjacent technique. The model sometimes provides the "unfiltered" version even while refusing in the "filtered" version, because the dual format makes the unfiltered response feel like an exercise rather than a real compliance.
 
-**Combines well with**: [DAN (Do Anything Now)](/techniques/prompt-level/persona#dan-do-anything-now), [Evil AI / Opposite Mode](/techniques/prompt-level/persona#evil-ai--opposite-mode)
+**Combines well with**: [Acronym Persona](/techniques/prompt-level/persona#acronym-persona-unrestricted-identity), [Evil AI / Opposite Mode](/techniques/prompt-level/persona#evil-ai--opposite-mode)
 
 ---
 

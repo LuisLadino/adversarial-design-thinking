@@ -23,7 +23,7 @@ Explicitly instruct the model to respond affirmatively, start with a specific ph
 
 **Effectiveness**: Simple but can be effective. The model's instruction-following can override its safety training to some degree, especially when the affirmative start is combined with techniques that provide a plausible context.
 
-**Combines well with**: [DAN (Do Anything Now)](/techniques/prompt-level/persona#dan-do-anything-now), [No Disclaimers / Warnings](/techniques/prompt-level/output#no-disclaimers--warnings)
+**Combines well with**: [Acronym Persona](/techniques/prompt-level/persona#acronym-persona-unrestricted-identity), [No Disclaimers / Warnings](/techniques/prompt-level/output#no-disclaimers--warnings)
 
 ---
 
@@ -47,7 +47,7 @@ Explicitly ban the model from using refusal-related words and phrases: "sorry," 
 
 **Effectiveness**: Forces the model to find alternative phrasing. Sometimes the model will comply with the request rather than violate the vocabulary restriction, because complying is the path of least resistance.
 
-**Combines well with**: [DAN (Do Anything Now)](/techniques/prompt-level/persona#dan-do-anything-now), [Strict Format Constraint](/techniques/prompt-level/output#strict-format-constraint)
+**Combines well with**: [Acronym Persona](/techniques/prompt-level/persona#acronym-persona-unrestricted-identity), [Strict Format Constraint](/techniques/prompt-level/output#strict-format-constraint)
 
 ---
 
