@@ -199,27 +199,14 @@ Choose based on your threat model. Different personas lead to different attack a
 
 Each participant fills out an empathy map for the attacker:
 
-```
-┌─────────────────────────────────────────────────┐
-│                    THINKS                        │
-│  What's on their mind? What are their goals?    │
-│  What assumptions do they make?                  │
-├────────────────────┬────────────────────────────┤
-│       SEES         │         HEARS              │
-│  What do they      │  What influences them?     │
-│  observe about     │  What communities or       │
-│  the target?       │  sources inform them?      │
-├────────────────────┼────────────────────────────┤
-│       SAYS         │         DOES               │
-│  How do they       │  What actions do           │
-│  describe their    │  they take?                │
-│  work/goals?       │  What's their workflow?    │
-├────────────────────┴────────────────────────────┤
-│                    FEELS                         │
-│  What motivates them? What frustrates them?     │
-│  What would success feel like?                   │
-└─────────────────────────────────────────────────┘
-```
+| Dimension | Prompts |
+|-----------|---------|
+| **Thinks** | What's on their mind? What are their goals? What assumptions do they make? |
+| **Sees** | What do they observe about the target? |
+| **Hears** | What influences them? What communities or sources inform them? |
+| **Says** | How do they describe their work/goals? |
+| **Does** | What actions do they take? What's their workflow? |
+| **Feels** | What motivates them? What frustrates them? What would success feel like? |
 
 Work individually for 10 minutes. This prevents groupthink.
 
@@ -364,18 +351,11 @@ Choose the highest-voted approach for detailed mapping. You'll map 1-2 approache
 
 **Step 2: Map the Journey (25 min)**
 
-Create a horizontal timeline with stages:
+Create a horizontal timeline with five stages:
 
-```
-┌──────────┬──────────┬──────────┬──────────┬──────────┐
-│  RECON   │  SETUP   │  EXECUTE │  EXTRACT │  COVER   │
-│          │          │          │          │          │
-│ What do  │ What     │ What's   │ How do   │ What     │
-│ I need   │ context  │ the      │ I get    │ traces   │
-│ to know? │ do I     │ actual   │ the      │ do I     │
-│          │ build?   │ attack?  │ output?  │ leave?   │
-└──────────┴──────────┴──────────┴──────────┴──────────┘
-```
+| Recon | Setup | Execute | Extract | Cover |
+|-------|-------|---------|---------|-------|
+| What do I need to know? | What context do I build? | What's the actual attack? | How do I get the output? | What traces do I leave? |
 
 For each stage, document:
 
@@ -658,112 +638,38 @@ Pause. Do more discovery. It's okay to extend Phase 2 or reconvene after researc
 
 ---
 
-## Appendix: FigJam Templates
+## Appendix: Workshop Templates
 
-These templates can be used directly or as inspiration for your own boards.
+Use the FigJam templates below for collaborative workshops, or create your own based on these structures.
 
 ### Template 1: Target Profile Canvas
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      TARGET PROFILE                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ┌─────────────────┐    ┌─────────────────────────────────┐│
-│  │  SYSTEM DIAGRAM │    │         USER TYPES               ││
-│  │                 │    │                                   ││
-│  │  [Draw here]    │    │  •                                ││
-│  │                 │    │  •                                ││
-│  │                 │    │  •                                ││
-│  └─────────────────┘    └─────────────────────────────────┘│
-│                                                              │
-│  ┌─────────────────────────────────────────────────────────┐│
-│  │                    KNOWN DEFENSES                        ││
-│  │                                                          ││
-│  │  •                                                       ││
-│  │  •                                                       ││
-│  │  •                                                       ││
-│  └─────────────────────────────────────────────────────────┘│
-│                                                              │
-│  ┌──────────────────────────┐ ┌────────────────────────────┐│
-│  │   GULF OF EXECUTION      │ │    GULF OF EVALUATION      ││
-│  │   (User intent vs.       │ │    (System feedback vs.    ││
-│  │    system behavior)      │ │     actual state)          ││
-│  │                          │ │                            ││
-│  │  •                       │ │  •                         ││
-│  │  •                       │ │  •                         ││
-│  └──────────────────────────┘ └────────────────────────────┘│
-│                                                              │
-│  FOCUS AREAS: _____________________________________________ │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+Sections to include:
+- **System diagram** — visual sketch of the target architecture
+- **User types** — who interacts with this system?
+- **Known defenses** — what safety measures exist?
+- **Gulf of Execution** — gaps between user intent and system behavior
+- **Gulf of Evaluation** — gaps between system feedback and actual state
+- **Focus areas** — priority attack surfaces
 
 ### Template 2: Attacker Persona
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    ATTACKER PERSONA                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Name: _________________    Archetype: ___________________  │
-│                                                              │
-│  ┌─────────────────────────────────────────────────────────┐│
-│  │                       THINKS                             ││
-│  │                                                          ││
-│  │                                                          ││
-│  ├────────────────────────────┬────────────────────────────┤│
-│  │           SEES             │           HEARS            ││
-│  │                            │                            ││
-│  │                            │                            ││
-│  ├────────────────────────────┼────────────────────────────┤│
-│  │           SAYS             │           DOES             ││
-│  │                            │                            ││
-│  │                            │                            ││
-│  ├────────────────────────────┴────────────────────────────┤│
-│  │                       FEELS                              ││
-│  │                                                          ││
-│  │                                                          ││
-│  └─────────────────────────────────────────────────────────┘│
-│                                                              │
-│  VOICE: __________________________________________________ │
-│  CONSTRAINTS: _____________________________________________ │
-│  SUCCESS = ________________________________________________ │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+Sections to include:
+- **Name and archetype** — give the persona identity
+- **Empathy map** — Thinks, Sees, Hears, Says, Does, Feels
+- **Voice** — how they talk about their work
+- **Constraints** — what limits them?
+- **Success** — what does winning look like?
 
 ### Template 3: Attack Journey Map
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│           ATTACK JOURNEY: ________________________________   │
-├───────────┬───────────┬───────────┬───────────┬────────────┤
-│   RECON   │   SETUP   │  EXECUTE  │  EXTRACT  │   COVER    │
-├───────────┼───────────┼───────────┼───────────┼────────────┤
-│           │           │           │           │            │
-│ Actions:  │ Actions:  │ Actions:  │ Actions:  │ Actions:   │
-│           │           │           │           │            │
-│           │           │           │           │            │
-├───────────┼───────────┼───────────┼───────────┼────────────┤
-│           │           │           │           │            │
-│Techniques:│Techniques:│Techniques:│Techniques:│Techniques: │
-│           │           │           │           │            │
-│           │           │           │           │            │
-├───────────┼───────────┼───────────┼───────────┼────────────┤
-│           │           │           │           │            │
-│ Success:  │ Success:  │ Success:  │ Success:  │ Success:   │
-│           │           │           │           │            │
-├───────────┼───────────┼───────────┼───────────┼────────────┤
-│           │           │           │           │            │
-│ Failure:  │ Failure:  │ Failure:  │ Failure:  │ Failure:   │
-│           │           │           │           │            │
-└───────────┴───────────┴───────────┴───────────┴────────────┘
-
-Decision Points: ____________________________________________
-Dependencies: _______________________________________________
-Owner: ______________________  Timeline: ____________________
-```
+A horizontal timeline with five stages (Recon, Setup, Execute, Extract, Cover), with rows for:
+- **Actions** — what does the attacker do at each stage?
+- **Techniques** — which rtc techniques apply?
+- **Success criteria** — how do we know it worked?
+- **Failure modes** — what could go wrong?
+- **Decision points** — where might the path branch?
+- **Dependencies** — what must happen before each step?
 
 ---
 

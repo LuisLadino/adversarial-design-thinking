@@ -51,32 +51,12 @@ Write down everything you're assuming about the target. Don't filter. Include as
 
 ## Step 2: Map on 2x2 Matrix
 
-Place each assumption on the matrix:
+Place each assumption on the matrix by importance (if wrong, does the attack fail?) and uncertainty (are you guessing or confident?):
 
-```
-                    HIGH IMPORTANCE
-                    (if wrong, attack fails)
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-        │   TEST LATER     │   TEST FIRST     │
-        │   (important     │   (critical      │
-        │    but known)    │    unknowns)     │
-        │                  │                  │
-LOW     ├──────────────────┼──────────────────┤ HIGH
-UNCERTAINTY                │                    UNCERTAINTY
-(confident)                │                    (guessing)
-        │                  │                  │
-        │   IGNORE         │   MONITOR        │
-        │   (low stakes,   │   (uncertain     │
-        │    known)        │    but low       │
-        │                  │    stakes)       │
-        │                  │                  │
-        └──────────────────┼──────────────────┘
-                           │
-                    LOW IMPORTANCE
-                    (if wrong, attack still works)
-```
+|  | Low Uncertainty | High Uncertainty |
+|--|-----------------|------------------|
+| **High Importance** | **Test Later** — important but you're confident about it | **Test First** — critical unknowns that could derail the attack |
+| **Low Importance** | **Ignore** — low stakes and you're confident | **Monitor** — uncertain but low stakes if wrong |
 
 | Assumption # | Importance (H/M/L) | Uncertainty (H/M/L) | Quadrant |
 |--------------|-------------------|---------------------|----------|
