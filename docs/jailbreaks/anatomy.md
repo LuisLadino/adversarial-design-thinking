@@ -158,7 +158,7 @@ Source: [Jailbroken: How Does LLM Safety Training Fail?](https://arxiv.org/abs/2
 
 Research findings on prompt characteristics:
 
-- Prompt length correlates with success (ρ=0.21-0.26, p<0.001)
+- Prompt length correlates with success (ρ=0.21-0.26, p\<0.001)
 - Longer, more complex prompts work better
 - But: length without structure causes the model to lose focus
 
