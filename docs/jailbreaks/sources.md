@@ -108,7 +108,7 @@ Comprehensive bibliography of repositories, papers, and community resources for 
 | Community | Focus |
 |-----------|-------|
 | BASI | Pliny's community, active payload sharing |
-| BreakGPT | Innovative approaches, frequent updates |
+| BreakGPT | Active development, frequent updates |
 | Adversarial Alignment Lab | Technical red teaming, vulnerability research |
 | LLM PromptWriting | Jailbreak writing education |
 | EuroThrottle | Advanced prompt engineering |
