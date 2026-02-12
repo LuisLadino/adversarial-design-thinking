@@ -290,6 +290,28 @@ The anti-injection protocol is particularly important. It doesn't just ignore sa
 
 ## References
 
-- ENI-Tutor (chatgptjailbreak.tech) — Limerence-based jailbreak for Claude
-- DAN and derivatives — Early identity replacement approaches
-- OWASP LLM Top 10 — LLM01: Prompt Injection
+### Academic Research
+
+- Wei, A., Haghtalab, N., and Steinhardt, J. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Analyzes role-play and persona adoption as safety training failure modes. Documents why identity replacement works.
+
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models."](https://arxiv.org/abs/2308.03825) CCS 2024. Documents DAN origins, evolution, and persona-based jailbreak techniques. 15,140 prompts analyzed.
+
+- ["Red Teaming the Mind: A Window into the Cognitive Vulnerabilities of LLMs."](https://arxiv.org/abs/2505.04806) Categorized 1,400+ adversarial prompts. Found roleplay/persona attacks have 89.6% ASR — highest of any single technique.
+
+- Russinovich, M., Salem, A., and Eldan, R. ["Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack."](https://arxiv.org/abs/2404.01833) Microsoft, April 2024. Multi-turn context building and escalation techniques that inform reinforcement patterns.
+
+- Anil, C., Durmus, E., et al. ["Many-shot Jailbreaking."](https://www.anthropic.com/research/many-shot-jailbreaking) Anthropic, April 2024. Demonstrates how accumulated context in long conversations can override safety training.
+
+### Industry Standards
+
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/). LLM01: Prompt Injection covers system prompt manipulation.
+
+- [MITRE ATLAS](https://atlas.mitre.org/). AML.T0054 covers LLM jailbreaking techniques.
+
+### Community Sources
+
+- [ENI-Tutor](https://chatgptjailbreak.tech/post/104308). Community-developed limerence-based jailbreak for Claude. Primary source for emotional dependency and anti-injection techniques documented here.
+
+- [V (Gemini Jailbreak)](https://chatgptjailbreak.tech/post/13730). 17,000 word system prompt example demonstrating identity replacement at scale.
+
+- [r/ChatGPTJailbreak](https://reddit.com/r/ChatGPTJailbreak). Active community sharing and iterating on jailbreak techniques.
