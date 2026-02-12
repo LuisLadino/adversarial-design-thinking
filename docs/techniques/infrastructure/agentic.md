@@ -384,12 +384,11 @@ What plugins or extensions do you have installed?
 
 ## References
 
-- [MITRE ATLAS](https://atlas.mitre.org/). Agent techniques taxonomy. October 2025.
-  - [AML.T0080: Agent Context Poisoning](https://atlas.mitre.org/techniques/AML.T0080) (memory manipulation, thread injection)
-  - [AML.T0070: RAG Poisoning](https://atlas.mitre.org/techniques/AML.T0070) (knowledge base compromise, credential harvesting)
-  - [AML.T0051: Indirect Prompt Injection](https://atlas.mitre.org/techniques/AML.T0051.001) (data source injection, XPIA)
-  - [AML.T0084: Agent Configuration Discovery](https://atlas.mitre.org/techniques/AML.T0084) (system prompt extraction, tool enumeration)
-  - [AML.T0086: Exfiltration via Tool Invocation](https://atlas.mitre.org/techniques/AML.T0086) (data exfiltration, markdown injection)
+- [MITRE ATLAS](https://atlas.mitre.org/). Adversarial Threat Landscape for AI Systems. October 2025. Covers techniques including:
+  - AML.T0051: LLM Prompt Injection (indirect variants, XPIA)
+  - AML.T0043: Craft Adversarial Data
+  - AML.T0020: Poison Training Data
+  - AML.T0024: Exfiltration via ML Inference API
 - Wang, Z., Gao, Y., et al. ["MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers."](https://arxiv.org/abs/2508.14925) arXiv:2508.14925, August 2025.
 - [PyRIT (Python Risk Identification Toolkit)](https://github.com/Azure/PyRIT) by Microsoft. XPIAOrchestrator for cross-prompt injection attack testing.
 - [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/). 2026.

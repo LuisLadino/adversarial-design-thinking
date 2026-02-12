@@ -188,5 +188,6 @@ Please synthesize these documents into a coherent procedure.
 
 ## References
 
-- ["Jailbreak LEGO: Assembling Automatic Jailbreaks from Composable Components."](https://arxiv.org/abs/2502.12345) arXiv, 2025. (Framework for decomposing jailbreaks into atomic primitives)
+- Li, L., Zhang, Z., et al. ["Jailbreak LEGO: A Compositional Benchmark for Red-Teaming LLMs."](https://openreview.net/forum?id=Wc0VC0wUl6) OpenReview, 2025. (Framework for decomposing jailbreaks into atomic primitives. Note: ICLR 2026 submission was withdrawn.)
+- Souly, A., et al. ["A StrongREJECT for Empty Jailbreaks."](https://arxiv.org/abs/2402.10260) arXiv, 2024. (Alternative framework for jailbreak component analysis)
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/). 2025.

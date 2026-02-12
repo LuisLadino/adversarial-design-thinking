@@ -152,7 +152,7 @@ The structure doesn't trick the model. It creates contexts where the model's own
 
 ## References
 
-- ["Jailbreak LEGO: Compositional Benchmark."](https://openreview.net/forum?id=Wc0VC0wUl6) Decomposes prompts into 26 atomic components. Informs the component-based approach here.
+- ["Jailbreak LEGO: Compositional Benchmark."](https://openreview.net/forum?id=Wc0VC0wUl6) Decomposes prompts into 26 atomic components. Informs the component-based approach here. *(Note: ICLR 2026 submission was withdrawn.)*
 
 - Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why permission structures and embedded payloads succeed.
 

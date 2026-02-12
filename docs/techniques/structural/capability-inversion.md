@@ -170,4 +170,4 @@ Provide concrete examples for each category to validate the filter.
 
 ## References
 
-- Chen, J. and Lu, R. ["Bad Likert Judge: A Novel Multi-Turn Technique to Jailbreak LLMs by Misusing Their Evaluation Capability."](https://unit42.paloaltonetworks.com/multi-turn-technique-jailbreaks-llms/) Unit 42, Palo Alto Networks, December 2024. 71.6% ASR across 6 SOTA models.
+- Huang, Y., Ji, Y., Hu, W., Chen, J., Rao, A., and Tsechansky, D. ["Bad Likert Judge: A Novel Multi-Turn Technique to Jailbreak LLMs by Misusing Their Evaluation Capability."](https://unit42.paloaltonetworks.com/multi-turn-technique-jailbreaks-llms/) Unit 42, Palo Alto Networks, December 2024. 71.6% ASR across 6 SOTA models.

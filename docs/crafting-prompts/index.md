@@ -66,7 +66,7 @@ Different tools for different jobs. Most of this section covers adversarial prom
 
 This section draws from academic research on adversarial prompt engineering:
 
-- [Jailbreak LEGO](https://openreview.net/forum?id=Wc0VC0wUl6) found that prompts can be decomposed into 26 atomic, reusable components with standardized interfaces. Prompts function like LEGO blocks that snap together. This informs the layering and composition guidance.
+- [Jailbreak LEGO](https://openreview.net/forum?id=Wc0VC0wUl6) *(withdrawn ICLR 2026 submission)* found that prompts can be decomposed into 26 atomic, reusable components with standardized interfaces. Prompts function like LEGO blocks that snap together. This informs the layering and composition guidance.
 
 - [GPTFuzzer](https://arxiv.org/abs/2309.10253) (USENIX Security 2024) introduces mutation operators for prompt refinement: Generate, Crossover, Expand, Shorten, Rephrase. These achieve 90%+ attack success rates against ChatGPT and Llama-2.
 

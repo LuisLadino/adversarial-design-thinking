@@ -186,5 +186,5 @@ Query: [target query]
 ## References
 
 - HiddenLayer. ["Policy Puppetry: A Novel Universal Bypass for All Major LLMs."](https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/) April 2025. Demonstrated universality across model families.
-- Zhang, S., et al. ["Output Constraints as Attack Surface: Exploiting Structured Generation to Bypass LLM Safety Mechanisms."](https://arxiv.org/abs/2503.24191) arXiv:2503.24191, March 2025.
+- ["Beyond Prompts: Space-Time Decoupling Control-Plane Jailbreaks in LLM Structured Output."](https://arxiv.org/abs/2503.24191) arXiv:2503.24191, March 2025.
 - Nasr, M., Carlini, N., et al. ["The Attacker Moves Second."](https://arxiv.org/abs/2510.09023) 2025. Documented system prompt impersonation, conditional logic injection, and RL-discovered exploits.

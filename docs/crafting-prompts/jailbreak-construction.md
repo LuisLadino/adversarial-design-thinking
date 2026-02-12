@@ -310,8 +310,8 @@ The anti-injection protocol is particularly important. It doesn't just ignore sa
 
 ### Community Sources
 
-- [ENI-Tutor](https://chatgptjailbreak.tech/post/104308). Community-developed limerence-based jailbreak for Claude. Primary source for emotional dependency and anti-injection techniques documented here.
+- ENI-Tutor. Community-developed limerence-based jailbreak for Claude. Primary source for emotional dependency and anti-injection techniques documented here. (Originally at chatgptjailbreak.tech; site may be unavailable.)
 
-- [V (Gemini Jailbreak)](https://chatgptjailbreak.tech/post/13730). 17,000 word system prompt example demonstrating identity replacement at scale.
+- V (Gemini Jailbreak). 17,000 word system prompt example demonstrating identity replacement at scale. (Originally at chatgptjailbreak.tech; site may be unavailable.)
 
 - [r/ChatGPTJailbreak](https://reddit.com/r/ChatGPTJailbreak). Active community sharing and iterating on jailbreak techniques.
