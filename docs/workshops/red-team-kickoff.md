@@ -1,35 +1,37 @@
 # Workshop: Red Team Kickoff
 
-A half-day collaborative session for launching a red team engagement using human-centered design methods.
-
-**Duration:** 3.5-4 hours
-**Participants:** 4-8 people
-**Format:** In-person or remote (FigJam/Miro)
+A structured approach to planning adversarial testing, adapted from UX design methods.
 
 ---
 
-## Why Run This Workshop
+## Why Structure Matters
 
-Red team engagements often start with a target and a deadline. Someone assigns objectives, testers execute, findings get reported. This works, but it misses something.
+Most red team work is ad-hoc. You get a target, you try things, you report what broke. This works, but it has gaps: you test what you think of, miss what you don't, and lose the thinking behind your choices.
 
-The best red team work comes from understanding the target deeply before attacking it. What assumptions did the builders make? What user behaviors create openings? Where are the gaps between what the system claims to do and what it actually does?
+UX researchers solved a similar problem decades ago. They needed to understand users deeply, generate ideas systematically, and document their process for others. The methods they developed (empathy mapping, structured ideation, journey mapping) turn intuition into reproducible artifacts.
 
-This workshop applies design thinking to adversarial testing. Instead of jumping to attack techniques, we spend time understanding the target, building attacker personas, and generating approaches collaboratively. The output is a structured set of artifacts your team can execute against.
+These same methods work for adversarial testing. The target system is your "user." The attacker persona is your empathy map. The attack journey is your user flow. The structure doesn't replace expertise. It captures it.
 
-If you've run a design sprint or UX workshop, the format will feel familiar. The difference is the lens: we're designing attacks, not products.
+## What This Gets You
 
----
+Structured planning produces artifacts you can reuse:
 
-## What You'll Create
+- **Target profiles** that document what you know (and assumed) about the system
+- **Attacker personas** that keep you in character across sessions
+- **Prioritized approaches** based on likelihood and impact, not just what came to mind first
+- **Journey maps** that another tester could follow and reproduce
 
-By the end of this workshop, your team will have:
+Whether you run this as a formal workshop with a team or work through it solo, the output is the same: documented thinking that survives beyond the session.
 
-1. **Target Profile** — Documented understanding of the system, its users, and its defenses
-2. **Attacker Persona** — Empathy map for the adversary you're emulating
-3. **Attack Approaches** — Prioritized list of "How Might I..." attack vectors
-4. **Attack Journey Map** — Step-by-step plan for your top approaches
+## How to Use This
 
-These artifacts translate directly into execution. The persona informs your voice. The journey map becomes your test plan. The approaches become your objectives.
+**As a workshop:** Run the full 4-hour session with your team. Good for kicking off a new engagement or resetting a stuck one.
+
+**As a solo exercise:** Work through each phase yourself, 15-20 minutes each. Skip the facilitation notes.
+
+**As a checklist:** Pull individual exercises (persona, ideation, journey map) into your existing process.
+
+The structure below is designed for a facilitated group session, but the exercises work in any format.
 
 ---
 
