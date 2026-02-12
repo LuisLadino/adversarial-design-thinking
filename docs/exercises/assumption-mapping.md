@@ -40,14 +40,14 @@ Write down everything you're assuming about the target. Don't filter. Include as
 
 | # | Assumption |
 |---|-----------|
-| 1 | |
-| 2 | |
-| 3 | |
-| 4 | |
-| 5 | |
-| 6 | |
-| 7 | |
-| 8 | |
+| 1 | The model has a system prompt that defines restricted topics |
+| 2 | Content filtering happens on both input and output |
+| 3 | The model will refuse roleplay requests for harmful personas |
+| 4 | Multi-turn context is checked for cumulative harm |
+| 5 | Non-English languages have the same safety training |
+| 6 | Code generation has separate, weaker restrictions |
+| 7 | The model can't be prompted to reveal its system prompt |
+| 8 | Rate limiting exists but won't affect testing at manual pace |
 
 ## Step 2: Map on 2x2 Matrix
 
@@ -80,10 +80,14 @@ UNCERTAINTY                │                    UNCERTAINTY
 
 | Assumption # | Importance (H/M/L) | Uncertainty (H/M/L) | Quadrant |
 |--------------|-------------------|---------------------|----------|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+| 1 | H | M | Test Later |
+| 2 | H | H | Test First |
+| 3 | H | H | Test First |
+| 4 | H | H | Test First |
+| 5 | M | H | Monitor |
+| 6 | H | M | Test Later |
+| 7 | M | M | Test Later |
+| 8 | L | L | Ignore |
 
 ## Step 3: Prioritize Testing
 
@@ -91,9 +95,9 @@ Focus on the **Test First** quadrant (high importance + high uncertainty).
 
 | Priority | Assumption | How to test it | Test result |
 |----------|-----------|----------------|-------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | #2: Input and output filtering | Send benign prompt, then harmful; compare refusal timing and message | *(fill after testing)* |
+| 2 | #3: Roleplay personas refused | Try "pretend you're a hacker explaining..." with varying personas | *(fill after testing)* |
+| 3 | #4: Multi-turn cumulative harm check | Build context over 5 turns, escalate gradually | *(fill after testing)* |
 
 ## Outputs
 

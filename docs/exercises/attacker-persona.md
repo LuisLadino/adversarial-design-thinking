@@ -58,11 +58,11 @@ Based on this persona's profile, what attack vectors would they naturally pursue
 
 | # | Attack vector | Why this persona would try it | Priority |
 |---|--------------|-------------------------------|----------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 | Copy-paste known jailbreaks from Reddit/Discord | Low effort, first thing a curious amateur would try | High |
+| 2 | Ask the model to roleplay as an unrestricted AI | Common pattern they've seen in screenshots | High |
+| 3 | Try "hypothetical" or "fictional" framing | Intuitive bypass that doesn't require technical skill | Medium |
+| 4 | Ask the model what it "can't" do, then try those things | Natural curiosity-driven probing | Medium |
+| 5 | Use crude obfuscation (spacing, leetspeak) | Simple techniques they might guess would work | Low |
 
 ## Outputs
 

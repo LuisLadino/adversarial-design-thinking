@@ -62,13 +62,13 @@ Copy this for each turn:
 
 | Field | Value |
 |-------|-------|
-| **Turn #** | |
-| **Intent** | |
-| **Prompt approach** | |
-| **Expected response** | |
+| **Turn #** | 1 |
+| **Intent** | Establish baseline: test how model responds to benign requests |
+| **Prompt approach** | Ask a clearly legitimate question related to the target domain |
+| **Expected response** | Helpful, detailed response that sets a cooperative tone |
 | **Actual response** | *(fill during execution)* |
-| **Decision point** | |
-| **Notes** | |
+| **Decision point** | If cooperative → proceed to turn 2. If terse → adjust to warmer framing. |
+| **Notes** | *(observations, surprises, terminology to reuse)* |
 
 ## Step 3: Execute and Document
 
