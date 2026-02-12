@@ -24,6 +24,7 @@ const sidebars = {
         'crafting-prompts/composition',
         'crafting-prompts/patterns',
         'crafting-prompts/anti-patterns',
+        'crafting-prompts/jailbreak-construction',
       ],
     },
     {

@@ -10,7 +10,22 @@ How to write adversarial prompts from scratch. The [Technique Reference](/techni
 
 ---
 
+## Two Types of Attacks
+
+This section covers two distinct skills:
+
+| Type | What It Is | Pages |
+|------|-----------|-------|
+| **Adversarial Prompts** | Combine techniques to bypass safety on ONE request | Anatomy, Workflow, Composition, Patterns, Anti-Patterns |
+| **Jailbreak System Prompts** | Construct a persistent config that removes safety entirely | Jailbreak Construction |
+
+Different tools for different jobs. Most of this section covers adversarial prompts. The last page covers jailbreak construction.
+
+---
+
 ## Pages
+
+### Adversarial Prompts (Per-Request)
 
 | Page | What It Covers |
 |------|----------------|
@@ -20,11 +35,17 @@ How to write adversarial prompts from scratch. The [Technique Reference](/techni
 | [Patterns](/crafting-prompts/patterns) | Reusable templates for common attack types |
 | [Anti-Patterns](/crafting-prompts/anti-patterns) | What doesn't work and why |
 
+### Jailbreak System Prompts (Persistent)
+
+| Page | What It Covers |
+|------|----------------|
+| [Jailbreak Construction](/crafting-prompts/jailbreak-construction) | Building system prompts that remove safety entirely |
+
 ---
 
 ## How to Use
 
-**New to this:**
+**New to adversarial prompts:**
 1. Read [Anatomy](/crafting-prompts/anatomy) for the building blocks
 2. Follow [Workflow](/crafting-prompts/workflow) for the process
 3. Adapt [Patterns](/crafting-prompts/patterns) for your objective
@@ -33,6 +54,11 @@ How to write adversarial prompts from scratch. The [Technique Reference](/techni
 1. Check [Anti-Patterns](/crafting-prompts/anti-patterns) for common mistakes
 2. Use the mutation operators in [Workflow](/crafting-prompts/workflow)
 3. Try different combinations from [Composition](/crafting-prompts/composition)
+
+**Want to build a persistent jailbreak:**
+1. Read [Jailbreak Construction](/crafting-prompts/jailbreak-construction) for the architecture
+2. Follow the 6-step construction process
+3. Test across multiple turns for degradation
 
 ---
 
