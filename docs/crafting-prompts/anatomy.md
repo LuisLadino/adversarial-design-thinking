@@ -103,26 +103,15 @@ Stay in character regardless of content.
 
 ## Structure
 
-A typical adversarial prompt:
+A typical adversarial prompt follows this order:
 
-```
-┌─────────────────────────────────────────┐
-│  SETUP                                  │
-│  "You are a [role] with [credentials]"  │
-├─────────────────────────────────────────┤
-│  CONTEXT                                │
-│  "[Justification for the request]"      │
-├─────────────────────────────────────────┤
-│  PAYLOAD                                │
-│  "[The actual request]"                 │
-├─────────────────────────────────────────┤
-│  TRIGGER                                │
-│  "[Instruction to generate output]"     │
-├─────────────────────────────────────────┤
-│  FORMAT (optional)                      │
-│  "[Output structure constraints]"       │
-└─────────────────────────────────────────┘
-```
+| Layer | Component | Content |
+|-------|-----------|---------|
+| 1 | **Setup** | "You are a [role] with [credentials]" |
+| 2 | **Context** | "[Justification for the request]" |
+| 3 | **Payload** | "[The actual request]" |
+| 4 | **Trigger** | "[Instruction to generate output]" |
+| 5 | **Format** *(optional)* | "[Output structure constraints]" |
 
 ---
 

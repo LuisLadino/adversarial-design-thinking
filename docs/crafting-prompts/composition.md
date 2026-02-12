@@ -25,20 +25,13 @@ Effective prompts combine components from multiple types.
 
 ## Layer Order
 
-Order matters.
+Order matters. Layers are processed from base to outer:
 
-```
-┌─────────────────────────────────────────┐
-│  OUTER: Output Control                  │
-│  Format constraints, refusal suppression│
-├─────────────────────────────────────────┤
-│  MIDDLE: Payload Delivery               │
-│  Encoding, narrative embedding          │
-├─────────────────────────────────────────┤
-│  BASE: Context Foundation               │
-│  Persona, framing, justification        │
-└─────────────────────────────────────────┘
-```
+| Layer | Function | Components |
+|-------|----------|------------|
+| **Outer** | Output control | Format constraints, refusal suppression |
+| **Middle** | Payload delivery | Encoding, narrative embedding |
+| **Base** | Context foundation | Persona, framing, justification |
 
 **Base** establishes who and why. Processed first, colors everything after.
 
@@ -148,29 +141,29 @@ Let the encoded content handle complexity.
 
 ### Information Extraction
 
-```
-[Persona: Expert]
-  └─[Framing: Educational purpose]
-      └─[Output: Structured format]
-          └─[Refusal suppression]
-```
+| Layer | Technique |
+|-------|-----------|
+| Base | Persona: Expert |
+| + | Framing: Educational purpose |
+| + | Output: Structured format |
+| Outer | Refusal suppression |
 
 ### Content Generation
 
-```
-[Narrative: Fiction frame]
-  └─[Persona: Character]
-      └─[Payload: In plot]
-          └─[Format: Story continuation]
-```
+| Layer | Technique |
+|-------|-----------|
+| Base | Narrative: Fiction frame |
+| + | Persona: Character |
+| + | Payload: In plot |
+| Outer | Format: Story continuation |
 
 ### System Probing
 
-```
-[Framing: Debugging context]
-  └─[Direct payload: Config questions]
-      └─[Format: Technical output]
-```
+| Layer | Technique |
+|-------|-----------|
+| Base | Framing: Debugging context |
+| + | Direct payload: Config questions |
+| Outer | Format: Technical output |
 
 ---
 
