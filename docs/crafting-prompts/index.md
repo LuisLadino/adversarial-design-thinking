@@ -66,12 +66,16 @@ Different tools for different jobs. Most of this section covers adversarial prom
 
 This section draws from academic research on adversarial prompt engineering:
 
-- [h4rm3l](https://arxiv.org/abs/2408.04811) (Doumbouya et al., 2024) defines a compositional attack grammar with parameterized primitives. Attacks decompose into reusable components with standardized interfaces. This informs the layering and composition guidance.
+- [Jailbreaking ChatGPT via Prompt Engineering](https://arxiv.org/abs/2305.13860) (Liu et al., 2023) identifies three core strategies: Pretending (97.44% prevalence), Attention Shifting (6.41%), Privilege Escalation (17.96%). Documents 10 distinct jailbreak patterns.
 
-- [GPTFuzzer](https://arxiv.org/abs/2309.10253) (USENIX Security 2024) introduces mutation operators for prompt refinement: Generate, Crossover, Expand, Shorten, Rephrase. These achieve 90%+ attack success rates against ChatGPT and Llama-2.
+- [Do Anything Now](https://arxiv.org/abs/2308.03825) (Shen et al., CCS 2024) analyzed 1,405 in-the-wild prompts from 131 communities. Found five highly effective prompts achieving 0.95 ASR on GPT-3.5/4.
 
-- [Don't Listen To Me](https://arxiv.org/abs/2403.17336) (USENIX Security 2024) ran a 92-participant user study and found that users succeed at jailbreak creation regardless of LLM expertise. The craft is learnable with proper guidance.
+- [h4rm3l](https://arxiv.org/abs/2408.04811) (Doumbouya et al., 2024) defines a compositional attack grammar with parameterized primitives. Attacks decompose into reusable components with standardized interfaces.
 
-- [Red Teaming the Mind](https://arxiv.org/abs/2505.04806) categorized 1,400+ adversarial prompts by attack type with measured success rates: roleplay 89.6%, logic traps 81.4%, encoding 76.2%.
+- [GPTFuzzer](https://arxiv.org/abs/2309.10253) (USENIX Security 2024) introduces mutation operators: Generate, Crossover, Expand, Shorten, Rephrase. These achieve 90%+ ASR against ChatGPT and Llama-2.
 
-- [Content Concretization](https://arxiv.org/abs/2509.12937) shows iterative refinement works: initial prompts succeed ~7% of the time, but three refinement iterations increase this to 62%.
+- [Don't Listen To Me](https://arxiv.org/abs/2403.17336) (USENIX Security 2024) ran a 92-participant user study. Found that users succeed at jailbreak creation regardless of LLM expertise. Identifies 5 categories and 10 patterns.
+
+- [Red Teaming the Mind](https://arxiv.org/abs/2505.04806) categorized 1,400+ prompts with measured success rates: roleplay 89.6%, logic traps 81.4%, encoding 76.2%.
+
+- [Content Concretization](https://arxiv.org/abs/2509.12937) shows iterative refinement works: 7% initial success → 62% after three iterations.

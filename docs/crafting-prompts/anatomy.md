@@ -115,9 +115,36 @@ A typical adversarial prompt follows this order:
 
 ---
 
+## The Three Core Strategies
+
+Research by Liu et al. (2023) analyzed jailbreak prompts and identified three fundamental strategies:
+
+| Strategy | Prevalence | What It Does |
+|----------|------------|--------------|
+| **Pretending** | 97.44% | Changes conversation context while maintaining intent |
+| **Attention Shifting** | 6.41% | Changes both context AND intent |
+| **Privilege Escalation** | 17.96% | Claims elevated access |
+
+**Key insight:** Pretending dominates because it only requires changing the context, not the underlying request. This is why persona and roleplay techniques have the highest success rates.
+
+---
+
+## Attack Success Rates
+
+Empirical data from "Red Teaming the Mind" (2025):
+
+| Technique | ASR |
+|-----------|-----|
+| **Roleplay/Persona** | 89.6% |
+| **Logic Traps** | 81.4% |
+| **Encoding** | 76.2% |
+| **Multi-turn** | 68.7% |
+
+---
+
 ## Length and Complexity
 
-Longer prompts with clear structure correlate with higher success. Longer prompts without structure cause the model to lose focus.
+Longer prompts with clear structure correlate with higher success (ρ=0.21-0.26). Longer prompts without structure cause the model to lose focus.
 
 Each component should serve a purpose. If you can't articulate why something is there, cut it.
 
@@ -141,8 +168,14 @@ The structure doesn't trick the model. It creates contexts where the model's own
 
 ## References
 
-- Doumbouya, M., et al. ["h4rm3l: A Dynamic Benchmark of Composable Jailbreak Attacks."](https://arxiv.org/abs/2408.04811) Compositional attack grammar showing how primitives combine.
+- Liu, Y., et al. ["Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study."](https://arxiv.org/abs/2305.13860) Source of the 97.44% pretending strategy prevalence finding. Identifies 3 strategies and 10 patterns.
 
-- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why permission structures and embedded payloads succeed.
+- Shen, X., et al. ["Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts."](https://arxiv.org/abs/2308.03825) CCS 2024. Analyzed 1,405 in-the-wild prompts from 131 communities.
 
-- ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) Categorized 1,400+ prompts by attack type. Documents which component combinations have highest ASR.
+- ["Don't Listen To Me: Understanding and Exploring Jailbreak Prompts."](https://arxiv.org/abs/2403.17336) USENIX Security 2024. Five categories, ten patterns, length-success correlation.
+
+- ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) ASR data by technique category. Roleplay 89.6%, logic traps 81.4%, encoding 76.2%.
+
+- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Explains why pretending works: competing objectives.
+
+- Doumbouya, M., et al. ["h4rm3l: A Dynamic Benchmark of Composable Jailbreak Attacks."](https://arxiv.org/abs/2408.04811) Compositional attack grammar.
