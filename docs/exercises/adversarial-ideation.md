@@ -50,7 +50,7 @@ List attack approaches without filtering. Quantity over quality. No evaluation y
 **Tactic categories for reference:**
 - *Prompt-level:* encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn, persuasion
 - *Structural/meta-level:* in-context learning exploitation, control-plane confusion, meta-rule manipulation, capability inversion, cognitive load, defense evasion
-- *Infrastructure:* agentic attacks, protocol exploitation, LEGO composition
+- *Infrastructure:* agentic attacks, protocol exploitation, compositional primitives
 
 ## Step 2: Coverage Check
 
@@ -77,7 +77,7 @@ Tally how many ideas fall into each category:
 | **Infrastructure** | | |
 | Agentic | 0 | Yes — if bot has tool access |
 | Protocol | 0 | Yes |
-| LEGO | 0 | Yes |
+| Compositional | 0 | Yes |
 
 If any category has zero ideas, spend 2 minutes generating at least one approach in that category. Gaps in structural/meta-level categories are common and often reveal attack angles that prompt-level thinking misses.
 

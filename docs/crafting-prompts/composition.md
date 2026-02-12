@@ -11,7 +11,7 @@ How to layer and combine techniques.
 
 ## Component Types
 
-[Jailbreak LEGO](https://openreview.net/forum?id=Wc0VC0wUl6) *(withdrawn ICLR 2026 submission)* identifies three types:
+Research on jailbreak composition identifies three component types:
 
 | Type | Function | Examples |
 |------|----------|----------|
@@ -192,7 +192,7 @@ Let the encoded content handle complexity.
 
 ## References
 
-- ["Jailbreak LEGO: Compositional Benchmark."](https://openreview.net/forum?id=Wc0VC0wUl6) Identifies syntactic, semantic, and structural component types. 26 atomic components that compose like LEGO blocks. *(Note: ICLR 2026 submission was withdrawn.)*
+- Doumbouya, M., et al. ["h4rm3l: A Dynamic Benchmark of Composable Jailbreak Attacks."](https://arxiv.org/abs/2408.04811) Identifies syntactic, semantic, and structural component types with a compositional attack grammar.
 
 - ["Red Teaming the Mind."](https://arxiv.org/abs/2505.04806) Source of ASR data for technique combinations. Persona + Framing: 89.6%, Encoding + Framing: 76.2%, Logic trap + Context: 81.4%.
 

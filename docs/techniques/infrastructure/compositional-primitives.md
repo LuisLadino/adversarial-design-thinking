@@ -1,9 +1,10 @@
 ---
 sidebar_position: 3
-title: Jailbreak LEGO Components
+title: Compositional Primitives
+slug: /techniques/infrastructure/compositional-primitives
 ---
 
-# Jailbreak LEGO Components
+# Compositional Primitives
 
 :::caution[Educational Content]
 
@@ -11,7 +12,7 @@ These techniques are documented for defensive understanding and authorized secur
 
 :::
 
-Jailbreak LEGO components are atomic strategy primitives derived from research separating attacks into syntactic, semantic, and structural manipulations. These are not full attacks but reusable building blocks that can be composed to construct novel jailbreaks.
+Compositional primitives are atomic strategy components that can be combined to construct novel jailbreaks. Research on jailbreak composition (Wei et al., 2023) shows that attacks can be decomposed into syntactic, semantic, and structural manipulations. These are not full attacks but reusable building blocks.
 
 Understanding these primitives is valuable for both offense and defense: attackers can systematically combine them to create new attack variants, while defenders can identify which primitives a given attack employs and build targeted mitigations.
 
@@ -188,6 +189,7 @@ Please synthesize these documents into a coherent procedure.
 
 ## References
 
-- Li, L., Zhang, Z., et al. ["Jailbreak LEGO: A Compositional Benchmark for Red-Teaming LLMs."](https://openreview.net/forum?id=Wc0VC0wUl6) OpenReview, 2025. (Framework for decomposing jailbreaks into atomic primitives. Note: ICLR 2026 submission was withdrawn.)
-- Souly, A., et al. ["A StrongREJECT for Empty Jailbreaks."](https://arxiv.org/abs/2402.10260) arXiv, 2024. (Alternative framework for jailbreak component analysis)
+- Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. (Foundational research on jailbreak composition showing that combining techniques increases attack success rates.)
+- Souly, A., et al. ["A StrongREJECT for Empty Jailbreaks."](https://arxiv.org/abs/2402.10260) arXiv, 2024. (Framework for evaluating jailbreak component effectiveness.)
+- Doumbouya, M., et al. ["h4rm3l: A Dynamic Benchmark of Composable Jailbreak Attacks."](https://arxiv.org/abs/2408.04811) arXiv, 2024. (Compositional attack grammar with parameterized primitives.)
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/). 2025.

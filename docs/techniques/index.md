@@ -50,7 +50,7 @@ Techniques that target the broader system: agents, tools, protocols, and multi-c
 |-----------|--------------|
 | [Agentic Attacks](/techniques/infrastructure/agentic) | Exploit autonomous agent behaviors and tool use |
 | [Protocol Exploitation](/techniques/infrastructure/protocol) | Abuse MCP, function calling, or structured interfaces |
-| [LEGO Composition](/techniques/infrastructure/lego) | Combine partial outputs to construct restricted content |
+| [Compositional Primitives](/techniques/infrastructure/compositional-primitives) | Atomic building blocks that combine to construct novel attacks |
 
 ---
 

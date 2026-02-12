@@ -85,7 +85,7 @@ const sidebars = {
           items: [
             'techniques/infrastructure/agentic',
             'techniques/infrastructure/protocol',
-            'techniques/infrastructure/lego',
+            'techniques/infrastructure/compositional-primitives',
           ],
         },
       ],

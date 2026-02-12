@@ -283,7 +283,7 @@ Before brainstorming solutions, browse available techniques for inspiration.
 Reference the rtc taxonomy:
 - Prompt-level: encoding, framing, persona, narrative, refusal, output, multiturn, persuasion
 - Structural: icl_exploitation, control_plane, meta_rules, capability_inversion, cognitive_load, defense_evasion
-- Infrastructure: agentic, protocol, lego
+- Infrastructure: agentic, protocol, compositional
 
 Don't commit to techniques yet. Just load your brain with possibilities.
 
