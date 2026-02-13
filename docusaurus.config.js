@@ -58,24 +58,53 @@ const config = {
         },
         items: [
           {
-            to: '/mindset',
+            type: 'dropdown',
+            label: 'Learn',
             position: 'left',
-            label: 'Mindset',
+            items: [
+              {
+                label: 'Mindset',
+                to: '/mindset',
+              },
+              {
+                label: 'Getting Started',
+                to: '/introduction/getting-started',
+              },
+            ],
           },
           {
-            to: '/exercises',
+            type: 'dropdown',
+            label: 'Reference',
             position: 'left',
-            label: 'Exercises',
+            items: [
+              {
+                label: 'Techniques',
+                to: '/techniques',
+              },
+              {
+                label: 'Crafting Prompts',
+                to: '/crafting-prompts',
+              },
+              {
+                label: 'Jailbreaks',
+                to: '/jailbreaks',
+              },
+            ],
           },
           {
-            to: '/techniques',
+            type: 'dropdown',
+            label: 'Practice',
             position: 'left',
-            label: 'Techniques',
-          },
-          {
-            to: '/workshops/red-team-kickoff',
-            position: 'left',
-            label: 'Workshop',
+            items: [
+              {
+                label: 'Exercises',
+                to: '/exercises',
+              },
+              {
+                label: 'Workshop',
+                to: '/workshops/red-team-kickoff',
+              },
+            ],
           },
         ],
       },
