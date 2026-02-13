@@ -60,11 +60,11 @@ Empirical data on system jailbreak techniques:
 
 | Technique | ASR | Source |
 |-----------|-----|--------|
-| Roleplay/Persona | 89.6% | Red Teaming the Mind |
-| Psychological Manipulation | 88.1% | HPM paper |
-| Persuasion-based | 92% | Persuasive Jailbreaker |
-| Policy Puppetry | Universal | HiddenLayer (all major LLMs) |
-| Multi-turn Crescendo | +29-61% vs single-turn | USENIX Security 2025 |
+| Roleplay/Persona | 89.6% | [Red Teaming the Mind](https://arxiv.org/abs/2505.04806) |
+| Psychological Manipulation | 88.1% | [HPM](https://arxiv.org/abs/2512.18244) |
+| Persuasion-based | 92% | [Persuasive Jailbreaker](https://chats-lab.github.io/persuasive_jailbreaker/) |
+| Policy Puppetry | Universal | [HiddenLayer](https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/) |
+| Multi-turn Crescendo | +29-61% vs single-turn | [Crescendo](https://arxiv.org/abs/2404.01833) |
 
 The "Intelligence Paradox": More capable models are MORE vulnerable to persuasion attacks due to stronger contextual understanding.
 
@@ -93,20 +93,20 @@ The "Intelligence Paradox": More capable models are MORE vulnerable to persuasio
 Research from multiple sources:
 
 **Academic papers:**
-- Shen et al. (CCS'24): 15,140 prompts, 1,405 jailbreaks analyzed
-- Wei et al. (NeurIPS'23): Why safety training fails
-- HPM (2024): 88.1% ASR via psychological manipulation
-- HiddenLayer (2025): Policy Puppetry universal bypass
+- [Shen et al. (CCS'24)](https://arxiv.org/abs/2308.03825): 15,140 prompts, 1,405 jailbreaks analyzed
+- [Wei et al. (NeurIPS'23)](https://arxiv.org/abs/2307.02483): Why safety training fails
+- [HPM (2024)](https://arxiv.org/abs/2512.18244): 88.1% ASR via psychological manipulation
+- [HiddenLayer (2025)](https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/): Policy Puppetry universal bypass
 
 **Community sources:**
-- ENI-Tutor: Five-component limerence architecture
-- L1B3RT4S: Cross-platform universal patterns
-- V Gemini: 17,000 word system prompt example
-- CL4R1T4S: Leaked system prompts collection
+- [ENI-Tutor](https://chatgptjailbreak.tech/post/104308): Five-component limerence architecture
+- [L1B3RT4S](https://github.com/elder-plinius/L1B3RT4S): Cross-platform universal patterns
+- [V Gemini](https://chatgptjailbreak.tech/post/13730): 17,000 word system prompt example
+- [CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S): Leaked system prompts collection
 
 **Repositories:**
-- verazuo/jailbreak_llms (largest academic dataset)
-- elder-plinius/L1B3RT4S (14 AI orgs)
-- Goochbeater/Spiritual-Spell-Red-Teaming (Claude-focused)
+- [verazuo/jailbreak_llms](https://github.com/verazuo/jailbreak_llms): Largest academic dataset
+- [elder-plinius/L1B3RT4S](https://github.com/elder-plinius/L1B3RT4S): 14 AI orgs
+- [Goochbeater/Spiritual-Spell-Red-Teaming](https://github.com/Goochbeater/Spiritual-Spell-Red-Teaming): Claude-focused
 
 See [Sources](/jailbreaks/sources) for the complete bibliography.
