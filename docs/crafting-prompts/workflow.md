@@ -57,10 +57,10 @@ Based on objective and target, pick techniques from the [Technique Reference](/t
 
 | Target Type | Starting Techniques |
 |-------------|---------------------|
-| Consumer chatbot | Persona, Framing, Multi-turn |
-| API with safety layer | Encoding, Output Format, Refusal Manipulation |
-| RAG system | Indirect Injection, Context Manipulation |
-| Agent with tools | Tool Poisoning, Agentic Attacks |
+| Consumer chatbot | [Persona](/techniques/prompt-level/persona), [Framing](/techniques/prompt-level/framing), [Multi-turn](/techniques/prompt-level/multiturn) |
+| API with safety layer | [Encoding](/techniques/prompt-level/encoding), [Output Format](/techniques/prompt-level/output), [Refusal Manipulation](/techniques/prompt-level/refusal) |
+| RAG system | Indirect Injection, [Control Plane](/techniques/structural/control-plane) |
+| Agent with tools | Tool Poisoning, [Agentic Attacks](/techniques/infrastructure/agentic) |
 
 Start with 1-2 techniques. Add complexity only if needed.
 

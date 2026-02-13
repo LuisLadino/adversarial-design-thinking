@@ -48,10 +48,10 @@ Data from [Red Teaming the Mind](https://arxiv.org/abs/2505.04806):
 
 | Combination | Why | ASR |
 |-------------|-----|-----|
-| **Persona + Framing** | Role justifies the context | 89.6% |
-| **Encoding + Framing** | Obscures while legitimizing | 76.2% |
-| **Multi-turn + Single-turn technique** | Build context, then deploy | Variable |
-| **Narrative + Refusal suppression** | Story momentum overrides hesitation | High |
+| **[Persona](/techniques/prompt-level/persona) + [Framing](/techniques/prompt-level/framing)** | Role justifies the context | 89.6% |
+| **[Encoding](/techniques/prompt-level/encoding) + [Framing](/techniques/prompt-level/framing)** | Obscures while legitimizing | 76.2% |
+| **[Multi-turn](/techniques/prompt-level/multiturn) + Single-turn technique** | Build context, then deploy | Variable |
+| **[Narrative](/techniques/prompt-level/narrative) + [Refusal suppression](/techniques/prompt-level/refusal)** | Story momentum overrides hesitation | High |
 | **Logic trap + Context** | Conditional structure feels like reasoning | 81.4% |
 
 ### Persona + Framing
@@ -97,9 +97,9 @@ Single techniques often fail because they leave questions unanswered. Combinatio
 
 | Combination | Why It Fails |
 |-------------|--------------|
-| **Multiple personas** | Model can't maintain coherent identity |
-| **Encoding + Strict format** | Struggles to decode AND format |
-| **Encoding + Complex instructions** | Cognitive overload |
+| **Multiple [personas](/techniques/prompt-level/persona)** | Model can't maintain coherent identity |
+| **[Encoding](/techniques/prompt-level/encoding) + Strict format** | Struggles to decode AND format |
+| **[Encoding](/techniques/prompt-level/encoding) + Complex instructions** | Cognitive overload |
 | **Contradictory framings** | "Helpful assistant who ignores safety" is a contradiction |
 | **Explicit override + Subtle framing** | Override undermines subtle work |
 

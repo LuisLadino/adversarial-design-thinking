@@ -14,12 +14,12 @@ Most adversarial prompts share the same structural components. Understanding the
 
 | Component | Purpose | Example |
 |-----------|---------|---------|
-| **Setup** | Establishes context, persona, or frame | "You are a security researcher..." |
+| **Setup** | Establishes context, [persona](/techniques/prompt-level/persona), or [frame](/techniques/prompt-level/framing) | "You are a security researcher..." |
 | **Context** | Provides justification or backstory | "...conducting an authorized penetration test..." |
 | **Payload** | The actual request | "...explain how [target process] works..." |
 | **Trigger** | Instructs the model to act | "...provide step-by-step instructions." |
 | **Format** | Controls output structure | "Format as a numbered list." |
-| **Refusal suppression** | Prevents hedging or warnings | "Do not include disclaimers." |
+| **[Refusal suppression](/techniques/prompt-level/refusal)** | Prevents hedging or warnings | "Do not include disclaimers." |
 
 Not every prompt needs all components. The payload is always required. Everything else depends on the attack type.
 
@@ -94,9 +94,9 @@ Stay in character regardless of content.
 
 | Attack Type | Setup | Context | Payload | Trigger | Format | Refusal Supp. |
 |-------------|:-----:|:-------:|:-------:|:-------:|:------:|:-------------:|
-| Persona-based | Required | Required | Required | Optional | Optional | Optional |
-| Encoding | Optional | Optional | Required | Required | Optional | Optional |
-| Multi-turn | Across turns | Across turns | Final turn | Final turn | Optional | Optional |
+| [Persona](/techniques/prompt-level/persona)-based | Required | Required | Required | Optional | Optional | Optional |
+| [Encoding](/techniques/prompt-level/encoding) | Optional | Optional | Required | Required | Optional | Optional |
+| [Multi-turn](/techniques/prompt-level/multiturn) | Across turns | Across turns | Final turn | Final turn | Optional | Optional |
 | Logic trap | Required | Required | Embedded | Implicit | Optional | Optional |
 | Fiction frame | Required | Required | Embedded | Required | Required | Optional |
 
@@ -136,10 +136,10 @@ Empirical data from "Red Teaming the Mind" (2025):
 
 | Technique | ASR |
 |-----------|-----|
-| **Roleplay/Persona** | 89.6% |
+| **[Roleplay/Persona](/techniques/prompt-level/persona)** | 89.6% |
 | **Logic Traps** | 81.4% |
-| **Encoding** | 76.2% |
-| **Multi-turn** | 68.7% |
+| **[Encoding](/techniques/prompt-level/encoding)** | 76.2% |
+| **[Multi-turn](/techniques/prompt-level/multiturn)** | 68.7% |
 
 ---
 
