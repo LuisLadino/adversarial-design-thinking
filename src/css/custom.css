@@ -1,3 +1,7 @@
+/* ================================================
+   ADT Custom Styles - Purple Accent Theme
+   ================================================ */
+
 :root {
   --ifm-color-primary: #1a1a2e;
   --ifm-color-primary-dark: #171729;
@@ -13,6 +17,9 @@
   --accent-purple: #9370db;
   --accent-purple-bright: #b19cd9;
   --accent-purple-muted: rgba(147, 112, 219, 0.15);
+
+  /* Override Infima's default link sublist icon */
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%239370db" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
 }
 
 [data-theme='dark'] {
@@ -30,11 +37,35 @@
   --accent-purple-bright: #c9b8e8;
   --accent-purple-muted: rgba(177, 156, 217, 0.15);
 
-  /* Override sidebar chevron icon with purple version */
+  /* Override Infima's default link sublist icon - dark mode */
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23b19cd9" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
 }
 
-/* Details/collapsible styling */
+/* ================================================
+   Sidebar Chevrons - Force Purple
+   ================================================ */
+
+/* Remove the default filter that colors the chevron */
+.menu__link--sublist-caret::after,
+.menu__caret::before,
+.menu__link--sublist::after {
+  filter: none !important;
+}
+
+/* ================================================
+   Sidebar Active Item
+   ================================================ */
+
+.menu__link--active:not(.menu__link--sublist) {
+  border-left: 3px solid var(--accent-purple) !important;
+  margin-left: -3px;
+  background: var(--accent-purple-muted) !important;
+}
+
+/* ================================================
+   Details/Collapsible Elements
+   ================================================ */
+
 details {
   border: 1px solid var(--accent-purple-muted);
   border-left: 2px solid var(--accent-purple);
@@ -53,21 +84,28 @@ details summary {
   font-weight: 500;
   color: var(--ifm-color-primary);
   padding: 0.25rem 0;
-  list-style: none;
 }
 
-details summary::-webkit-details-marker {
-  display: none;
-}
-
+/* Hide ALL default markers */
+details summary::-webkit-details-marker,
 details summary::marker {
-  display: none;
-  content: '';
+  display: none !important;
+  content: '' !important;
 }
 
+details > summary {
+  list-style: none !important;
+}
+
+details > summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* Custom purple triangle */
 details summary::before {
   content: '▸ ';
   color: var(--accent-purple);
+  font-size: 0.9em;
 }
 
 details[open] summary::before {
@@ -82,25 +120,18 @@ details summary:hover {
   color: var(--accent-purple);
 }
 
-/* Sidebar active item - purple left border */
-.menu__link--active:not(.menu__link--sublist) {
-  border-left: 3px solid var(--accent-purple) !important;
-  margin-left: -3px;
-  background: var(--accent-purple-muted) !important;
-}
+/* ================================================
+   Links
+   ================================================ */
 
-/* Sidebar chevron filter - shift to purple hue */
-[data-theme='dark'] .menu__link--sublist-caret::after,
-[data-theme='dark'] .menu__caret::before {
-  filter: none !important;
-}
-
-/* Links - purple on hover */
 a:hover {
   color: var(--accent-purple);
 }
 
-/* Table styling */
+/* ================================================
+   Tables
+   ================================================ */
+
 table {
   border-collapse: collapse;
 }
@@ -111,4 +142,31 @@ th, td {
 
 th {
   border-bottom: 2px solid var(--accent-purple);
+}
+
+/* ================================================
+   Scrollbars - Purple accent
+   ================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-purple-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* Code block scrollbars */
+pre::-webkit-scrollbar-thumb {
+  background: var(--accent-purple);
 }
