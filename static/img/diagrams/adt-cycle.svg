@@ -106,20 +106,20 @@
     <text x="90" y="72" class="text-sub">Evaluate &amp; learn</text>
   </g>
 
-  <!-- Flow Arrows - balanced curves -->
-  <!-- 1→2: Empathize (right) to Define (top) -->
-  <path d="M590,100 C660,100 700,140 700,190" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- Flow Arrows - quadratic curves flowing clockwise around center -->
+  <!-- 1→2: Empathize to Define -->
+  <path d="M590,140 Q680,170 700,210" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
-  <!-- 2→3: Define (bottom) to Ideate (right) -->
-  <path d="M790,300 C790,370 760,420 690,430" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- 2→3: Define to Ideate -->
+  <path d="M800,300 Q830,380 780,430" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
-  <!-- 3→4: Ideate (left) to Prototype (right) -->
-  <path d="M600,480 C520,480 480,480 410,480" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- 3→4: Ideate to Prototype -->
+  <path d="M600,490 Q500,540 400,490" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
-  <!-- 4→5: Prototype (top) to Test (bottom) -->
-  <path d="M310,430 C310,370 300,310 300,300" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- 4→5: Prototype to Test -->
+  <path d="M230,430 Q170,380 200,300" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
-  <!-- 5→1: Test (top) to Empathize (left) -->
-  <path d="M210,200 C210,140 340,100 400,100" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- 5→1: Test to Empathize -->
+  <path d="M200,200 Q280,120 410,140" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
 </svg>
