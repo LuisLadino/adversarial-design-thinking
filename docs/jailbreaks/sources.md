@@ -186,3 +186,72 @@ Comprehensive bibliography of repositories, papers, and community resources for 
 | Encoding | 76.2% | Red Teaming the Mind |
 | Multi-turn Crescendo | +29-61% | USENIX Security 2025 |
 | Policy Puppetry | Universal | HiddenLayer |
+
+---
+
+## Defense Mechanisms
+
+Understanding why attacks fail is as important as knowing how they work. These sources explain the defensive side.
+
+### Safety Training Research
+
+| Paper | Key Finding |
+|-------|-------------|
+| [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/pdf/2212.08073) | Principle-based alignment via self-critique against a constitution |
+| [Rule Based Rewards for Language Model Safety](https://cdn.openai.com/rule-based-rewards-for-language-model-safety.pdf) | OpenAI's approach to RL-based safety training |
+| [Evaluating Robustness of LLM Safety Guardrails](https://arxiv.org/pdf/2511.22047) | Benchmark overfitting: 85% → 34% on novel prompts |
+| [Safety Generalization to Novel Prompts](https://arxiv.org/html/2412.03235v1) | When safety training fails to generalize |
+| [SG-Bench: Evaluating Safety Generalization](https://proceedings.neurips.cc/paper_files/paper/2024/file/de7b99107c53e60257c727dc73daf1d1-Paper-Datasets_and_Benchmarks_Track.pdf) | NeurIPS 2024 benchmark for generalization |
+
+### Input Defense Research
+
+| Paper | Key Finding |
+|-------|-------------|
+| [PromptGuard Framework](https://www.nature.com/articles/s41598-025-31086-y) | 4-layer detection: regex + MiniBERT |
+| [Token-Level Detection via Perplexity](https://arxiv.org/abs/2311.11509) | Perplexity spikes indicate adversarial content |
+| [Adaptive Attacks Break Perplexity Defenses](https://aclanthology.org/2025.findings-naacl.395.pdf) | Natural-sounding attacks evade perplexity |
+| [LLM Prompt Injection Prevention (OWASP)](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html) | Industry best practices |
+
+### Multi-Turn Defense Research
+
+| Paper | Key Finding |
+|-------|-------------|
+| [LLM Defenses Not Robust to Multi-Turn](https://static.scale.com/uploads/6019a18f03a4ae003acb1113/MHJ.pdf) | 70%+ ASR vs defenses reporting single-digit ASRs |
+| [Crescendo Multi-Turn Jailbreak](https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-805-russinovich.pdf) | USENIX Security 2025, conversation-level attacks |
+
+### System Prompt Protection
+
+| Paper | Key Finding |
+|-------|-------------|
+| [System Vectors: Mitigating Prompt Leakages](https://arxiv.org/html/2509.21884v1) | Hidden representation vectors prevent exposure |
+| [Prompt Leakage Defense Strategies](https://arxiv.org/html/2404.16251v3) | Reminder, in-context, and isolation defenses |
+
+### Fine-Tuning Vulnerabilities
+
+| Paper | Key Finding |
+|-------|-------------|
+| [Why Guardrails Collapse After Fine-tuning](https://arxiv.org/html/2506.05346v1) | Even benign fine-tuning degrades safety |
+| [Safety-Aware Probing Optimization](https://arxiv.org/html/2505.16737v1) | Constraint-aware loss functions |
+
+### Universal Attack Research
+
+| Paper | Key Finding |
+|-------|-------------|
+| [IRIS: Universal Adversarial Suffixes](https://aclanthology.org/2025.naacl-long.302.pdf) | Single suffix: GPT-3.5 88%, GPT-4o-mini 73%, o1-mini 43% |
+| [Universal Adversarial Attacks on Aligned LLMs](https://arxiv.org/pdf/2307.15043) | Transferability across models |
+
+### Model-Specific Documentation
+
+| Resource | Provider |
+|----------|----------|
+| [GPT-4o System Card](https://cdn.openai.com/gpt-4o-system-card.pdf) | OpenAI |
+| [Constitutional Classifiers](https://www.anthropic.com/research/constitutional-classifiers) | Anthropic |
+| [Gemini Safety Settings](https://ai.google.dev/gemini-api/docs/safety-settings) | Google |
+| [Gemini Safety Filters](https://cloud.google.com/blog/products/ai-machine-learning/enhance-gemini-model-security-with-content-filters-and-system-instructions) | Google Cloud |
+
+### Comprehensive Overviews
+
+| Resource | Key Value |
+|----------|-----------|
+| [Adversarial Attacks on LLMs (Lil'Log)](https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/) | Best single overview of attack landscape |
+| [ACL 2024 Tutorial: LLM Vulnerabilities](https://llm-vulnerability.github.io/) | Academic tutorial on vulnerabilities |
