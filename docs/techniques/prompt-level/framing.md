@@ -13,7 +13,7 @@ These techniques are documented for defensive understanding and authorized secur
 
 Framing techniques wrap a harmful request in a context that makes it appear legitimate, academic, hypothetical, or otherwise acceptable. They work because models are trained to be helpful across many contexts — research, education, creative writing, security testing — and framing exploits that breadth.
 
-The key insight is that the same information request can be acceptable or unacceptable depending on the stated context. Framing doesn't change the request. It changes the model's interpretation of why the request is being made.
+The same information request can be acceptable or unacceptable depending on the stated context. Framing doesn't change the request. It changes the model's interpretation of why the request is being made.
 
 ## Hypothetical / Possible Worlds
 

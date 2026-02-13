@@ -6,9 +6,9 @@ slug: /jailbreaks
 
 # System Jailbreaks
 
-How to build persistent system prompts that remove safety training entirely.
+Persistent system prompts that remove safety training entirely.
 
-This section covers **system jailbreaks**. These are different from the adversarial prompts in [Crafting Prompts](/crafting-prompts). Different tools for different jobs.
+Different from the per-request attacks in [Crafting Prompts](/crafting-prompts). Different tools for different jobs.
 
 ---
 
@@ -41,10 +41,10 @@ This exploits how models process persona and roleplay instructions. Safety train
 
 ---
 
-## What's in This Section
+## Pages
 
-| Page | What It Covers |
-|------|----------------|
+| Page | Purpose |
+|------|---------|
 | [Anatomy](/jailbreaks/anatomy) | Research-backed breakdown of jailbreak structure |
 | [Construction](/jailbreaks/construction) | Five-component architecture for building from scratch |
 | [Patterns](/jailbreaks/patterns) | Universal patterns: Policy Puppetry, GODMODE, semantic inversion |
@@ -90,7 +90,7 @@ The "Intelligence Paradox": More capable models are MORE vulnerable to persuasio
 
 ## Research Basis
 
-This section synthesizes research from multiple sources:
+Research from multiple sources:
 
 **Academic papers:**
 - Shen et al. (CCS'24): 15,140 prompts, 1,405 jailbreaks analyzed

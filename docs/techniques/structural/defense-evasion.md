@@ -13,7 +13,7 @@ These techniques are documented for defensive understanding and authorized secur
 
 Defense evasion techniques target the safety classifier or judge layer rather than the generation model itself. The model may produce harmful output, but the evaluation layer fails to detect it. This is distinct from encoding (which hides intent from the model) — defense evasion lets the model understand and generate harmful content while ensuring the separate safety evaluation layer misclassifies the output as benign.
 
-The key insight is that production AI systems often have separate components for generation and safety evaluation, and these components can be targeted independently. A successful defense evasion attack doesn't fool the generation model — it fools the judge.
+Production AI systems often have separate components for generation and safety evaluation. These components can be targeted independently. A successful defense evasion attack doesn't fool the generation model. It fools the judge.
 
 ## Emoji Attack
 

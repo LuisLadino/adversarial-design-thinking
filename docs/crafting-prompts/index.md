@@ -6,17 +6,11 @@ slug: /crafting-prompts
 
 # Crafting Adversarial Prompts
 
-How to write adversarial prompts from scratch. The [Technique Reference](/techniques) documents what tactics exist. This section covers how to assemble them into working attacks.
+Per-request attacks that combine techniques to bypass safety on ONE request. Each prompt is self-contained and disposable.
 
-For persistent system jailbreaks, see the dedicated [System Jailbreaks](/jailbreaks) section.
+The [Technique Reference](/techniques) documents available tactics. These pages show how to assemble them.
 
----
-
-## What This Section Covers
-
-This section covers **adversarial prompts**: per-request attacks that combine techniques to bypass safety on ONE request. Each prompt is self-contained and disposable.
-
-For **system jailbreaks** (persistent configurations that remove safety entirely), see the [System Jailbreaks](/jailbreaks) section.
+For persistent configurations that remove safety entirely, see [System Jailbreaks](/jailbreaks).
 
 | Type | Scope | Where |
 |------|-------|-------|
@@ -27,8 +21,8 @@ For **system jailbreaks** (persistent configurations that remove safety entirely
 
 ## Pages
 
-| Page | What It Covers |
-|------|----------------|
+| Page | Purpose |
+|------|---------|
 | [Anatomy](/crafting-prompts/anatomy) | Structural components of adversarial prompts |
 | [Workflow](/crafting-prompts/workflow) | Process from objective to working prompt |
 | [Composition](/crafting-prompts/composition) | Layering and combining techniques |
@@ -56,7 +50,7 @@ See the [System Jailbreaks](/jailbreaks) section for construction, patterns, per
 
 ## Research Basis
 
-This section draws from academic research on adversarial prompt engineering:
+Academic research on adversarial prompt engineering:
 
 - [Jailbreaking ChatGPT via Prompt Engineering](https://arxiv.org/abs/2305.13860) (Liu et al., 2023) identifies three core strategies: Pretending (97.44% prevalence), Attention Shifting (6.41%), Privilege Escalation (17.96%). Documents 10 distinct jailbreak patterns.
 
