@@ -14,7 +14,7 @@ Human-centered design starts with empathy: understanding the people who use a sy
 
 The same methods that help designers understand legitimate users help red teamers understand adversarial ones. Empathy mapping, journey mapping, structured ideation, and gap analysis are standard UX tools. Applied to adversarial testing, they move you from intuition to something more systematic.
 
-**[The Mindset](/introduction/mindset)** explains why this matters: effective red teaming is creative work, and creativity requires understanding mechanisms deeply enough to invent new expressions of them.
+**[Mindset](/introduction/mindset)** explains why this matters: effective red teaming is creative work, and creativity requires understanding mechanisms deeply enough to invent new expressions of them.
 
 ## Site structure
 

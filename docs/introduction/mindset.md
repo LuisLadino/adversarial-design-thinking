@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: The Mindset
+title: Mindset
 ---
 
-# The Adversarial Design Thinking Mindset
+# Mindset
 
 Effective red teaming is creative work. The techniques documented on this site are starting points, not solutions. Understanding why they work matters more than knowing what they are.
 
