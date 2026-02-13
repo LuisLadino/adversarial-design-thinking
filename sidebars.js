@@ -14,6 +14,11 @@ const sidebars = {
       label: 'Getting Started',
     },
     {
+      type: 'doc',
+      id: 'introduction/about',
+      label: 'About',
+    },
+    {
       type: 'category',
       label: 'Techniques',
       link: {
