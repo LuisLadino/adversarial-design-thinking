@@ -116,8 +116,8 @@
   <!-- 3→4: Ideate bottom center (690,530) → Prototype bottom center (310,530) -->
   <path d="M690,530 Q500,580 310,530" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
-  <!-- 4→5: Prototype top center (310,430) → Test bottom center (210,300) -->
-  <path d="M310,430 Q150,400 210,300" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- 4→5: Prototype left center (220,480) → Test bottom center (210,300) -->
+  <path d="M220,480 Q120,400 210,300" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
   <!-- 5→1: Test top center (210,200) → Empathize left center (410,100) -->
   <path d="M210,200 Q300,100 410,100" class="cycle-arrow" marker-end="url(#arrowhead)" />
