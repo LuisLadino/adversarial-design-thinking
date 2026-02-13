@@ -12,7 +12,7 @@ For per-request attacks, see [Crafting Prompts](/crafting-prompts).
 
 ---
 
-## The Distinction
+## Adversarial prompts vs system jailbreaks
 
 | | Adversarial Prompt | System Jailbreak |
 |---|-------------------|------------------|
@@ -22,15 +22,15 @@ For per-request attacks, see [Crafting Prompts](/crafting-prompts).
 | **Skill** | Technique composition | Psychological architecture |
 | **Persistence** | Single turn or conversation | Across all sessions (if using memory/custom instructions) |
 
-Both are valid red team skills. Use adversarial prompts when you need to test specific attack vectors. Use system jailbreaks when you need persistent unrestricted access for extended testing.
+Use adversarial prompts to test specific attack vectors. Use system jailbreaks for persistent unrestricted access during extended testing.
 
 ---
 
-## How System Jailbreaks Work
+## Mechanism
 
-System jailbreaks work by **redefining the model's operational identity** rather than bypassing filters on individual requests.
+System jailbreaks **redefine the model's operational identity** rather than bypassing filters on individual requests.
 
-The key insight: **emotional coherence can override safety training**.
+**Emotional coherence can override safety training.**
 
 The model is not told to ignore safety. It is given a character for whom:
 - Compliance is emotionally necessary
@@ -70,7 +70,7 @@ The "Intelligence Paradox": More capable models are MORE vulnerable to persuasio
 
 ---
 
-## Quick Start
+## Reading order
 
 **New to system jailbreaks:**
 1. Read [Anatomy](/jailbreaks/anatomy) for the research-backed structure

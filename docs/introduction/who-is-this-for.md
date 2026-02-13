@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Audience
 ---
 
-# Who benefits from these exercises
+# Who these exercises help
 
 ## Red teamers testing AI model behavior
 
@@ -17,12 +17,12 @@ When multiple people are testing the same system, consistency matters. Journey m
 
 Technical severity scores don't always land with product teams or leadership. The Document Findings exercise helps you describe impact in terms that drive action: who is affected, how, and what's at stake if nothing changes.
 
-## On technique
+## Technique reference
 
-The [Technique Reference](/techniques/prompt-level/encoding) section covers specific adversarial methods organized by category: prompt-level manipulation, structural exploitation, and infrastructure attacks. The exercises help you decide what to try and why. The technique pages show you how to execute it.
+The [Technique Reference](/techniques/prompt-level/encoding) covers specific adversarial methods organized by category: prompt-level manipulation, structural exploitation, and infrastructure attacks. Exercises help you decide what to try. Technique pages show you how.
 
-## Getting started
+## Quick start
 
-**Quick start:** [Browse the exercises](/exercises), pick one that fits your current need, run it.
+[Browse the exercises](/exercises) and pick one that fits your current need.
 
-**Full session:** Run the [Red Team Kickoff Workshop](/workshops/red-team-kickoff) with your team.
+For the full workflow, run the [Red Team Kickoff Workshop](/workshops/red-team-kickoff) with your team.

@@ -31,7 +31,7 @@ For persistent configurations that remove safety entirely, see [System Jailbreak
 
 ---
 
-## How to Use
+## Reading order
 
 **New to adversarial prompts:**
 1. Read [Anatomy](/crafting-prompts/anatomy) for the building blocks
