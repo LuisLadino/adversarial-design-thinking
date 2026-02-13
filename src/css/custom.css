@@ -8,6 +8,11 @@
   --ifm-color-primary-lightest: #23233c;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Purple accent - subtle, not primary */
+  --accent-purple: #7c6f9c;
+  --accent-purple-light: #9a8fba;
+  --accent-purple-muted: rgba(124, 111, 156, 0.15);
 }
 
 [data-theme='dark'] {
@@ -19,4 +24,56 @@
   --ifm-color-primary-lighter: #cacee4;
   --ifm-color-primary-lightest: #e8eaf2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Purple accent - dark mode */
+  --accent-purple: #a799c7;
+  --accent-purple-light: #bfb3d9;
+  --accent-purple-muted: rgba(167, 153, 199, 0.12);
+}
+
+/* Details/collapsible - outline style, subtle */
+details {
+  border: 1px solid var(--accent-purple-muted);
+  border-left: 2px solid var(--accent-purple);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background: transparent;
+}
+
+details[open] {
+  background: var(--accent-purple-muted);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  padding: 0.25rem 0;
+}
+
+[data-theme='dark'] details summary {
+  color: var(--ifm-color-primary-light);
+}
+
+details summary:hover {
+  color: var(--accent-purple);
+}
+
+/* Links - subtle purple on hover */
+a:hover {
+  color: var(--accent-purple);
+}
+
+/* Table styling - cleaner lines */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid var(--accent-purple-muted);
+}
+
+th {
+  border-bottom: 2px solid var(--accent-purple);
 }
