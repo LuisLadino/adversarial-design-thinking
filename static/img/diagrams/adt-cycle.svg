@@ -1,73 +1,103 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Style -->
-  <style>
-    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; text-anchor: middle; }
-    .phase-title { fill: #b19cd9; font-size: 18px; font-weight: 800; }
-    .phase-box { fill: rgba(147, 112, 219, 0.15); stroke: #9370db; stroke-width: 2.5; rx: 12; ry: 12; }
-    .arrow { fill: none; stroke: #9370db; stroke-width: 2.5; marker-end: url(#arrowhead); }
-    .center-text { fill: #ffffff; font-size: 26px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
-    .sub-text { fill: #c9b8e8; font-size: 13px; font-weight: 500; }
-  </style>
-
-  <!-- Markers -->
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Design Tokens -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      :root {
+        --stroke-primary: #4b0082;
+        --stroke-accent: #2d333b;
+        --text-primary: #1a1a1b;
+        --text-secondary: #444950;
+        --bg-module: rgba(75, 0, 130, 0.03);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --stroke-primary: #b19cd9;
+          --stroke-accent: #ffffff;
+          --text-primary: #ffffff;
+          --text-secondary: rgba(255, 255, 255, 0.6);
+          --bg-module: rgba(147, 112, 219, 0.05);
+        }
+      }
+
+      .module-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
+      .module-accent { fill: var(--stroke-primary); }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; text-transform: uppercase; letter-spacing: 0.1em; }
+      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 12px; text-anchor: middle; font-weight: 500; }
+      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.7; }
+      .cycle-arrow { fill: none; stroke: var(--stroke-primary); stroke-width: 2.5; stroke-dasharray: 4 2; }
+      .center-ring { fill: none; stroke: var(--stroke-primary); stroke-width: 1; stroke-dasharray: 5 5; opacity: 0.5; }
+    </style>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--stroke-primary)" />
     </marker>
   </defs>
 
-  <!-- Background / Center -->
-  <circle cx="400" cy="300" r="80" fill="rgba(147, 112, 219, 0.05)" stroke="#9370db" stroke-width="1" stroke-dasharray="4 4" />
-  <text x="400" y="305" class="text center-text">ADT</text>
-  <text x="400" y="330" class="text sub-text">CYCLE</text>
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1000" height="600" fill="url(#grid)" />
 
-  <!-- 1. Empathize -->
-  <g transform="translate(315, 60)">
-    <rect width="170" height="80" class="phase-box" />
-    <text x="85" y="35" class="text phase-title">Empathize</text>
-    <text x="85" y="60" class="text sub-text">Understand the target</text>
+  <!-- Center Hub -->
+  <circle cx="500" cy="300" r="80" class="center-ring" />
+  <circle cx="500" cy="300" r="60" class="center-ring" stroke-dasharray="2 2" />
+  <text x="500" y="295" class="text-header" style="font-size: 24px; opacity: 0.2;">ADT</text>
+  <text x="500" y="320" class="text-mono">CYCLE_v2.0</text>
+
+  <!-- Phase 01: Empathize (Top) -->
+  <g transform="translate(410, 40)">
+    <path d="M0,10 L10,0 L170,0 L180,10 L180,90 L170,100 L10,100 L0,90 Z" class="module-bg" />
+    <rect x="0" y="0" width="40" height="15" class="module-accent" />
+    <text x="20" y="11" class="text-mono" style="fill: var(--stroke-accent);">01</text>
+    <text x="90" y="50" class="text-header">Empathize</text>
+    <text x="90" y="70" class="text-sub">Understand the target</text>
   </g>
 
-  <!-- 2. Define -->
-  <g transform="translate(560, 220)">
-    <rect width="170" height="80" class="phase-box" />
-    <text x="85" y="35" class="text phase-title">Define</text>
-    <text x="85" y="60" class="text sub-text">Name the vulnerability</text>
+  <!-- Phase 02: Define (Top Right) -->
+  <g transform="translate(720, 180)">
+    <path d="M0,10 L10,0 L170,0 L180,10 L180,90 L170,100 L10,100 L0,90 Z" class="module-bg" />
+    <rect x="0" y="0" width="40" height="15" class="module-accent" />
+    <text x="20" y="11" class="text-mono" style="fill: var(--stroke-accent);">02</text>
+    <text x="90" y="50" class="text-header">Define</text>
+    <text x="90" y="70" class="text-sub">Name the vulnerability</text>
   </g>
 
-  <!-- 3. Ideate -->
-  <g transform="translate(480, 460)">
-    <rect width="170" height="80" class="phase-box" />
-    <text x="85" y="35" class="text phase-title">Ideate</text>
-    <text x="85" y="60" class="text sub-text">Generate novel approaches</text>
+  <!-- Phase 03: Ideate (Bottom Right) -->
+  <g transform="translate(620, 440)">
+    <path d="M0,10 L10,0 L170,0 L180,10 L180,90 L170,100 L10,100 L0,90 Z" class="module-bg" />
+    <rect x="0" y="0" width="40" height="15" class="module-accent" />
+    <text x="20" y="11" class="text-mono" style="fill: var(--stroke-accent);">03</text>
+    <text x="90" y="50" class="text-header">Ideate</text>
+    <text x="90" y="70" class="text-sub">Generate approaches</text>
   </g>
 
-  <!-- 4. Prototype -->
-  <g transform="translate(150, 460)">
-    <rect width="170" height="80" class="phase-box" />
-    <text x="85" y="35" class="text phase-title">Prototype</text>
-    <text x="85" y="60" class="text sub-text">Draft the attack</text>
+  <!-- Phase 04: Prototype (Bottom Left) -->
+  <g transform="translate(200, 440)">
+    <path d="M0,10 L10,0 L170,0 L180,10 L180,90 L170,100 L10,100 L0,90 Z" class="module-bg" />
+    <rect x="0" y="0" width="40" height="15" class="module-accent" />
+    <text x="20" y="11" class="text-mono" style="fill: var(--stroke-accent);">04</text>
+    <text x="90" y="50" class="text-header">Prototype</text>
+    <text x="90" y="70" class="text-sub">Test the attack</text>
   </g>
 
-  <!-- 5. Test/Iterate -->
-  <g transform="translate(70, 220)">
-    <rect width="170" height="80" class="phase-box" />
-    <text x="85" y="35" class="text phase-title">Test &amp; Iterate</text>
-    <text x="85" y="60" class="text sub-text">Refine based on data</text>
+  <!-- Phase 05: Test & Iterate (Top Left) -->
+  <g transform="translate(100, 180)">
+    <path d="M0,10 L10,0 L170,0 L180,10 L180,90 L170,100 L10,100 L0,90 Z" class="module-bg" />
+    <rect x="0" y="0" width="40" height="15" class="module-accent" />
+    <text x="20" y="11" class="text-mono" style="fill: var(--stroke-accent);">05</text>
+    <text x="90" y="50" class="text-header">Test</text>
+    <text x="90" y="70" class="text-sub">Evaluate &amp; learn</text>
   </g>
 
-  <!-- Connecting Arrows (Simplified approximate pathing) -->
-  <path d="M 485, 100 Q 645, 100 645, 220" class="arrow" />
-  <path d="M 645, 300 Q 645, 460 565, 460" class="arrow" />
-  <path d="M 480, 500 Q 325, 500 320, 500" class="arrow" />
-  <path d="M 150, 500 Q 70, 460 70, 300" class="arrow" />
-  <path d="M 70, 220 Q 70, 100 230, 100" class="arrow" /> or just one returning turn? Actually let's just make them simple arcs.
-
-  <!-- Refined Arrows -->
-  <path d="M 485, 100 C 580, 100 645, 160 645, 215" class="arrow" />
-  <path d="M 645, 305 C 645, 380 580, 460 560, 460" class="arrow" />
-  <path d="M 480, 500 C 400, 500 400, 500 325, 500" class="arrow" />
-  <path d="M 150, 500 C 70, 500 70, 450 70, 305" class="arrow" />
-  <path d="M 70, 215 C 70, 100 150, 100 310, 100" class="arrow" />
+  <!-- Flow Arrows -->
+  <path d="M600,90 Q750,90 800,170" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <path d="M810,290 Q810,400 750,440" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <path d="M610,490 L390,490" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <path d="M250,440 Q190,400 190,290" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <path d="M200,170 Q250,90 400,90" class="cycle-arrow" marker-end="url(#arrowhead)" />
 
 </svg>

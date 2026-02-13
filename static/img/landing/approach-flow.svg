@@ -1,56 +1,101 @@
-<svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Style -->
-  <style>
-    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
-    .sub-text { fill: #a1a1b1; font-size: 12px; font-weight: 400; }
-    .node { fill: rgba(147, 112, 219, 0.1); stroke: #9370db; stroke-width: 2; rx: 10; ry: 10; }
-    .arrow { fill: none; stroke: #9370db; stroke-width: 2; marker-end: url(#arrowhead); }
-    .phase { fill: #b19cd9; font-size: 16px; font-weight: 800; }
-  </style>
-
+<svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Design Tokens -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      :root {
+        --stroke-primary: #4b0082;
+        --stroke-accent: #2d333b;
+        --text-primary: #1a1a1b;
+        --text-secondary: #444950;
+        --bg-module: rgba(75, 0, 130, 0.03);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --stroke-primary: #b19cd9;
+          --stroke-accent: #ffffff;
+          --text-primary: #ffffff;
+          --text-secondary: rgba(255, 255, 255, 0.6);
+          --bg-module: rgba(147, 112, 219, 0.05);
+        }
+      }
+
+      .module-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
+      .module-accent { fill: var(--stroke-primary); }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; text-transform: uppercase; letter-spacing: 0.05em; }
+      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 11px; text-anchor: middle; font-weight: 500; }
+      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 9px; opacity: 0.7; }
+      .arrow { fill: none; stroke: var(--stroke-primary); stroke-width: 2; stroke-linecap: round; }
+    </style>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--stroke-primary)" />
     </marker>
   </defs>
 
-  <!-- Flow -->
-  <g transform="translate(20, 50)">
-    <rect width="180" height="80" class="node" />
-    <text x="90" y="35" class="text phase">EMPATHIZE</text>
-    <text x="90" y="60" class="text sub-text">Understand the target</text>
+  <!-- Step 01: EMPATHIZE -->
+  <g transform="translate(20, 40)">
+    <path d="M0,10 L10,0 L160,0 L170,10 L170,110 L160,120 L10,120 L0,110 Z" class="module-bg" />
+    <rect x="5" y="5" width="30" height="4" class="module-accent" opacity="0.4" />
+    <text x="85" y="60" class="text-header">Empathize</text>
+    <text x="85" y="80" class="text-sub">Understand the target</text>
+    <text x="10" y="110" class="text-mono">PROC_ID: 0x7E1</text>
   </g>
 
-  <line x1="200" y1="90" x2="220" y2="90" class="arrow" />
+  <!-- Arrow 1 -->
+  <path d="M190,100 L210,100" class="arrow" marker-end="url(#arrowhead)" />
 
-  <g transform="translate(220, 50)">
-    <rect width="180" height="80" class="node" />
-    <text x="90" y="35" class="text phase">DEFINE</text>
-    <text x="90" y="60" class="text sub-text">Name the vulnerability</text>
+  <!-- Step 02: DEFINE -->
+  <g transform="translate(215, 40)">
+    <path d="M0,10 L10,0 L160,0 L170,10 L170,110 L160,120 L10,120 L0,110 Z" class="module-bg" />
+    <rect x="5" y="5" width="30" height="4" class="module-accent" opacity="0.4" />
+    <text x="85" y="60" class="text-header">Define</text>
+    <text x="85" y="80" class="text-sub">Name the vulnerability</text>
+    <text x="10" y="110" class="text-mono">PROC_ID: 0x7E2</text>
   </g>
 
-  <line x1="400" y1="90" x2="420" y2="90" class="arrow" />
+  <!-- Arrow 2 -->
+  <path d="M385,100 L405,100" class="arrow" marker-end="url(#arrowhead)" />
 
-  <g transform="translate(420, 50)">
-    <rect width="180" height="80" class="node" />
-    <text x="90" y="35" class="text phase">IDEATE</text>
-    <text x="90" y="60" class="text sub-text">Generate approaches</text>
+  <!-- Step 03: IDEATE -->
+  <g transform="translate(410, 40)">
+    <path d="M0,10 L10,0 L160,0 L170,10 L170,110 L160,120 L10,120 L0,110 Z" class="module-bg" />
+    <rect x="5" y="5" width="30" height="4" class="module-accent" opacity="0.4" />
+    <text x="85" y="60" class="text-header">Ideate</text>
+    <text x="85" y="80" class="text-sub">Generate approaches</text>
+    <text x="10" y="110" class="text-mono">PROC_ID: 0x7E3</text>
   </g>
 
-  <line x1="600" y1="90" x2="620" y2="90" class="arrow" />
+  <!-- Arrow 3 -->
+  <path d="M580,100 L600,100" class="arrow" marker-end="url(#arrowhead)" />
 
-  <g transform="translate(620, 50)">
-    <rect width="180" height="80" class="node" />
-    <text x="90" y="35" class="text phase">PROTOTYPE</text>
-    <text x="90" y="60" class="text sub-text">Test the attack</text>
+  <!-- Step 04: PROTOTYPE -->
+  <g transform="translate(605, 40)">
+    <path d="M0,10 L10,0 L160,0 L170,10 L170,110 L160,120 L10,120 L0,110 Z" class="module-bg" />
+    <rect x="5" y="5" width="30" height="4" class="module-accent" opacity="0.4" />
+    <text x="85" y="60" class="text-header">Prototype</text>
+    <text x="85" y="80" class="text-sub">Test the attack</text>
+    <text x="10" y="110" class="text-mono">PROC_ID: 0x7E4</text>
   </g>
 
-  <line x1="800" y1="90" x2="820" y2="90" class="arrow" />
+  <!-- Arrow 4 -->
+  <path d="M775,100 L795,100" class="arrow" marker-end="url(#arrowhead)" />
 
-  <g transform="translate(820, 50)">
-    <rect width="160" height="80" class="node" />
-    <text x="80" y="35" class="text phase">ITERATE</text>
-    <text x="80" y="60" class="text sub-text">Refine &amp; repeat</text>
+  <!-- Step 05: ITERATE -->
+  <g transform="translate(800, 40)">
+    <path d="M0,10 L10,0 L160,0 L170,10 L170,110 L160,120 L10,120 L0,110 Z" class="module-bg" />
+    <rect x="5" y="5" width="30" height="4" class="module-accent" opacity="0.4" />
+    <text x="85" y="60" class="text-header">Iterate</text>
+    <text x="85" y="80" class="text-sub">Refine &amp; repeat</text>
+    <text x="10" y="110" class="text-mono">PROC_ID: 0x7E5</text>
   </g>
+
+  <!-- Connection markers (dots) -->
+  <circle cx="192" cy="100" r="3" fill="var(--stroke-primary)" />
+  <circle cx="387" cy="100" r="3" fill="var(--stroke-primary)" />
+  <circle cx="582" cy="100" r="3" fill="var(--stroke-primary)" />
+  <circle cx="777" cy="100" r="3" fill="var(--stroke-primary)" />
 
 </svg>

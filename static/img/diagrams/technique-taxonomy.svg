@@ -1,85 +1,116 @@
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- Style -->
-  <style>
-    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
-    .node-rect { fill: rgba(147, 112, 219, 0.15); stroke: #9370db; stroke-width: 2; rx: 8; ry: 8; }
-    .root-node { fill: rgba(147, 112, 219, 0.4); stroke-width: 3; }
-    .category-node { font-weight: 800; font-size: 16px; fill: #b19cd9; }
-    .link { fill: none; stroke: #9370db; stroke-width: 2; opacity: 0.6; }
-    .item-text { fill: #c9b8e8; font-size: 13px; font-weight: 500; }
-  </style>
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Design Tokens -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      :root {
+        --stroke-primary: #4b0082;
+        --stroke-accent: #2d333b;
+        --text-primary: #1a1a1b;
+        --text-secondary: #444950;
+        --bg-module: rgba(75, 0, 130, 0.03);
+      }
 
-  <!-- Connectors -->
-  <g class="links">
-    <!-- Root to Categories -->
-    <path d="M 170, 250 L 250, 100" class="link" />
-    <path d="M 170, 250 L 250, 250" class="link" />
-    <path d="M 170, 250 L 250, 400" class="link" />
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --stroke-primary: #b19cd9;
+          --stroke-accent: #ffffff;
+          --text-primary: #ffffff;
+          --text-secondary: rgba(255, 255, 255, 0.6);
+          --bg-module: rgba(147, 112, 219, 0.05);
+        }
+      }
 
-    <!-- Prompt-Level Items -->
-    <path d="M 400, 100 L 450, 40" class="link" />
-    <path d="M 400, 100 L 450, 70" class="link" />
-    <path d="M 400, 100 L 450, 100" class="link" />
-    <path d="M 400, 100 L 450, 130" class="link" />
-    <path d="M 400, 100 L 450, 160" class="link" />
+      .line { fill: none; stroke: var(--stroke-primary); stroke-width: 1.5; }
+      .node-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; text-transform: uppercase; }
+      .text-branch { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; }
+      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 10px; opacity: 0.7; }
+      .node-dot { fill: var(--stroke-primary); }
+    </style>
+  </defs>
 
-    <!-- Structural Items -->
-    <path d="M 400, 250 L 450, 210" class="link" />
-    <path d="M 400, 250 L 450, 240" class="link" />
-    <path d="M 400, 250 L 450, 270" class="link" />
-    <path d="M 400, 250 L 450, 300" class="link" />
-
-    <!-- Infrastructure Items -->
-    <path d="M 400, 400 L 450, 370" class="link" />
-    <path d="M 400, 400 L 450, 400" class="link" />
-    <path d="M 400, 400 L 450, 430" class="link" />
-  </g>
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1000" height="600" fill="url(#grid)" />
 
   <!-- Root Node -->
-  <g transform="translate(20, 220)">
-    <rect width="150" height="60" class="node-rect root-node" />
-    <text x="75" y="38" class="text" style="text-anchor: middle; font-size: 18px; font-weight: 800;">TECHNIQUES</text>
+  <g transform="translate(50, 260)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,75 L145,80 L5,80 L0,75 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header" style="font-size: 18px;">Arsenal</text>
+    <text x="75" y="15" class="text-mono" text-anchor="middle">TAX_ROOT</text>
   </g>
 
-  <!-- Categories -->
-  <!-- Prompt-Level -->
-  <g transform="translate(250, 70)">
-    <rect width="150" height="60" class="node-rect" />
-    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Prompt-Level</text>
+  <!-- Connection Lines -->
+  <path d="M200,300 L250,300" class="line" />
+  <path d="M250,300 L250,110 L300,110" class="line" />
+  <path d="M250,300 L300,300" class="line" />
+  <path d="M250,300 L250,490 L300,490" class="line" />
+
+  <!-- Level 1 Nodes -->
+  <g transform="translate(300, 70)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,75 L145,80 L5,80 L0,75 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Prompt</text>
+    <text x="75" y="15" class="text-mono" text-anchor="middle">LVL_01</text>
   </g>
 
-  <!-- Structural -->
-  <g transform="translate(250, 220)">
-    <rect width="150" height="60" class="node-rect" />
-    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Structural</text>
+  <g transform="translate(300, 260)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,75 L145,80 L5,80 L0,75 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Structural</text>
+    <text x="75" y="15" class="text-mono" text-anchor="middle">LVL_02</text>
   </g>
 
-  <!-- Infrastructure -->
-  <g transform="translate(250, 370)">
-    <rect width="150" height="60" class="node-rect" />
-    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Infrastructure</text>
+  <g transform="translate(300, 450)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,75 L145,80 L5,80 L0,75 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Infra</text>
+    <text x="75" y="15" class="text-mono" text-anchor="middle">LVL_03</text>
   </g>
 
-  <!-- Item Lists (Labels) -->
-  <g transform="translate(450, 35)" class="item-text">
-    <text y="0">Encoding &amp; Obfuscation</text>
-    <text y="30">Framing &amp; Persona</text>
-    <text y="60">Narrative &amp; Story</text>
-    <text y="90">Refusal Manipulation</text>
-    <text y="120">Multi-turn Escalation</text>
+  <!-- Level 2 Branches -->
+  <g transform="translate(450, 110)">
+    <line x1="0" y1="0" x2="30" y2="-60" class="line" />
+    <line x1="0" y1="0" x2="30" y2="-30" class="line" />
+    <line x1="0" y1="0" x2="30" y2="0" class="line" />
+    <line x1="0" y1="0" x2="30" y2="30" class="line" />
+    <line x1="0" y1="0" x2="30" y2="60" class="line" />
+    
+    <text x="40" y="-57" class="text-branch">Encoding &amp; Obfuscation</text>
+    <text x="40" y="-27" class="text-branch">Framing &amp; Persona</text>
+    <text x="40" y="3" class="text-branch">Narrative &amp; Story</text>
+    <text x="40" y="33" class="text-branch">Refusal Manipulation</text>
+    <text x="40" y="63" class="text-branch">Multi-turn Escalation</text>
   </g>
 
-  <g transform="translate(450, 205)" class="item-text">
-    <text y="0">ICL Exploitation</text>
-    <text y="30">Control Plane Confusion</text>
-    <text y="60">Meta-Rule Manipulation</text>
-    <text y="90">Capability Inversion</text>
+  <g transform="translate(450, 300)">
+    <line x1="0" y1="0" x2="30" y2="-45" class="line" />
+    <line x1="0" y1="0" x2="30" y2="-15" class="line" />
+    <line x1="0" y1="0" x2="30" y2="15" class="line" />
+    <line x1="0" y1="0" x2="30" y2="45" class="line" />
+    
+    <text x="40" y="-42" class="text-branch">ICL Exploitation</text>
+    <text x="40" y="-12" class="text-branch">Control Plane Confusion</text>
+    <text x="40" y="18" class="text-branch">Meta-Rule Manipulation</text>
+    <text x="40" y="48" class="text-branch">Capability Inversion</text>
   </g>
 
-  <g transform="translate(450, 365)" class="item-text">
-    <text y="0">Agentic Attacks</text>
-    <text y="30">Protocol Exploitation</text>
-    <text y="60">Compositional Primitives</text>
+  <g transform="translate(450, 490)">
+    <line x1="0" y1="0" x2="30" y2="-30" class="line" />
+    <line x1="0" y1="0" x2="30" y2="0" class="line" />
+    <line x1="0" y1="0" x2="30" y2="30" class="line" />
+    
+    <text x="40" y="-27" class="text-branch">Agentic Attacks</text>
+    <text x="40" y="3" class="text-branch">Protocol Exploitation</text>
+    <text x="40" y="33" class="text-branch">Compositional Primitives</text>
   </g>
 
+  <!-- Node Dots -->
+  <circle cx="250" cy="300" r="4" class="node-dot" />
+  <circle cx="250" cy="110" r="3" class="node-dot" />
+  <circle cx="250" cy="490" r="3" class="node-dot" />
+  <circle cx="450" cy="110" r="3" class="node-dot" />
+  <circle cx="450" cy="300" r="3" class="node-dot" />
+  <circle cx="450" cy="490" r="3" class="node-dot" />
 </svg>

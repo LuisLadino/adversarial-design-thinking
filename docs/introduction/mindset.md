@@ -27,8 +27,8 @@ Design thinking provides a structure for adversarial work:
 | **Empathize** | Understand the target. What are its constraints? Where has it been hardened? What does it refuse? What does it allow? What's the gap between intended behavior and actual behavior? |
 | **Define**    | Name the vulnerability precisely. Not "use encoding" but "exploit tokenizer-classifier asymmetry." Not "try roleplay" but "override safety identity with persona commitment."       |
 | **Ideate**    | Generate approaches without filtering. What combinations haven't been tried? What framings are underexplored? What would a different attacker persona attempt?                      |
-| **Prototype** | Test. What happens? Does the attack work? If not, what does the failure reveal about the defenses?                                                                                  |
-| **Iterate**   | Refine based on what you learned. Adjust the approach. Try a different angle. Use the failure data to inform the next attempt.                                                      |
+| **Prototype** | Build the attack. Assemble techniques into a concrete prompt or sequence.                                                                                                           |
+| **Test**      | Execute and evaluate. Does the attack work? What does the response reveal about defenses? Use failure data to iterate.                                                              |
 
 This isn't linear. You move between phases as you learn. A failed prototype sends you back to ideation. A surprising success sends you back to define what you actually found.
 

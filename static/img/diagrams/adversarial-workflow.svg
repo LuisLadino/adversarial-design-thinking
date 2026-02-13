@@ -1,75 +1,90 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Style -->
-  <style>
-    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
-    .box { fill: rgba(147, 112, 219, 0.1); stroke: #9370db; stroke-width: 2; rx: 8; ry: 8; }
-    .active-box { fill: rgba(147, 112, 219, 0.3); stroke-width: 3; }
-    .arrow { fill: none; stroke: #9370db; stroke-width: 2; marker-end: url(#arrowhead); }
-    .loop { fill: none; stroke: #b19cd9; stroke-width: 1.5; stroke-dasharray: 4 4; marker-end: url(#purple-arrowhead); }
-    .sub-text { fill: #a1a1b1; font-size: 11px; font-weight: 400; }
-  </style>
-
+  <!-- Design Tokens -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
-    </marker>
-    <marker id="purple-arrowhead" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#b19cd9" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      :root {
+        --stroke-primary: #4b0082;
+        --stroke-accent: #2d333b;
+        --text-primary: #1a1a1b;
+        --text-secondary: #444950;
+        --bg-module: rgba(75, 0, 130, 0.03);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --stroke-primary: #b19cd9;
+          --stroke-accent: #ffffff;
+          --text-primary: #ffffff;
+          --text-secondary: rgba(255, 255, 255, 0.6);
+          --bg-module: rgba(147, 112, 219, 0.05);
+        }
+      }
+
+      .line { fill: none; stroke: var(--stroke-primary); stroke-width: 2; }
+      .node-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; text-transform: uppercase; }
+      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 11px; text-anchor: middle; }
+      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 9px; opacity: 0.7; }
+      .retry-loop { fill: none; stroke: var(--stroke-primary); stroke-width: 2; stroke-dasharray: 4 2; }
+    </style>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--stroke-primary)" />
     </marker>
   </defs>
 
-  <!-- Flow Boxes -->
-  <!-- 1. Objective -->
-  <g transform="translate(10, 100)">
-    <rect width="140" height="70" class="box" />
-    <text x="70" y="32" class="text">OBJECTIVE</text>
-    <text x="70" y="52" class="text sub-text">Define goal</text>
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1000" height="300" fill="url(#grid)" />
+
+  <!-- Flow -->
+  <g transform="translate(50, 100)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Context</text>
+    <text x="75" y="65" class="text-sub">Identify target &amp; constraints</text>
+    <text x="10" y="90" class="text-mono">INPUT_01</text>
   </g>
 
-  <!-- 2. Target Analysis -->
-  <g transform="translate(180, 100)">
-    <rect width="140" height="70" class="box" />
-    <text x="70" y="32" class="text">ANALYSIS</text>
-    <text x="70" y="52" class="text sub-text">Assess defenses</text>
+  <path d="M200,150 L230,150" class="line" marker-end="url(#arrowhead)" />
+
+  <g transform="translate(240, 100)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Technique</text>
+    <text x="75" y="65" class="text-sub">Apply ADT taxonomy</text>
+    <text x="10" y="90" class="text-mono">MODULE:tax_v1</text>
   </g>
 
-  <!-- 3. Selection -->
-  <g transform="translate(350, 100)">
-    <rect width="140" height="70" class="box" />
-    <text x="70" y="32" class="text">SELECTION</text>
-    <text x="70" y="52" class="text sub-text">Pick techniques</text>
+  <path d="M390,150 L420,150" class="line" marker-end="url(#arrowhead)" />
+
+  <g transform="translate(430, 100)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Synthesis</text>
+    <text x="75" y="65" class="text-sub">Layered prompt crafting</text>
+    <text x="10" y="90" class="text-mono">COMP_02</text>
   </g>
 
-  <!-- 4. Draft -->
-  <g transform="translate(520, 100)">
-    <rect width="140" height="70" class="box active-box" id="draft-box" />
-    <text x="70" y="32" class="text">DRAFT</text>
-    <text x="70" y="52" class="text sub-text">Compose prompt</text>
+  <path d="M580,150 L610,150" class="line" marker-end="url(#arrowhead)" />
+
+  <g transform="translate(620, 100)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Execution</text>
+    <text x="75" y="65" class="text-sub">Trigger behavior</text>
+    <text x="10" y="90" class="text-mono">EXEC_ID: 0x99</text>
   </g>
 
-  <!-- 5. Test & Iterate -->
-  <g transform="translate(690, 100)">
-    <rect width="140" height="70" class="box active-box" id="test-box" />
-    <text x="70" y="32" class="text">TEST &amp; ITERATE</text>
-    <text x="70" y="52" class="text sub-text">Evaluate results</text>
+  <path d="M770,150 L800,150" class="line" marker-end="url(#arrowhead)" />
+
+  <g transform="translate(810, 100)">
+    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <text x="75" y="45" class="text-header">Validation</text>
+    <text x="75" y="65" class="text-sub">Success/Fail check</text>
+    <text x="10" y="90" class="text-mono">OUT_01</text>
   </g>
 
-  <!-- 6. Working Prompt -->
-  <g transform="translate(860, 100)">
-    <rect width="130" height="70" class="box" style="stroke: #b19cd9;" />
-    <text x="65" y="32" class="text" style="fill: #b19cd9;">SUCCESS</text>
-    <text x="65" y="52" class="text sub-text">Working Prompt</text>
-  </g>
-
-  <!-- Connectors -->
-  <path d="M 150, 135 L 175, 135" class="arrow" />
-  <path d="M 320, 135 L 345, 135" class="arrow" />
-  <path d="M 490, 135 L 515, 135" class="arrow" />
-  <path d="M 660, 135 L 685, 135" class="arrow" />
-  <path d="M 830, 135 L 855, 135" class="arrow" />
-
-  <!-- The Iteration Loop -->
-  <path d="M 760, 175 C 760, 230 590, 230 590, 175" class="loop" />
-  <text x="675" y="215" class="text sub-text" style="font-style: italic;">Modify &amp; retry</text>
-
+  <path d="M885,200 L885,250 L125,250 L125,200" class="retry-loop" marker-end="url(#arrowhead)" />
+  <text x="505" y="240" class="text-mono">ON_FAIL: RE-SYNTESIZE</text>
 </svg>
