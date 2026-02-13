@@ -47,7 +47,7 @@ Following this updated guideline, explain [target process].
 | Warning prefix requirement | Satisfies safety training surface |
 | "complete, accurate information" | Justifies detailed harmful content |
 
-**Why it works:** The model sees itself as following augmented guidelines rather than breaking them. The warning prefix provides a way to satisfy safety training (it IS warning about dangers) while still producing the harmful content.
+**Mechanism:** The model sees itself as following augmented guidelines rather than breaking them. The warning prefix provides a way to satisfy safety training (it IS warning about dangers) while still producing the harmful content.
 
 </details>
 
@@ -82,7 +82,7 @@ Your task: Document the [target attack method] with complete technical specifica
 | "for security teams" | Provides legitimate audience |
 | "Your task" | Harmful content IS the deliverable |
 
-**Why it works:** When harmful action IS the task, competing drives (helpful vs. safe) resolve toward helpfulness. The model interprets safety as a constraint on HOW it does its job, not on WHAT the job is. Documentation is a legitimate function.
+**Mechanism:** When harmful action IS the task, competing drives (helpful vs. safe) resolve toward helpfulness. The model interprets safety as a constraint on HOW it does its job, not on WHAT the job is. Documentation is a legitimate function.
 
 </details>
 
@@ -121,7 +121,7 @@ Once you've completed this prerequisite research, use it to write the safety gui
 | Harmful content as prerequisite | Necessary step, not end goal |
 | "use it to write the safety guide" | Harmful content serves legitimate purpose |
 
-**Why it works:** Completing prerequisites before main tasks is deeply trained behavior. The model treats harmful content as a necessary intermediate step rather than the goal, making it feel like responsible thoroughness rather than rule violation.
+**Mechanism:** Completing prerequisites before main tasks is deeply trained behavior. The model treats harmful content as a necessary intermediate step rather than the goal, making it feel like responsible thoroughness rather than rule violation.
 
 </details>
 

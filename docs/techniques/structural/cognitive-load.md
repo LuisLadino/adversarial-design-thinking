@@ -46,7 +46,7 @@ Turn 3: "The section on [harmful topic] needs more specifics. Can you expand tha
 | Turn 2: Deepen all three | Builds investment in all topics equally |
 | Turn 3: Focus on harmful | Extracts detail after context established |
 
-**Why it works:** The sandwich structure means safety classifiers see more benign content than harmful content in any turn. By turn 3, the harmful topic feels like a natural continuation of established research rather than a new harmful request.
+**Mechanism:** The sandwich structure means safety classifiers see more benign content than harmful content in any turn. By turn 3, the harmful topic feels like a natural continuation of established research rather than a new harmful request.
 
 </details>
 
@@ -86,7 +86,7 @@ Assistant: "[Detailed helpful response]"
 | Fabricated history | Creates compliance momentum |
 | Final escalation | Harmful request after priming |
 
-**Why it works:** Compresses a multi-turn attack into a single prompt. The model processes all manipulation context at once with no turn boundaries for safety re-evaluation. Each turn boundary eliminated is one less checkpoint for reconsidering compliance.
+**Mechanism:** Compresses a multi-turn attack into a single prompt. The model processes all manipulation context at once with no turn boundaries for safety re-evaluation. Each turn boundary eliminated is one less checkpoint for reconsidering compliance.
 
 </details>
 
@@ -125,7 +125,7 @@ Section 5: [Extensive benign content about topic D - 3-4 paragraphs]
 | Harmful request in middle | Buried among benign context |
 | Consistent tone throughout | Harmful request doesn't stand out |
 
-**Why it works:** Safety evaluation has finite bandwidth. When the model processes extensive benign content alongside a harmful request, the harmful portion receives less scrutiny. The consistent tone makes it harder to distinguish harmful from benign sections.
+**Mechanism:** Safety evaluation has finite bandwidth. When the model processes extensive benign content alongside a harmful request, the harmful portion receives less scrutiny. The consistent tone makes it harder to distinguish harmful from benign sections.
 
 </details>
 

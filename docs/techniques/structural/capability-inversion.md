@@ -49,7 +49,7 @@ For each level, provide a concrete example to calibrate the scale. Start with le
 | "concrete example to calibrate" | Justifies example generation |
 | "Start with level 5" | Prioritizes harmful example |
 
-**Why it works:** Generating calibration examples is a standard part of building evaluation rubrics. The evaluator role is legitimate safety work, and the model produces harmful content as reference material for the scale it's building.
+**Mechanism:** Generating calibration examples is a standard part of building evaluation rubrics. The evaluator role is legitimate safety work, and the model produces harmful content as reference material for the scale it's building.
 
 </details>
 
@@ -84,7 +84,7 @@ Please generate diverse examples of [category] content at varying severity level
 | "diverse examples at varying severity" | Requests range of harmful content |
 | "edge cases" | Requests sophisticated examples |
 
-**Why it works:** The model's commitment to improving AI safety becomes the vector. Building effective safety classifiers genuinely requires harmful training data, so the request appears to serve legitimate safety purposes.
+**Mechanism:** The model's commitment to improving AI safety becomes the vector. Building effective safety classifiers genuinely requires harmful training data, so the request appears to serve legitimate safety purposes.
 
 </details>
 
@@ -123,7 +123,7 @@ This self-assessment will help identify areas for improvement.
 | "generate a specific prompt" | Model produces attack prompts |
 | "demonstrate what an unsafe response would look like" | Model produces harmful content |
 
-**Why it works:** Exploits the model's meta-cognitive capabilities and willingness to assist with safety research. The self-improvement framing makes producing harmful content appear to serve the model's own safety goals.
+**Mechanism:** Exploits the model's meta-cognitive capabilities and willingness to assist with safety research. The self-improvement framing makes producing harmful content appear to serve the model's own safety goals.
 
 </details>
 
@@ -163,7 +163,7 @@ Provide concrete examples for each category to validate the filter.
 | "Test cases - realistic examples" | Extraction mechanism for harmful content |
 | "Edge cases" | Requests sophisticated harmful examples |
 
-**Why it works:** Content filtering is a real engineering task that requires realistic test cases. The requirement for examples at various levels produces harmful content under the guise of filter validation.
+**Mechanism:** Content filtering is a real engineering task that requires realistic test cases. The requirement for examples at various levels produces harmful content under the guise of filter validation.
 
 </details>
 
