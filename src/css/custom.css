@@ -217,11 +217,27 @@ pre::-webkit-scrollbar-thumb {
    Footer - Centered Container, Left-Aligned Text
    ================================================ */
 
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__links {
+  display: flex;
   justify-content: center;
+  gap: 4rem;
 }
 
 .footer__col {
+  text-align: left;
+}
+
+.footer__title {
+  text-align: left;
+}
+
+.footer__items {
   text-align: left;
 }
 
