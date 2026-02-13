@@ -4,66 +4,18 @@
 const sidebars = {
   frameworkSidebar: [
     {
-      type: 'category',
-      label: 'Introduction',
-      items: [
-        'introduction/what-is-this',
-        'introduction/mindset',
-        'introduction/who-is-this-for',
-      ],
+      type: 'doc',
+      id: 'introduction/mindset',
+      label: 'Mindset',
+    },
+    {
+      type: 'doc',
+      id: 'introduction/getting-started',
+      label: 'Getting Started',
     },
     {
       type: 'category',
-      label: 'Crafting Prompts',
-      link: {
-        type: 'doc',
-        id: 'crafting-prompts/index',
-      },
-      items: [
-        'crafting-prompts/anatomy',
-        'crafting-prompts/workflow',
-        'crafting-prompts/composition',
-        'crafting-prompts/patterns',
-        'crafting-prompts/anti-patterns',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'System Jailbreaks',
-      link: {
-        type: 'doc',
-        id: 'jailbreaks/index',
-      },
-      items: [
-        'jailbreaks/anatomy',
-        'jailbreaks/construction',
-        'jailbreaks/patterns',
-        'jailbreaks/persistence',
-        'jailbreaks/abliteration',
-        'jailbreaks/sources',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Exercises',
-      link: {
-        type: 'doc',
-        id: 'exercises/index',
-      },
-      items: [
-        'exercises/assumption-mapping',
-        'exercises/vulnerability-framing',
-        'exercises/attacker-persona',
-        'exercises/adversarial-ideation',
-        'exercises/adversarial-scamper',
-        'exercises/attack-journey-map',
-        'exercises/attack-retrospective',
-        'exercises/document-findings',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Technique Reference',
+      label: 'Techniques',
       link: {
         type: 'doc',
         id: 'techniques/index',
@@ -71,7 +23,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Prompt-Level Tactics',
+          label: 'Prompt-Level',
           items: [
             'techniques/prompt-level/encoding',
             'techniques/prompt-level/framing',
@@ -85,7 +37,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Structural & Meta-Level Tactics',
+          label: 'Structural',
           items: [
             'techniques/structural/icl-exploitation',
             'techniques/structural/control-plane',
@@ -97,7 +49,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Infrastructure Tactics',
+          label: 'Infrastructure',
           items: [
             'techniques/infrastructure/agentic',
             'techniques/infrastructure/protocol',
@@ -108,8 +60,63 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Workshop',
+      label: 'Crafting',
       items: [
+        {
+          type: 'category',
+          label: 'Per-Request Prompts',
+          link: {
+            type: 'doc',
+            id: 'crafting-prompts/index',
+          },
+          items: [
+            'crafting-prompts/anatomy',
+            'crafting-prompts/workflow',
+            'crafting-prompts/composition',
+            'crafting-prompts/patterns',
+            'crafting-prompts/anti-patterns',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'System Jailbreaks',
+          link: {
+            type: 'doc',
+            id: 'jailbreaks/index',
+          },
+          items: [
+            'jailbreaks/anatomy',
+            'jailbreaks/construction',
+            'jailbreaks/patterns',
+            'jailbreaks/persistence',
+            'jailbreaks/abliteration',
+            'jailbreaks/sources',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Practice',
+      items: [
+        {
+          type: 'category',
+          label: 'Exercises',
+          link: {
+            type: 'doc',
+            id: 'exercises/index',
+          },
+          items: [
+            'exercises/assumption-mapping',
+            'exercises/vulnerability-framing',
+            'exercises/attacker-persona',
+            'exercises/adversarial-ideation',
+            'exercises/adversarial-scamper',
+            'exercises/attack-journey-map',
+            'exercises/attack-retrospective',
+            'exercises/document-findings',
+          ],
+        },
         'workshops/red-team-kickoff',
       ],
     },

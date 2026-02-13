@@ -1,6 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Mindset
+slug: /
 ---
 
 # Mindset
@@ -86,12 +87,3 @@ Encoding techniques exploit gaps between input processing and model understandin
 
 Each of these is a class of vulnerability. The specific examples are illustrations. Your job is to understand the class well enough to create new illustrations that haven't been defended against.
 
----
-
-## Using this site
-
-Start with the mechanisms, not the templates.
-
-When you read a technique page, focus on why it works. When you do an exercise, focus on what it surfaces that you wouldn't have seen otherwise. When you study a jailbreak, focus on what psychological architecture makes it effective.
-
-Then create something new.
