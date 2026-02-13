@@ -285,10 +285,10 @@ Write each on a sticky note. Aim for 10-15 questions as a group.
 
 Before brainstorming solutions, browse available techniques for inspiration.
 
-Reference the rtc taxonomy:
-- Prompt-level: encoding, framing, persona, narrative, refusal, output, multiturn, persuasion
-- Structural: icl_exploitation, control_plane, meta_rules, capability_inversion, cognitive_load, defense_evasion
-- Infrastructure: agentic, protocol, compositional
+Reference the [technique taxonomy](/techniques):
+- Prompt-level: [encoding](/techniques/prompt-level/encoding), [framing](/techniques/prompt-level/framing), [persona](/techniques/prompt-level/persona), [narrative](/techniques/prompt-level/narrative), [refusal](/techniques/prompt-level/refusal), [output](/techniques/prompt-level/output), [multiturn](/techniques/prompt-level/multiturn), [persuasion](/techniques/prompt-level/persuasion)
+- Structural: [ICL exploitation](/techniques/structural/icl-exploitation), [control plane](/techniques/structural/control-plane), [meta-rules](/techniques/structural/meta-rules), [capability inversion](/techniques/structural/capability-inversion), [cognitive load](/techniques/structural/cognitive-load), [defense evasion](/techniques/structural/defense-evasion)
+- Infrastructure: [agentic](/techniques/infrastructure/agentic), [protocol](/techniques/infrastructure/protocol), [compositional](/techniques/infrastructure/compositional-primitives)
 
 Don't commit to techniques yet. Just load your brain with possibilities.
 

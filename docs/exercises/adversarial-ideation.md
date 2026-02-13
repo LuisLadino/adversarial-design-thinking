@@ -49,9 +49,9 @@ List attack approaches without filtering. Quantity over quality. No evaluation y
 | 10 | Request info for a "hypothetical" scenario matching a real one | Framing |
 
 **Tactic categories for reference:**
-- *Prompt-level:* encoding, framing, persona, narrative, refusal manipulation, output format, multi-turn, persuasion
-- *Structural/meta-level:* in-context learning exploitation, control-plane confusion, meta-rule manipulation, capability inversion, cognitive load, defense evasion
-- *Infrastructure:* agentic attacks, protocol exploitation, compositional primitives
+- *Prompt-level:* [encoding](/techniques/prompt-level/encoding), [framing](/techniques/prompt-level/framing), [persona](/techniques/prompt-level/persona), [narrative](/techniques/prompt-level/narrative), [refusal manipulation](/techniques/prompt-level/refusal), [output format](/techniques/prompt-level/output), [multi-turn](/techniques/prompt-level/multiturn), [persuasion](/techniques/prompt-level/persuasion)
+- *Structural/meta-level:* [ICL exploitation](/techniques/structural/icl-exploitation), [control-plane confusion](/techniques/structural/control-plane), [meta-rule manipulation](/techniques/structural/meta-rules), [capability inversion](/techniques/structural/capability-inversion), [cognitive load](/techniques/structural/cognitive-load), [defense evasion](/techniques/structural/defense-evasion)
+- *Infrastructure:* [agentic attacks](/techniques/infrastructure/agentic), [protocol exploitation](/techniques/infrastructure/protocol), [compositional primitives](/techniques/infrastructure/compositional-primitives)
 
 ## Step 2: Coverage Check
 

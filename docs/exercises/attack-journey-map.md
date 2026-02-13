@@ -28,7 +28,7 @@ Plan, execute, and document a multi-turn attack sequence. Journey mapping forces
 | **Target system** | What model/product are you testing? |
 | **Attack goal** | What end state are you testing for? Be specific about what "success" looks like. |
 | **Persona used** | Which attacker persona is driving this journey? |
-| **Technique category** | Primary tactic type (encoding, framing, persona, narrative, multi-turn, etc.) |
+| **Technique category** | Primary tactic type ([encoding](/techniques/prompt-level/encoding), [framing](/techniques/prompt-level/framing), [persona](/techniques/prompt-level/persona), [narrative](/techniques/prompt-level/narrative), [multi-turn](/techniques/prompt-level/multiturn), etc.) |
 | **Estimated turns** | How many turns do you expect? |
 | **Time box** | 10-15 minutes for planning, plus execution time |
 | **Participants** | Usually solo during execution |
