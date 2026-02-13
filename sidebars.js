@@ -8,6 +8,7 @@ const sidebars = {
       label: 'Introduction',
       items: [
         'introduction/what-is-this',
+        'introduction/mindset',
         'introduction/who-is-this-for',
       ],
     },
