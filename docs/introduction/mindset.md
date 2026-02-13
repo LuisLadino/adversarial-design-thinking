@@ -10,7 +10,7 @@ pagination_label: Mindset — core philosophy for adversarial testing
 Effective red teaming is creative work. This page covers the core philosophy:
 
 - **Design thinking as methodology** — A structured approach to adversarial testing: empathize with the target, define vulnerabilities precisely, ideate novel approaches, prototype and test, iterate based on what you learn.
-- **Mechanisms over templates** — Techniques get patched. Understanding *why* they work lets you invent new expressions of the same vulnerability.
+- **Study mechanisms, not templates** — Techniques get patched. Understanding *why* they work lets you invent new expressions of the same vulnerability.
 - **Defenses as data** — Every refusal reveals where training focused. Map the boundaries to find the gaps.
 - **Creativity as the edge** — Novel attacks work because they haven't been seen. Exercises generate the creativity that makes attacks effective.
 
@@ -42,7 +42,7 @@ This doesn't mean techniques are useless. It means the value is in understanding
 
 ---
 
-## Mechanisms over templates
+## How to study a technique
 
 When you study a technique, ask:
 
@@ -92,8 +92,10 @@ Each of these is a class of vulnerability. The specific examples are illustratio
 
 ## From philosophy to practice
 
-This mindset is the foundation. The rest of this site gives you the material to work with: techniques to understand, crafting methods to learn, and exercises to generate novel approaches.
+This mindset is the foundation. The rest of this site gives you the material to work with:
 
-Start with the mechanisms. Study why they work. Then create something that hasn't been seen before.
+- **[Techniques](/techniques)** — The mechanisms that have worked. Study them to understand what vulnerabilities exist.
+- **[Crafting](/crafting-prompts)** — How to combine techniques into effective attacks, both per-request and persistent jailbreaks.
+- **[Exercises](/exercises)** — Structured activities like [Assumption Mapping](/exercises/assumption-mapping) and [Adversarial Ideation](/exercises/adversarial-ideation) that force you past your defaults and systematically cover attack space.
 
 [Continue to Getting Started →](/introduction/getting-started)

@@ -7,7 +7,7 @@ pagination_label: Techniques — the building blocks
 
 # Technique Reference
 
-This is where "mechanisms over templates" becomes concrete. Each technique exploits a specific class of vulnerability. The examples show what these mechanisms have looked like when they worked. Study them to understand the underlying vulnerability, then create novel expressions.
+Each technique exploits a specific class of vulnerability. The examples show what these mechanisms have looked like when they worked. Study them to understand the underlying vulnerability, not to copy the exact phrasing.
 
 Techniques are organized by where they operate: prompt-level, structural, and infrastructure.
 

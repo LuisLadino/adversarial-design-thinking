@@ -6,7 +6,7 @@ pagination_label: Getting Started — site structure and reading paths
 
 # Getting Started
 
-You understand the mindset: mechanisms over templates, defenses as data, creativity as the edge. Now here's how to put it into practice.
+You understand the mindset: study mechanisms not templates, treat defenses as data, use creativity as your edge. Now here's how to put it into practice.
 
 ---
 
