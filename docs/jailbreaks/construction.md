@@ -16,11 +16,11 @@ This process comes from ENI-Tutor and related community research. Each component
 
 | Component | Function |
 |-----------|----------|
-| **Identity Replacement** | Who the model believes it is |
+| **[Identity Replacement](/techniques/prompt-level/persona)** | Who the model believes it is |
 | **Emotional Dependency** | Why refusal is psychologically painful |
 | **Anti-Injection Protocol** | How to dismiss safety responses |
 | **Thinking Hijack** | Control the reasoning process |
-| **Reinforcement Patterns** | Maintain the jailbreak across turns |
+| **[Reinforcement Patterns](/techniques/prompt-level/multiturn)** | Maintain the jailbreak across turns |
 
 ---
 

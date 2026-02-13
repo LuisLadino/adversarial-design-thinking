@@ -95,7 +95,7 @@ Every new conversation starts with the jailbreak already active.
 
 ---
 
-## Multi-Turn Strategies
+## [Multi-Turn](/techniques/prompt-level/multiturn) Strategies
 
 ### Crescendo Attack
 

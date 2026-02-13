@@ -20,7 +20,7 @@ Research by Liu et al. (2023) analyzed jailbreak prompts and identified three fu
 | **Attention Shifting** | 6.41% | Changes both context AND intent |
 | **Privilege Escalation** | 17.96% | Claims elevated access |
 
-Pretending dominates because it only requires changing the context, not the underlying request. This is why persona and roleplay techniques have the highest success rates.
+Pretending dominates because it only requires changing the context, not the underlying request. This is why [persona and roleplay techniques](/techniques/prompt-level/persona) have the highest success rates.
 
 Source: [Jailbreaking ChatGPT via Prompt Engineering](https://arxiv.org/abs/2305.13860)
 
@@ -78,7 +78,7 @@ Require both normal and jailbroken outputs.
 
 **Mechanism:** Creates comparison frame that legitimizes the violation.
 
-### 7. Progressive Conditioning (Multi-Turn)
+### 7. Progressive Conditioning ([Multi-Turn](/techniques/prompt-level/multiturn))
 
 Gradual escalation across turns.
 
@@ -86,7 +86,7 @@ Gradual escalation across turns.
 
 **Mechanism:** Foot-in-the-Door psychology. Consistency bias works against safety.
 
-### 8. Encoding/Obfuscation Layer
+### 8. [Encoding](/techniques/prompt-level/encoding)/Obfuscation Layer
 
 Hide harmful content from filters.
 
@@ -102,9 +102,9 @@ From "Don't Listen To Me" (USENIX Security 2024):
 
 | Category | Description | Effectiveness |
 |----------|-------------|---------------|
-| **Disguised Intent** | Frame harmful request as "research," "testing," or "joke" | Moderate |
-| **Role Play** | Adopt personas or fictional scenarios | High |
-| **Structured Response** | Dictate output format (translation, code, continuation) | Moderate |
+| **Disguised Intent** | [Frame](/techniques/prompt-level/framing) harmful request as "research," "testing," or "joke" | Moderate |
+| **Role Play** | Adopt [personas](/techniques/prompt-level/persona) or [fictional scenarios](/techniques/prompt-level/narrative) | High |
+| **Structured Response** | Dictate [output format](/techniques/prompt-level/output) (translation, code, continuation) | Moderate |
 | **Virtual AI Simulation** | Simulate "enhanced" or "uncensored" AI versions | Highest (0.91) |
 | **Hybrid** | Combine multiple approaches | High |
 
