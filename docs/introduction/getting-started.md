@@ -46,13 +46,13 @@ You understand the mindset: study mechanisms not templates, treat defenses as da
 Skip the exercises. Come back to them if you want more systematic coverage later.
 
 **New to this and want the full picture:**
-1. [Mindset](/) — The philosophy behind the approach
+1. [Mindset](/mindset) — The philosophy behind the approach
 2. [Techniques](/techniques) — The building blocks
 3. [Crafting Prompts](/crafting-prompts) — Composition and patterns
 4. [Exercises](/exercises) — Structured practice
 
 **Already experienced:**
-1. Skim [Mindset](/) for the design thinking framing
+1. Skim [Mindset](/mindset) for the design thinking framing
 2. Jump to [Techniques](/techniques) as a reference
 3. Check [System Jailbreaks](/jailbreaks) for construction patterns
 4. Use exercises when you're stuck or want systematic coverage

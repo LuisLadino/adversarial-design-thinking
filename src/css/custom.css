@@ -18,11 +18,11 @@
   --accent-purple-bright: #b19cd9;
   --accent-purple-muted: rgba(147, 112, 219, 0.15);
 
-  /* Override Infima's default link sublist icon */
-  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%239370db" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+  /* Override Infima's default link sublist icon — UP-pointing chevron (Infima rotates it) */
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%239370db" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>');
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #a8b2d1;
   --ifm-color-primary-dark: #91a0c4;
   --ifm-color-primary-darker: #8697be;
@@ -37,8 +37,8 @@
   --accent-purple-bright: #c9b8e8;
   --accent-purple-muted: rgba(177, 156, 217, 0.15);
 
-  /* Override Infima's default link sublist icon - dark mode */
-  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23b19cd9" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+  /* Override Infima's default link sublist icon - dark mode — UP-pointing chevron (Infima rotates it) */
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23b19cd9" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>');
 }
 
 /* ================================================
@@ -63,10 +63,51 @@
 }
 
 /* ================================================
-   Details/Collapsible Elements
+   Details/Collapsible Elements — Override Docusaurus alert--info
    ================================================ */
 
-details {
+/* Override the Docusaurus Details component's alert--info colors
+   so the border and decoration use our purple accent instead of cyan */
+details.alert.alert--info {
+  --ifm-alert-border-color: var(--accent-purple);
+  --ifm-alert-background-color: transparent;
+  --ifm-alert-foreground-color: inherit;
+  --docusaurus-details-decoration-color: var(--accent-purple);
+  border: 1px solid var(--accent-purple-muted);
+  border-left: 2px solid var(--accent-purple);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+details.alert.alert--info[open],
+details.alert.alert--info[data-collapsed="false"] {
+  --ifm-alert-background-color: var(--accent-purple-muted);
+  background-color: var(--accent-purple-muted);
+}
+
+/* Style the summary text */
+details.alert.alert--info > summary {
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] details.alert.alert--info > summary {
+  color: var(--ifm-color-primary-light);
+}
+
+details.alert.alert--info > summary:hover {
+  color: var(--accent-purple);
+}
+
+/* Override the separator line between summary and content */
+details.alert.alert--info
+  .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module,
+details.alert.alert--info [class*="collapsibleContent"] {
+  border-top-color: var(--accent-purple-muted);
+}
+
+/* Fallback for plain <details> not wrapped by Docusaurus */
+details:not(.alert) {
   border: 1px solid var(--accent-purple-muted);
   border-left: 2px solid var(--accent-purple);
   border-radius: 4px;
@@ -75,48 +116,48 @@ details {
   background: transparent;
 }
 
-details[open] {
+details:not(.alert)[open] {
   background: var(--accent-purple-muted);
 }
 
-details summary {
+details:not(.alert) summary {
   cursor: pointer;
   font-weight: 500;
   color: var(--ifm-color-primary);
   padding: 0.25rem 0;
 }
 
-/* Hide ALL default markers */
-details summary::-webkit-details-marker,
-details summary::marker {
+/* Hide default markers on non-Docusaurus details */
+details:not(.alert) summary::-webkit-details-marker,
+details:not(.alert) summary::marker {
   display: none !important;
-  content: '' !important;
+  content: "" !important;
 }
 
-details > summary {
+details:not(.alert) > summary {
   list-style: none !important;
 }
 
-details > summary::-webkit-details-marker {
+details:not(.alert) > summary::-webkit-details-marker {
   display: none !important;
 }
 
-/* Custom purple triangle */
-details summary::before {
-  content: '▸ ';
+/* Custom purple triangle for non-Docusaurus details */
+details:not(.alert) summary::before {
+  content: "▸ ";
   color: var(--accent-purple);
   font-size: 0.9em;
 }
 
-details[open] summary::before {
-  content: '▾ ';
+details:not(.alert)[open] summary::before {
+  content: "▾ ";
 }
 
-[data-theme='dark'] details summary {
+[data-theme="dark"] details:not(.alert) summary {
   color: var(--ifm-color-primary-light);
 }
 
-details summary:hover {
+details:not(.alert) summary:hover {
   color: var(--accent-purple);
 }
 
@@ -136,7 +177,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--accent-purple-muted);
 }
 
