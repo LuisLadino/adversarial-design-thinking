@@ -83,29 +83,58 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Contact',
+            title: 'Learn',
             items: [
               {
-                label: 'luis@luisladino.com',
-                href: 'mailto:luis@luisladino.com',
+                label: 'Mindset',
+                to: '/mindset',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/LuisLadino/adversarial-design-thinking',
+                label: 'Getting Started',
+                to: '/introduction/getting-started',
+              },
+              {
+                label: 'Techniques',
+                to: '/techniques',
               },
             ],
           },
           {
-            title: 'Legal',
+            title: 'Research',
             items: [
+              {
+                label: 'OWASP LLM Top 10',
+                href: 'https://genai.owasp.org/llm-top-10/',
+              },
+              {
+                label: 'MITRE ATLAS',
+                href: 'https://atlas.mitre.org/',
+              },
+              {
+                label: 'Sources',
+                to: '/jailbreaks/sources',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/LuisLadino/adversarial-design-thinking',
+              },
               {
                 label: 'Disclaimer',
                 to: '/disclaimer',
               },
+              {
+                label: 'luisladino.com',
+                href: 'https://www.luisladino.com',
+              },
             ],
           },
         ],
-        copyright: `I use design thinking to identify problems, adapt to different domains, and create solutions that work. — <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>`,
+        copyright: `Created by <a href="https://www.luisladino.com" target="_blank">Luis Ladino</a>`,
       },
       prism: {
         theme: prismThemes.github,

@@ -13,12 +13,7 @@ const sidebars = {
       id: 'introduction/getting-started',
       label: 'Getting Started',
     },
-    {
-      type: 'doc',
-      id: 'introduction/about',
-      label: 'About',
-    },
-    {
+        {
       type: 'category',
       label: 'Techniques',
       link: {
