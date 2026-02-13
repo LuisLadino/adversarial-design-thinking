@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: Mindset
 slug: /
+pagination_label: Mindset — core philosophy for adversarial testing
 ---
 
 # Mindset

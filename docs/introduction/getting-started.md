@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Getting Started
+pagination_label: Getting Started — site structure and reading paths
 ---
 
 # Getting Started
