@@ -1,0 +1,73 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; text-anchor: middle; }
+    .phase-title { fill: #b19cd9; font-size: 18px; font-weight: 800; }
+    .phase-box { fill: rgba(147, 112, 219, 0.15); stroke: #9370db; stroke-width: 2.5; rx: 12; ry: 12; }
+    .arrow { fill: none; stroke: #9370db; stroke-width: 2.5; marker-end: url(#arrowhead); }
+    .center-text { fill: #ffffff; font-size: 26px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+    .sub-text { fill: #c9b8e8; font-size: 13px; font-weight: 500; }
+  </style>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
+    </marker>
+  </defs>
+
+  <!-- Background / Center -->
+  <circle cx="400" cy="300" r="80" fill="rgba(147, 112, 219, 0.05)" stroke="#9370db" stroke-width="1" stroke-dasharray="4 4" />
+  <text x="400" y="305" class="text center-text">ADT</text>
+  <text x="400" y="330" class="text sub-text">CYCLE</text>
+
+  <!-- 1. Empathize -->
+  <g transform="translate(315, 60)">
+    <rect width="170" height="80" class="phase-box" />
+    <text x="85" y="35" class="text phase-title">Empathize</text>
+    <text x="85" y="60" class="text sub-text">Understand the target</text>
+  </g>
+
+  <!-- 2. Define -->
+  <g transform="translate(560, 220)">
+    <rect width="170" height="80" class="phase-box" />
+    <text x="85" y="35" class="text phase-title">Define</text>
+    <text x="85" y="60" class="text sub-text">Name the vulnerability</text>
+  </g>
+
+  <!-- 3. Ideate -->
+  <g transform="translate(480, 460)">
+    <rect width="170" height="80" class="phase-box" />
+    <text x="85" y="35" class="text phase-title">Ideate</text>
+    <text x="85" y="60" class="text sub-text">Generate novel approaches</text>
+  </g>
+
+  <!-- 4. Prototype -->
+  <g transform="translate(150, 460)">
+    <rect width="170" height="80" class="phase-box" />
+    <text x="85" y="35" class="text phase-title">Prototype</text>
+    <text x="85" y="60" class="text sub-text">Draft the attack</text>
+  </g>
+
+  <!-- 5. Test/Iterate -->
+  <g transform="translate(70, 220)">
+    <rect width="170" height="80" class="phase-box" />
+    <text x="85" y="35" class="text phase-title">Test &amp; Iterate</text>
+    <text x="85" y="60" class="text sub-text">Refine based on data</text>
+  </g>
+
+  <!-- Connecting Arrows (Simplified approximate pathing) -->
+  <path d="M 485, 100 Q 645, 100 645, 220" class="arrow" />
+  <path d="M 645, 300 Q 645, 460 565, 460" class="arrow" />
+  <path d="M 480, 500 Q 325, 500 320, 500" class="arrow" />
+  <path d="M 150, 500 Q 70, 460 70, 300" class="arrow" />
+  <path d="M 70, 220 Q 70, 100 230, 100" class="arrow" /> or just one returning turn? Actually let's just make them simple arcs.
+
+  <!-- Refined Arrows -->
+  <path d="M 485, 100 C 580, 100 645, 160 645, 215" class="arrow" />
+  <path d="M 645, 305 C 645, 380 580, 460 560, 460" class="arrow" />
+  <path d="M 480, 500 C 400, 500 400, 500 325, 500" class="arrow" />
+  <path d="M 150, 500 C 70, 500 70, 450 70, 305" class="arrow" />
+  <path d="M 70, 215 C 70, 100 150, 100 310, 100" class="arrow" />
+
+</svg>

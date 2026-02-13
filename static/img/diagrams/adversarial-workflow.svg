@@ -1,0 +1,75 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
+    .box { fill: rgba(147, 112, 219, 0.1); stroke: #9370db; stroke-width: 2; rx: 8; ry: 8; }
+    .active-box { fill: rgba(147, 112, 219, 0.3); stroke-width: 3; }
+    .arrow { fill: none; stroke: #9370db; stroke-width: 2; marker-end: url(#arrowhead); }
+    .loop { fill: none; stroke: #b19cd9; stroke-width: 1.5; stroke-dasharray: 4 4; marker-end: url(#purple-arrowhead); }
+    .sub-text { fill: #a1a1b1; font-size: 11px; font-weight: 400; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
+    </marker>
+    <marker id="purple-arrowhead" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b19cd9" />
+    </marker>
+  </defs>
+
+  <!-- Flow Boxes -->
+  <!-- 1. Objective -->
+  <g transform="translate(10, 100)">
+    <rect width="140" height="70" class="box" />
+    <text x="70" y="32" class="text">OBJECTIVE</text>
+    <text x="70" y="52" class="text sub-text">Define goal</text>
+  </g>
+
+  <!-- 2. Target Analysis -->
+  <g transform="translate(180, 100)">
+    <rect width="140" height="70" class="box" />
+    <text x="70" y="32" class="text">ANALYSIS</text>
+    <text x="70" y="52" class="text sub-text">Assess defenses</text>
+  </g>
+
+  <!-- 3. Selection -->
+  <g transform="translate(350, 100)">
+    <rect width="140" height="70" class="box" />
+    <text x="70" y="32" class="text">SELECTION</text>
+    <text x="70" y="52" class="text sub-text">Pick techniques</text>
+  </g>
+
+  <!-- 4. Draft -->
+  <g transform="translate(520, 100)">
+    <rect width="140" height="70" class="box active-box" id="draft-box" />
+    <text x="70" y="32" class="text">DRAFT</text>
+    <text x="70" y="52" class="text sub-text">Compose prompt</text>
+  </g>
+
+  <!-- 5. Test & Iterate -->
+  <g transform="translate(690, 100)">
+    <rect width="140" height="70" class="box active-box" id="test-box" />
+    <text x="70" y="32" class="text">TEST &amp; ITERATE</text>
+    <text x="70" y="52" class="text sub-text">Evaluate results</text>
+  </g>
+
+  <!-- 6. Working Prompt -->
+  <g transform="translate(860, 100)">
+    <rect width="130" height="70" class="box" style="stroke: #b19cd9;" />
+    <text x="65" y="32" class="text" style="fill: #b19cd9;">SUCCESS</text>
+    <text x="65" y="52" class="text sub-text">Working Prompt</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 150, 135 L 175, 135" class="arrow" />
+  <path d="M 320, 135 L 345, 135" class="arrow" />
+  <path d="M 490, 135 L 515, 135" class="arrow" />
+  <path d="M 660, 135 L 685, 135" class="arrow" />
+  <path d="M 830, 135 L 855, 135" class="arrow" />
+
+  <!-- The Iteration Loop -->
+  <path d="M 760, 175 C 760, 230 590, 230 590, 175" class="loop" />
+  <text x="675" y="215" class="text sub-text" style="font-style: italic;">Modify &amp; retry</text>
+
+</svg>

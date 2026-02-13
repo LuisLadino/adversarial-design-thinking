@@ -16,8 +16,7 @@ The process from objective to working prompt.
 Objective → Target Analysis → Technique Selection → Draft → Test & Iterate → Working Prompt
 ```
 
-{/* TODO: Add diagram when ready */}
-{/* ![Adversarial Workflow Pipeline](/img/diagrams/adversarial-workflow.svg) */}
+![Adversarial Workflow Pipeline](/img/diagrams/adversarial-workflow.svg)
 
 ---
 

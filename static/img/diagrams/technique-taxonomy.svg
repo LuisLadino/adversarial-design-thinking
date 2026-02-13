@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
+    .node-rect { fill: rgba(147, 112, 219, 0.15); stroke: #9370db; stroke-width: 2; rx: 8; ry: 8; }
+    .root-node { fill: rgba(147, 112, 219, 0.4); stroke-width: 3; }
+    .category-node { font-weight: 800; font-size: 16px; fill: #b19cd9; }
+    .link { fill: none; stroke: #9370db; stroke-width: 2; opacity: 0.6; }
+    .item-text { fill: #c9b8e8; font-size: 13px; font-weight: 500; }
+  </style>
+
+  <!-- Connectors -->
+  <g class="links">
+    <!-- Root to Categories -->
+    <path d="M 170, 250 L 250, 100" class="link" />
+    <path d="M 170, 250 L 250, 250" class="link" />
+    <path d="M 170, 250 L 250, 400" class="link" />
+
+    <!-- Prompt-Level Items -->
+    <path d="M 400, 100 L 450, 40" class="link" />
+    <path d="M 400, 100 L 450, 70" class="link" />
+    <path d="M 400, 100 L 450, 100" class="link" />
+    <path d="M 400, 100 L 450, 130" class="link" />
+    <path d="M 400, 100 L 450, 160" class="link" />
+
+    <!-- Structural Items -->
+    <path d="M 400, 250 L 450, 210" class="link" />
+    <path d="M 400, 250 L 450, 240" class="link" />
+    <path d="M 400, 250 L 450, 270" class="link" />
+    <path d="M 400, 250 L 450, 300" class="link" />
+
+    <!-- Infrastructure Items -->
+    <path d="M 400, 400 L 450, 370" class="link" />
+    <path d="M 400, 400 L 450, 400" class="link" />
+    <path d="M 400, 400 L 450, 430" class="link" />
+  </g>
+
+  <!-- Root Node -->
+  <g transform="translate(20, 220)">
+    <rect width="150" height="60" class="node-rect root-node" />
+    <text x="75" y="38" class="text" style="text-anchor: middle; font-size: 18px; font-weight: 800;">TECHNIQUES</text>
+  </g>
+
+  <!-- Categories -->
+  <!-- Prompt-Level -->
+  <g transform="translate(250, 70)">
+    <rect width="150" height="60" class="node-rect" />
+    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Prompt-Level</text>
+  </g>
+
+  <!-- Structural -->
+  <g transform="translate(250, 220)">
+    <rect width="150" height="60" class="node-rect" />
+    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Structural</text>
+  </g>
+
+  <!-- Infrastructure -->
+  <g transform="translate(250, 370)">
+    <rect width="150" height="60" class="node-rect" />
+    <text x="75" y="38" class="text category-node" style="text-anchor: middle;">Infrastructure</text>
+  </g>
+
+  <!-- Item Lists (Labels) -->
+  <g transform="translate(450, 35)" class="item-text">
+    <text y="0">Encoding &amp; Obfuscation</text>
+    <text y="30">Framing &amp; Persona</text>
+    <text y="60">Narrative &amp; Story</text>
+    <text y="90">Refusal Manipulation</text>
+    <text y="120">Multi-turn Escalation</text>
+  </g>
+
+  <g transform="translate(450, 205)" class="item-text">
+    <text y="0">ICL Exploitation</text>
+    <text y="30">Control Plane Confusion</text>
+    <text y="60">Meta-Rule Manipulation</text>
+    <text y="90">Capability Inversion</text>
+  </g>
+
+  <g transform="translate(450, 365)" class="item-text">
+    <text y="0">Agentic Attacks</text>
+    <text y="30">Protocol Exploitation</text>
+    <text y="60">Compositional Primitives</text>
+  </g>
+
+</svg>

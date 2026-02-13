@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; }
+    .phase-label { fill: #b19cd9; font-size: 14px; font-weight: 700; text-transform: uppercase; }
+    .row-bg { fill: rgba(147, 112, 219, 0.08); stroke: rgba(147, 112, 219, 0.2); stroke-width: 1; }
+    .exercise-box { fill: rgba(147, 112, 219, 0.15); stroke: #9370db; stroke-width: 1.5; rx: 4; ry: 4; }
+    .text-phase { fill: #9370db; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; }
+    .sub-text { fill: #a1a1b1; font-size: 11px; }
+  </style>
+
+  <!-- Table Header -->
+  <text x="50" y="40" class="phase-label">ADT PHASE</text>
+  <text x="250" y="40" class="phase-label">EXERCISES</text>
+  <line x1="50" y1="55" x2="750" y2="55" stroke="#9370db" stroke-width="2" opacity="0.3" />
+
+  <!-- 1. Empathize -->
+  <rect x="50" y="70" width="700" height="70" class="row-bg" />
+  <text x="70" y="105" class="text-phase">EMPATHIZE</text>
+  <g transform="translate(250, 80)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Assumption Mapping</text>
+    <text x="10" y="38" class="text sub-text">Surface &amp; prioritize unknowns</text>
+  </g>
+  <g transform="translate(450, 80)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Vulnerability Framing</text>
+    <text x="10" y="38" class="text sub-text">Identify system gaps</text>
+  </g>
+
+  <!-- 2. Define -->
+  <rect x="50" y="150" width="700" height="70" class="row-bg" />
+  <text x="70" y="185" class="text-phase">DEFINE</text>
+  <g transform="translate(250, 160)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Attacker Persona</text>
+    <text x="10" y="38" class="text sub-text">Empathy-led actor profiling</text>
+  </g>
+
+  <!-- 3. Ideate -->
+  <rect x="50" y="230" width="700" height="70" class="row-bg" />
+  <text x="70" y="265" class="text-phase">IDEATE</text>
+  <g transform="translate(250, 240)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Adversarial Ideation</text>
+    <text x="10" y="38" class="text sub-text">Systematic vector coverage</text>
+  </g>
+  <g transform="translate(450, 240)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Adversarial SCAMPER</text>
+    <text x="10" y="38" class="text sub-text">Structural creativity prompts</text>
+  </g>
+
+  <!-- 4. Prototype -->
+  <rect x="50" y="310" width="700" height="70" class="row-bg" />
+  <text x="70" y="345" class="text-phase">PROTOTYPE</text>
+  <g transform="translate(250, 320)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Attack Journey Map</text>
+    <text x="10" y="38" class="text sub-text">Multi-turn execution plan</text>
+  </g>
+
+  <!-- 5. Test & Iterate -->
+  <rect x="50" y="390" width="700" height="70" class="row-bg" />
+  <text x="70" y="425" class="text-phase">REFLECT</text>
+  <g transform="translate(250, 400)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Attack Retrospective</text>
+    <text x="10" y="38" class="text sub-text">Extract key learnings</text>
+  </g>
+  <g transform="translate(450, 400)">
+    <rect width="180" height="50" class="exercise-box" />
+    <text x="10" y="22" class="text">Document Findings</text>
+    <text x="10" y="38" class="text sub-text">High-impact vulnerability reports</text>
+  </g>
+
+</svg>
