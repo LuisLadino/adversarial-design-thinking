@@ -73,6 +73,15 @@
   max-width: 500px;
 }
 
+/* Light Mode Overrides for Hero Legibility */
+[data-theme="light"] .heroTitle {
+  background: linear-gradient(135deg, #1a1a1b 0%, #6a4c93 100%);
+}
+
+[data-theme="light"] .heroSubtitle {
+  color: var(--ifm-color-emphasis-800);
+}
+
 .heroButtons {
   display: flex;
   gap: 1.5rem;
