@@ -25,11 +25,11 @@
 
       .module-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 2; }
       .badge { fill: var(--badge-bg); }
-      .badge-text { fill: var(--badge-text); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; }
+      .badge-text { fill: var(--badge-text); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
       .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; }
       .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 12px; text-anchor: middle; font-weight: 500; }
       .text-center { fill: var(--stroke-primary); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; opacity: 0.4; }
-      .cycle-arrow { fill: none; stroke: var(--stroke-primary); stroke-width: 2; }
+      .arrow { fill: none; stroke: var(--stroke-primary); stroke-width: 2; }
       .center-ring { fill: none; stroke: var(--stroke-primary); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.3; }
     </style>
 
@@ -51,58 +51,58 @@
   <!-- Phase 1: Empathize (Top Center) -->
   <g transform="translate(410, 50)">
     <rect width="180" height="90" rx="8" class="module-bg" />
-    <rect x="10" y="10" width="28" height="22" rx="4" class="badge" />
-    <text x="24" y="26" class="badge-text">1</text>
-    <text x="90" y="45" class="text-header">Empathize</text>
-    <text x="90" y="65" class="text-sub">Understand the target</text>
+    <rect x="12" y="12" width="26" height="26" rx="4" class="badge" />
+    <text x="25" y="25" class="badge-text">1</text>
+    <text x="90" y="50" class="text-header">Empathize</text>
+    <text x="90" y="72" class="text-sub">Understand the target</text>
   </g>
 
-  <!-- Phase 2: Define (Top Right) -->
-  <g transform="translate(700, 170)">
+  <!-- Phase 2: Define (Right) -->
+  <g transform="translate(700, 205)">
     <rect width="180" height="90" rx="8" class="module-bg" />
-    <rect x="10" y="10" width="28" height="22" rx="4" class="badge" />
-    <text x="24" y="26" class="badge-text">2</text>
-    <text x="90" y="45" class="text-header">Define</text>
-    <text x="90" y="65" class="text-sub">Name the vulnerability</text>
+    <rect x="12" y="12" width="26" height="26" rx="4" class="badge" />
+    <text x="25" y="25" class="badge-text">2</text>
+    <text x="90" y="50" class="text-header">Define</text>
+    <text x="90" y="72" class="text-sub">Name the vulnerability</text>
   </g>
 
   <!-- Phase 3: Ideate (Bottom Right) -->
-  <g transform="translate(620, 420)">
+  <g transform="translate(600, 420)">
     <rect width="180" height="90" rx="8" class="module-bg" />
-    <rect x="10" y="10" width="28" height="22" rx="4" class="badge" />
-    <text x="24" y="26" class="badge-text">3</text>
-    <text x="90" y="45" class="text-header">Ideate</text>
-    <text x="90" y="65" class="text-sub">Generate approaches</text>
+    <rect x="12" y="12" width="26" height="26" rx="4" class="badge" />
+    <text x="25" y="25" class="badge-text">3</text>
+    <text x="90" y="50" class="text-header">Ideate</text>
+    <text x="90" y="72" class="text-sub">Generate approaches</text>
   </g>
 
   <!-- Phase 4: Prototype (Bottom Left) -->
-  <g transform="translate(200, 420)">
+  <g transform="translate(220, 420)">
     <rect width="180" height="90" rx="8" class="module-bg" />
-    <rect x="10" y="10" width="28" height="22" rx="4" class="badge" />
-    <text x="24" y="26" class="badge-text">4</text>
-    <text x="90" y="45" class="text-header">Prototype</text>
-    <text x="90" y="65" class="text-sub">Build the attack</text>
+    <rect x="12" y="12" width="26" height="26" rx="4" class="badge" />
+    <text x="25" y="25" class="badge-text">4</text>
+    <text x="90" y="50" class="text-header">Prototype</text>
+    <text x="90" y="72" class="text-sub">Build the attack</text>
   </g>
 
-  <!-- Phase 5: Test (Top Left) -->
-  <g transform="translate(120, 170)">
+  <!-- Phase 5: Test (Left) -->
+  <g transform="translate(120, 205)">
     <rect width="180" height="90" rx="8" class="module-bg" />
-    <rect x="10" y="10" width="28" height="22" rx="4" class="badge" />
-    <text x="24" y="26" class="badge-text">5</text>
-    <text x="90" y="45" class="text-header">Test</text>
-    <text x="90" y="65" class="text-sub">Evaluate &amp; learn</text>
+    <rect x="12" y="12" width="26" height="26" rx="4" class="badge" />
+    <text x="25" y="25" class="badge-text">5</text>
+    <text x="90" y="50" class="text-header">Test</text>
+    <text x="90" y="72" class="text-sub">Evaluate &amp; learn</text>
   </g>
 
-  <!-- Flow Arrows (symmetric curves) -->
-  <!-- Empathize → Define -->
-  <path d="M590,95 Q700,95 700,160" class="cycle-arrow" marker-end="url(#arrowhead)" />
-  <!-- Define → Ideate -->
-  <path d="M790,270 Q790,380 760,410" class="cycle-arrow" marker-end="url(#arrowhead)" />
-  <!-- Ideate → Prototype -->
-  <path d="M620,465 L390,465" class="cycle-arrow" marker-end="url(#arrowhead)" />
-  <!-- Prototype → Test -->
-  <path d="M210,410 Q210,300 210,270" class="cycle-arrow" marker-end="url(#arrowhead)" />
-  <!-- Test → Empathize -->
-  <path d="M300,170 Q400,95 400,95" class="cycle-arrow" marker-end="url(#arrowhead)" />
+  <!-- Flow Arrows - all curved beziers -->
+  <!-- 1→2: Empathize to Define -->
+  <path d="M590,100 C650,100 700,150 700,195" class="arrow" marker-end="url(#arrowhead)" />
+  <!-- 2→3: Define to Ideate -->
+  <path d="M790,305 C790,360 750,420 690,420" class="arrow" marker-end="url(#arrowhead)" />
+  <!-- 3→4: Ideate to Prototype -->
+  <path d="M600,465 C550,465 450,465 410,465" class="arrow" marker-end="url(#arrowhead)" />
+  <!-- 4→5: Prototype to Test -->
+  <path d="M220,420 C180,380 180,340 210,305" class="arrow" marker-end="url(#arrowhead)" />
+  <!-- 5→1: Test to Empathize -->
+  <path d="M210,195 C210,150 350,100 400,100" class="arrow" marker-end="url(#arrowhead)" />
 
 </svg>
