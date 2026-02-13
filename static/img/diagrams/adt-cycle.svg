@@ -23,7 +23,7 @@
 
       .module-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
       .badge { fill: var(--stroke-primary); }
-      .badge-text { fill: var(--badge-text); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; }
+      .badge-text { fill: var(--badge-text); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
       .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; text-transform: uppercase; letter-spacing: 0.1em; }
       .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 12px; text-anchor: middle; font-weight: 500; }
       .text-center { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 12px; opacity: 0.5; text-anchor: middle; }
@@ -57,7 +57,7 @@
     <g clip-path="url(#boxClip)">
       <rect x="0" y="0" width="38" height="20" class="badge" />
     </g>
-    <text x="19" y="14" class="badge-text">01</text>
+    <text x="19" y="10" class="badge-text">01</text>
     <text x="90" y="52" class="text-header">Empathize</text>
     <text x="90" y="72" class="text-sub">Understand the target</text>
   </g>
@@ -68,7 +68,7 @@
     <g clip-path="url(#boxClip)">
       <rect x="0" y="0" width="38" height="20" class="badge" />
     </g>
-    <text x="19" y="14" class="badge-text">02</text>
+    <text x="19" y="10" class="badge-text">02</text>
     <text x="90" y="52" class="text-header">Define</text>
     <text x="90" y="72" class="text-sub">Name the vulnerability</text>
   </g>
@@ -79,7 +79,7 @@
     <g clip-path="url(#boxClip)">
       <rect x="0" y="0" width="38" height="20" class="badge" />
     </g>
-    <text x="19" y="14" class="badge-text">03</text>
+    <text x="19" y="10" class="badge-text">03</text>
     <text x="90" y="52" class="text-header">Ideate</text>
     <text x="90" y="72" class="text-sub">Generate approaches</text>
   </g>
@@ -90,7 +90,7 @@
     <g clip-path="url(#boxClip)">
       <rect x="0" y="0" width="38" height="20" class="badge" />
     </g>
-    <text x="19" y="14" class="badge-text">04</text>
+    <text x="19" y="10" class="badge-text">04</text>
     <text x="90" y="52" class="text-header">Prototype</text>
     <text x="90" y="72" class="text-sub">Build the attack</text>
   </g>
@@ -101,7 +101,7 @@
     <g clip-path="url(#boxClip)">
       <rect x="0" y="0" width="38" height="20" class="badge" />
     </g>
-    <text x="19" y="14" class="badge-text">05</text>
+    <text x="19" y="10" class="badge-text">05</text>
     <text x="90" y="52" class="text-header">Test</text>
     <text x="90" y="72" class="text-sub">Evaluate &amp; learn</text>
   </g>
