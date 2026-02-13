@@ -9,7 +9,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Metallic purple accent - brighter, more visible */
+  /* Metallic purple accent */
   --accent-purple: #9370db;
   --accent-purple-bright: #b19cd9;
   --accent-purple-muted: rgba(147, 112, 219, 0.15);
@@ -25,16 +25,19 @@
   --ifm-color-primary-lightest: #e8eaf2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* Metallic purple accent - dark mode, brighter */
+  /* Metallic purple accent - dark mode */
   --accent-purple: #b19cd9;
   --accent-purple-bright: #c9b8e8;
   --accent-purple-muted: rgba(177, 156, 217, 0.15);
+
+  /* Override sidebar chevron icon with purple version */
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23b19cd9" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
 }
 
-/* Details/collapsible - outline style with purple accents */
+/* Details/collapsible styling */
 details {
   border: 1px solid var(--accent-purple-muted);
-  border-left: 3px solid var(--accent-purple);
+  border-left: 2px solid var(--accent-purple);
   border-radius: 4px;
   padding: 0.75rem 1rem;
   margin: 1rem 0;
@@ -50,7 +53,6 @@ details summary {
   font-weight: 500;
   color: var(--ifm-color-primary);
   padding: 0.25rem 0;
-  padding-left: 0.5rem;
   list-style: none;
 }
 
@@ -58,17 +60,18 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
+details summary::marker {
+  display: none;
+  content: '';
+}
+
 details summary::before {
-  content: '▸';
+  content: '▸ ';
   color: var(--accent-purple);
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-left: -0.5rem;
-  transition: transform 0.2s ease;
 }
 
 details[open] summary::before {
-  content: '▾';
+  content: '▾ ';
 }
 
 [data-theme='dark'] details summary {
@@ -79,36 +82,25 @@ details summary:hover {
   color: var(--accent-purple);
 }
 
-/* Sidebar - purple accents for dropdowns and active items */
-.menu__link--sublist-caret::after {
-  background: var(--accent-purple) !important;
-  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
-  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
-}
-
+/* Sidebar active item - purple left border */
 .menu__link--active:not(.menu__link--sublist) {
-  border-left: 3px solid var(--accent-purple);
-  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
-  background: var(--accent-purple-muted);
+  border-left: 3px solid var(--accent-purple) !important;
+  margin-left: -3px;
+  background: var(--accent-purple-muted) !important;
 }
 
-.menu__caret::before {
-  background: var(--accent-purple) !important;
-}
-
-/* Sidebar dropdown chevron color */
-.menu__link--sublist::after,
-.menu__caret::before {
+/* Sidebar chevron filter - shift to purple hue */
+[data-theme='dark'] .menu__link--sublist-caret::after,
+[data-theme='dark'] .menu__caret::before {
   filter: none !important;
-  background-color: var(--accent-purple) !important;
 }
 
-/* Links - subtle purple on hover */
+/* Links - purple on hover */
 a:hover {
   color: var(--accent-purple);
 }
 
-/* Table styling - cleaner lines */
+/* Table styling */
 table {
   border-collapse: collapse;
 }
