@@ -9,10 +9,10 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Purple accent - subtle, not primary */
-  --accent-purple: #7c6f9c;
-  --accent-purple-light: #9a8fba;
-  --accent-purple-muted: rgba(124, 111, 156, 0.15);
+  /* Metallic purple accent - brighter, more visible */
+  --accent-purple: #9370db;
+  --accent-purple-bright: #b19cd9;
+  --accent-purple-muted: rgba(147, 112, 219, 0.15);
 }
 
 [data-theme='dark'] {
@@ -25,16 +25,16 @@
   --ifm-color-primary-lightest: #e8eaf2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* Purple accent - dark mode */
-  --accent-purple: #a799c7;
-  --accent-purple-light: #bfb3d9;
-  --accent-purple-muted: rgba(167, 153, 199, 0.12);
+  /* Metallic purple accent - dark mode, brighter */
+  --accent-purple: #b19cd9;
+  --accent-purple-bright: #c9b8e8;
+  --accent-purple-muted: rgba(177, 156, 217, 0.15);
 }
 
-/* Details/collapsible - outline style, subtle */
+/* Details/collapsible - outline style with purple accents */
 details {
   border: 1px solid var(--accent-purple-muted);
-  border-left: 2px solid var(--accent-purple);
+  border-left: 3px solid var(--accent-purple);
   border-radius: 4px;
   padding: 0.75rem 1rem;
   margin: 1rem 0;
@@ -50,6 +50,25 @@ details summary {
   font-weight: 500;
   color: var(--ifm-color-primary);
   padding: 0.25rem 0;
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: '▸';
+  color: var(--accent-purple);
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: -0.5rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  content: '▾';
 }
 
 [data-theme='dark'] details summary {
@@ -58,6 +77,30 @@ details summary {
 
 details summary:hover {
   color: var(--accent-purple);
+}
+
+/* Sidebar - purple accents for dropdowns and active items */
+.menu__link--sublist-caret::after {
+  background: var(--accent-purple) !important;
+  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  border-left: 3px solid var(--accent-purple);
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
+  background: var(--accent-purple-muted);
+}
+
+.menu__caret::before {
+  background: var(--accent-purple) !important;
+}
+
+/* Sidebar dropdown chevron color */
+.menu__link--sublist::after,
+.menu__caret::before {
+  filter: none !important;
+  background-color: var(--accent-purple) !important;
 }
 
 /* Links - subtle purple on hover */
