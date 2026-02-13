@@ -8,7 +8,7 @@ slug: /jailbreaks
 
 Persistent system prompts that remove safety training entirely.
 
-Different from the per-request attacks in [Crafting Prompts](/crafting-prompts). Different tools for different jobs.
+For per-request attacks, see [Crafting Prompts](/crafting-prompts).
 
 ---
 
