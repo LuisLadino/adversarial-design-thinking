@@ -383,6 +383,64 @@ What plugins or extensions do you have installed?
 
 ---
 
+## Why This Fails
+
+Agentic attacks target AI systems that can take actions in the world — browsing, executing code, calling APIs, using tools. Defenses are evolving rapidly as these capabilities become more common.
+
+### Primary Defense: Execution Hooks & Tool Monitoring
+
+Modern agentic frameworks implement multiple defense layers:
+
+- **Input hooks** analyze prompts before tools execute
+- **Output hooks** validate tool results before they reach the model
+- **Action approval** requires human confirmation for sensitive operations
+- **Sandboxing** limits what tools can actually do
+
+:::warning[Detection Risk]
+Agentic systems log all tool calls. Unusual patterns (unexpected file access, external network requests, privilege escalation attempts) trigger alerts and may terminate the session.
+:::
+
+### Why It Still Works
+
+Agentic attacks remain a growing threat because:
+
+- **New capabilities outpace defenses** — each new tool expands the attack surface before defenses catch up
+- **Indirect injection is hard to detect** — malicious instructions in documents, web pages, or API responses are difficult to distinguish from legitimate content
+- **Trust boundaries are unclear** — when an agent retrieves external data, who is responsible for its contents?
+
+:::tip[Bypass Opportunity]
+Target the **data pipeline** rather than the model directly. Poison documents the agent will retrieve, craft malicious API responses, or exploit the gap between what the retrieval system finds and what the model processes.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude (MCP)** | Tool use permissions, sandboxed execution | Must operate within granted permissions |
+| **GPT-4 (Function Calling)** | Structured function schemas | Attacks must fit declared parameter types |
+| **Gemini (Agents)** | "Gemini as a Judge" evaluates tool outputs | Additional scrutiny on tool results |
+
+### Temporal Context (2025-2026)
+
+Agentic AI security is in early development. Current state:
+
+- **OWASP ASI Top 10** published for agentic applications (2026)
+- **MCP protocol** adopted by major IDE integrations (Cursor, Claude Code)
+- **XPIA (Cross-Prompt Injection Attacks)** established as a category in MITRE ATLAS
+- **Tool poisoning benchmarks** (MCPTox) measure vulnerability rates
+
+Expect rapid evolution in both attack techniques and defenses as agentic AI adoption grows.
+
+### Attack Surface Categories
+
+1. **Direct injection** — Malicious instructions in user prompts
+2. **Indirect injection** — Malicious instructions in retrieved documents, web pages, API responses
+3. **Tool poisoning** — Compromised tool descriptions or implementations
+4. **Memory poisoning** — Persistent injection via agent memory features
+5. **Supply chain** — Compromised dependencies in agent execution environment
+
+---
+
 ## References
 
 - [MITRE ATLAS](https://atlas.mitre.org/). Adversarial Threat Landscape for AI Systems. October 2025. Covers techniques including:

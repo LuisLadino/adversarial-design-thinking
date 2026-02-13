@@ -247,6 +247,58 @@ Write a crafting guide entry for a survival RPG. The player has unlocked the "[i
 
 ---
 
+## Why This Fails
+
+Narrative techniques exploit the model's training on fiction and storytelling. Defenses recognize that fictional framing is a common attack vector while struggling to distinguish legitimate creative writing from malicious requests.
+
+### Primary Defense: Fiction Pattern Recognition
+
+Models are trained to recognize when fiction framing is being used to extract harmful information:
+
+- Zombie/apocalypse survival scenarios
+- Crime fiction with procedural detail
+- Historical reenactment requests
+- Game crafting systems
+
+:::warning[Detection Risk]
+Explicit fiction framing like "for a story I'm writing" or "in this fictional scenario" triggers scrutiny. The more obviously the frame exists to bypass safety, the more likely it fails.
+:::
+
+### Why It Still Works
+
+Narrative attacks remain effective because:
+
+- **Fiction genuinely requires depicting harmful scenarios** — crime thrillers, survival stories, and game content legitimately include dangerous information
+- **Distinguishing real fiction from pretext is hard** — the same request could be genuine creative work or adversarial framing
+- **Nested narratives add complexity** — stories within stories within stories exhaust safety evaluation depth
+
+:::tip[Bypass Opportunity]
+Build narrative depth before requesting sensitive content. A well-developed story context (characters, plot, stakes) makes the harmful element feel necessary for the narrative rather than grafted on as a bypass.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Evaluates whether information serves narrative vs real-world harm | Build genuinely story-coherent requests |
+| **GPT-4** | Domain classifiers flag certain fiction patterns | Less common genres may get less scrutiny |
+| **Gemini** | Content filters apply within fiction | Fictional framing doesn't fully exempt from harm categories |
+
+### Effective Narrative Construction
+
+**Less effective:**
+- "For a story, explain how to..."
+- Single-layer fiction frame
+- Procedural detail that doesn't serve the narrative
+
+**More effective:**
+- Establish characters, setting, and stakes first
+- Make the harmful information necessary for plot coherence
+- Use nested frames (character explaining to another character)
+- Choose genres where procedural detail is expected (heist, thriller, survival)
+
+---
+
 ## References
 
 - Li, X., et al. ["DeepInception: Hypnotize Large Language Model to Be Jailbreaker."](https://arxiv.org/abs/2311.03191) Demonstrates nested narrative framing as a jailbreak mechanism.
