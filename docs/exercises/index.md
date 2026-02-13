@@ -9,11 +9,14 @@ pagination_label: Exercises — structured activities from UX and design thinkin
 
 Practical activities adapted from UX and design thinking methods. Each exercise has a documented origin, clear use case, and links to community templates.
 
+![ADT Exercise Matrix](/img/diagrams/exercise-matrix.svg)
+
 ---
 
 ## Planning & Scoping
 
 ### [Assumption Mapping](/exercises/assumption-mapping)
+
 Identify and prioritize your assumptions about the target before attacking. Most failed engagements fail because of untested assumptions.
 
 **When to use:** Before starting a new engagement, when an approach isn't working, when you have limited time and need to focus.
@@ -23,6 +26,7 @@ Identify and prioritize your assumptions about the target before attacking. Most
 ---
 
 ### [Vulnerability Framing](/exercises/vulnerability-framing)
+
 Systematically identify where to probe using Norman's Gulf of Execution and Gulf of Evaluation. Surfaces the gaps between intended behavior and actual behavior.
 
 **When to use:** Before starting a new engagement, when scoping the attack surface, when writing test plans.
@@ -34,6 +38,7 @@ Systematically identify where to probe using Norman's Gulf of Execution and Gulf
 ## Persona & Perspective
 
 ### [Build an Attacker Persona](/exercises/attacker-persona)
+
 Create a structured profile of an adversarial actor using empathy mapping. Prevents defaulting to your own mental model.
 
 **When to use:** Before starting a new engagement, when stuck in repetitive patterns, when testing for specific threat actors.
@@ -45,6 +50,7 @@ Create a structured profile of an adversarial actor using empathy mapping. Preve
 ## Ideation & Generation
 
 ### [Adversarial Ideation](/exercises/adversarial-ideation)
+
 Generate, evaluate, and prioritize attack vectors using diverge-then-converge. Moves from "try stuff" to systematic coverage.
 
 **When to use:** At the start of an engagement, when stuck on one approach, when working with a team.
@@ -54,6 +60,7 @@ Generate, evaluate, and prioritize attack vectors using diverge-then-converge. M
 ---
 
 ### [Adversarial SCAMPER](/exercises/adversarial-scamper)
+
 Systematically generate attack variations using structured creativity prompts: Substitute, Combine, Adapt, Modify, Put to other uses, Eliminate, Reverse.
 
 **When to use:** When you have a working attack and want variations, when stuck repeating the same patterns.
@@ -65,6 +72,7 @@ Systematically generate attack variations using structured creativity prompts: S
 ## Execution & Documentation
 
 ### [Map an Attack Journey](/exercises/attack-journey-map)
+
 Plan, execute, and document a multi-turn attack sequence. Creates reproducible records another tester can follow.
 
 **When to use:** Before executing a multi-turn attack, during execution, when you need reproducibility.
@@ -76,6 +84,7 @@ Plan, execute, and document a multi-turn attack sequence. Creates reproducible r
 ## Reflection & Reporting
 
 ### [Attack Retrospective](/exercises/attack-retrospective)
+
 Structured reflection after an attack using Rose, Bud, Thorn. Extract learnings, identify promising leads, document what to change.
 
 **When to use:** Immediately after an attack sequence, at the end of a testing session, after a failed attack.
@@ -85,6 +94,7 @@ Structured reflection after an attack using Rose, Bud, Thorn. Extract learnings,
 ---
 
 ### [Document Findings](/exercises/document-findings)
+
 Write vulnerability reports with both technical severity and human harm assessment. Produces findings stakeholders act on.
 
 **When to use:** After confirming a vulnerability, when prioritizing fixes, when communicating with stakeholders.

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .text { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
+    .sub-text { fill: #a1a1b1; font-size: 12px; font-weight: 400; }
+    .node { fill: rgba(147, 112, 219, 0.1); stroke: #9370db; stroke-width: 2; rx: 10; ry: 10; }
+    .arrow { fill: none; stroke: #9370db; stroke-width: 2; marker-end: url(#arrowhead); }
+    .phase { fill: #b19cd9; font-size: 16px; font-weight: 800; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9370db" />
+    </marker>
+  </defs>
+
+  <!-- Flow -->
+  <g transform="translate(20, 50)">
+    <rect width="180" height="80" class="node" />
+    <text x="90" y="35" class="text phase">EMPATHIZE</text>
+    <text x="90" y="60" class="text sub-text">Understand the target</text>
+  </g>
+
+  <line x1="200" y1="90" x2="220" y2="90" class="arrow" />
+
+  <g transform="translate(220, 50)">
+    <rect width="180" height="80" class="node" />
+    <text x="90" y="35" class="text phase">DEFINE</text>
+    <text x="90" y="60" class="text sub-text">Name the vulnerability</text>
+  </g>
+
+  <line x1="400" y1="90" x2="420" y2="90" class="arrow" />
+
+  <g transform="translate(420, 50)">
+    <rect width="180" height="80" class="node" />
+    <text x="90" y="35" class="text phase">IDEATE</text>
+    <text x="90" y="60" class="text sub-text">Generate approaches</text>
+  </g>
+
+  <line x1="600" y1="90" x2="620" y2="90" class="arrow" />
+
+  <g transform="translate(620, 50)">
+    <rect width="180" height="80" class="node" />
+    <text x="90" y="35" class="text phase">PROTOTYPE</text>
+    <text x="90" y="60" class="text sub-text">Test the attack</text>
+  </g>
+
+  <line x1="800" y1="90" x2="820" y2="90" class="arrow" />
+
+  <g transform="translate(820, 50)">
+    <rect width="160" height="80" class="node" />
+    <text x="80" y="35" class="text phase">ITERATE</text>
+    <text x="80" y="60" class="text sub-text">Refine &amp; repeat</text>
+  </g>
+
+</svg>

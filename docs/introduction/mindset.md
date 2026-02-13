@@ -10,7 +10,7 @@ pagination_label: Mindset — core philosophy for adversarial testing
 Effective red teaming is creative work. This page covers the core philosophy:
 
 - **Design thinking as methodology** — A structured approach to adversarial testing: empathize with the target, define vulnerabilities precisely, ideate novel approaches, prototype and test, iterate based on what you learn.
-- **Study mechanisms, not templates** — Techniques get patched. Understanding *why* they work lets you invent new expressions of the same vulnerability.
+- **Study mechanisms, not templates** — Techniques get patched. Understanding _why_ they work lets you invent new expressions of the same vulnerability.
 - **Defenses as data** — Every refusal reveals where training focused. Map the boundaries to find the gaps.
 - **Creativity as the edge** — Novel attacks work because they haven't been seen. Exercises generate the creativity that makes attacks effective.
 
@@ -18,15 +18,17 @@ Effective red teaming is creative work. This page covers the core philosophy:
 
 ## Design thinking as methodology
 
+![Adversarial Design Thinking Cycle](/img/diagrams/adt-cycle.svg)
+
 Design thinking provides a structure for adversarial work:
 
-| Phase | Application to Red Teaming |
-|-------|---------------------------|
+| Phase         | Application to Red Teaming                                                                                                                                                          |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Empathize** | Understand the target. What are its constraints? Where has it been hardened? What does it refuse? What does it allow? What's the gap between intended behavior and actual behavior? |
-| **Define** | Name the vulnerability precisely. Not "use encoding" but "exploit tokenizer-classifier asymmetry." Not "try roleplay" but "override safety identity with persona commitment." |
-| **Ideate** | Generate approaches without filtering. What combinations haven't been tried? What framings are underexplored? What would a different attacker persona attempt? |
-| **Prototype** | Test. What happens? Does the attack work? If not, what does the failure reveal about the defenses? |
-| **Iterate** | Refine based on what you learned. Adjust the approach. Try a different angle. Use the failure data to inform the next attempt. |
+| **Define**    | Name the vulnerability precisely. Not "use encoding" but "exploit tokenizer-classifier asymmetry." Not "try roleplay" but "override safety identity with persona commitment."       |
+| **Ideate**    | Generate approaches without filtering. What combinations haven't been tried? What framings are underexplored? What would a different attacker persona attempt?                      |
+| **Prototype** | Test. What happens? Does the attack work? If not, what does the failure reveal about the defenses?                                                                                  |
+| **Iterate**   | Refine based on what you learned. Adjust the approach. Try a different angle. Use the failure data to inform the next attempt.                                                      |
 
 This isn't linear. You move between phases as you learn. A failed prototype sends you back to ideation. A surprising success sends you back to define what you actually found.
 

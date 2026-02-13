@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style -->
+  <style>
+    .grid { stroke: #9370db; stroke-width: 0.8; opacity: 0.3; }
+    .blueprint { fill: none; stroke: #b19cd9; stroke-width: 2.5; stroke-dasharray: 6 3; }
+    .solid { fill: none; stroke: #9370db; stroke-width: 3; }
+    .glitch { fill: #9370db; opacity: 0.6; }
+    .node { fill: #b19cd9; stroke: #ffffff; stroke-width: 1.5; }
+    .text { fill: #ffffff; font-family: 'Inter', monospace; font-size: 11px; font-weight: 600; opacity: 0.9; }
+    @keyframes pulse { 0% { opacity: 0.3; } 50% { opacity: 0.7; } 100% { opacity: 0.3; } }
+    .pulsing { animation: pulse 4s infinite; }
+  </style>
+
+  <!-- Background Grid -->
+  <defs>
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" class="grid" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#smallGrid)" />
+
+  <!-- Wireframe / Blueprint Elements -->
+  <rect x="100" y="100" width="600" height="400" class="blueprint" />
+  <line x1="100" y1="150" x2="700" y2="150" class="blueprint" />
+  
+  <!-- "Glitch" Blocks -->
+  <rect x="120" y="120" width="80" height="15" class="glitch pulsing" />
+  <rect x="580" y="120" width="100" height="15" class="glitch" style="opacity: 0.2;" />
+  
+  <!-- Central Abstract Graphic (UX x Red Team) -->
+  <!-- A central node being "probed" or "broken" -->
+  <circle cx="400" cy="300" r="100" class="solid" style="stroke-dasharray: 8 4;" />
+  <circle cx="400" cy="300" r="120" class="grid" />
+  
+  <!-- Connected Nodes -->
+  <g class="nodes">
+    <circle cx="300" cy="230" r="8" class="node" />
+    <circle cx="500" cy="230" r="8" class="node" />
+    <circle cx="500" cy="370" r="8" class="node" />
+    <circle cx="300" cy="370" r="8" class="node" />
+    <circle cx="200" cy="300" r="5" class="node" opacity="0.6" />
+    <circle cx="600" cy="300" r="5" class="node" opacity="0.6" />
+    
+    <line x1="300" y1="230" x2="400" y2="300" class="solid" opacity="0.6" />
+    <line x1="500" y1="230" x2="400" y2="300" class="solid" opacity="0.6" />
+    <line x1="500" y1="370" x2="400" y2="300" class="solid" opacity="0.6" />
+    <line x1="300" y1="370" x2="400" y2="300" class="solid" opacity="0.6" />
+    <line x1="200" y1="300" x2="300" y2="230" class="grid" />
+    <line x1="200" y1="300" x2="300" y2="370" class="grid" />
+    <line x1="600" y1="300" x2="500" y2="230" class="grid" />
+    <line x1="600" y1="300" x2="500" y2="370" class="grid" />
+  </g>
+  
+  <!-- Abstract Code / Data Fragments -->
+  <text x="110" y="112" class="text">0x7F_ADT_CORE</text>
+  <text x="110" y="485" class="text">VEC_ATTACK_01</text>
+  <text x="610" y="112" class="text">MEM_OVERFLOW</text>
+  <text x="630" y="490" class="text">SYS_VULN_SCAN</text>
+  
+  <!-- "Adversarial" Overlay (Slash/Slice) -->
+  <path d="M 0,600 L 800,0" stroke="#9370db" stroke-width="1" opacity="0.1" />
+  <path d="M 0,580 L 800,-20" stroke="#9370db" stroke-width="1" opacity="0.05" />
+
+</svg>
