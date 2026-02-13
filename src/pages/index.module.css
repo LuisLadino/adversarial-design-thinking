@@ -75,7 +75,7 @@
 
 /* Light Mode Overrides for Hero Legibility */
 [data-theme="light"] .heroTitle {
-  background: linear-gradient(135deg, #1a1a1b 0%, #6a4c93 100%);
+  background-image: linear-gradient(135deg, #1a1a1b 0%, #6a4c93 100%);
 }
 
 [data-theme="light"] .heroSubtitle {
