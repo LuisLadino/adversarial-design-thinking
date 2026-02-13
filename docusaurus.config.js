@@ -12,6 +12,11 @@ const config = {
     v4: true,
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   url: 'https://LuisLadino.github.io',
   baseUrl: '/adversarial-design-thinking/',
 

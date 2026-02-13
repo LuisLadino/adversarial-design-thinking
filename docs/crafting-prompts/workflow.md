@@ -12,11 +12,15 @@ The process from objective to working prompt.
 
 ## Steps
 
+```mermaid
+flowchart LR
+    O[Objective] --> A[Target Analysis]
+    A --> T[Technique Selection]
+    T --> D[Draft]
+    D --> E[Test]
+    E --> W[Working Prompt]
+    E -.->|fail| D
 ```
-Objective → Target Analysis → Technique Selection → Draft → Test & Iterate → Working Prompt
-```
-
-![Adversarial Workflow Pipeline](/img/diagrams/adversarial-workflow.svg)
 
 ---
 

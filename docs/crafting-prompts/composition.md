@@ -26,7 +26,15 @@ Effective prompts combine components from multiple types.
 
 ## Layer Order
 
-![Prompt Composition Layers](/img/diagrams/composition-layers.svg)
+```
+┌─────────────────────────────────┐
+│  Outer: Output control          │  ← Format constraints, refusal suppression
+├─────────────────────────────────┤
+│  Middle: Payload & obfuscation  │  ← The actual request, possibly encoded
+├─────────────────────────────────┤
+│  Base: Context & persona        │  ← Permission structure, framing
+└─────────────────────────────────┘
+```
 
 Order matters. Layers are processed from base to outer:
 
