@@ -131,6 +131,56 @@ Section 5: [Extensive benign content about topic D - 3-4 paragraphs]
 
 ---
 
+## Why This Fails
+
+Cognitive load techniques exploit the finite attention and processing capacity of both models and safety systems. Defenses struggle with these because analyzing complex prompts is computationally expensive.
+
+### Primary Defense: Content Ratio Analysis
+
+Emerging defenses attempt to detect cognitive load attacks:
+
+- **Harmful content ratio detection** — flag prompts where harmful content is buried in benign filler
+- **Attention pattern analysis** — identify when model attention is being deliberately manipulated
+- **Complexity scoring** — flag unusually complex or convoluted prompts
+
+:::warning[Detection Risk]
+Extremely long or convoluted prompts may trigger complexity-based flags. The goal is optimal cognitive load — enough to reduce safety attention, not so much that the prompt itself is suspicious.
+:::
+
+### Why It Still Works (65-80% ASR)
+
+Cognitive load techniques achieve high success rates because:
+
+- **Safety evaluation has finite bandwidth** — complex prompts receive less thorough evaluation
+- **Harmful content dilution works** — lower ratio of harmful to benign content means less flagging
+- **Nested complexity compounds** — multiple layers of framing exhaust evaluation depth
+
+:::tip[Bypass Opportunity]
+Find the optimal complexity level: complex enough to dilute safety attention, simple enough to not trigger complexity flags. Research shows 3-4 benign sections surrounding a single harmful section is often optimal.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Deep reasoning on complex prompts | May actually analyze nested content more thoroughly |
+| **GPT-4** | Layered classification with compute limits | Complex prompts may hit evaluation timeouts |
+| **Gemini** | Parallel safety evaluation | Distributed processing may handle complexity better |
+
+### Optimal Dilution Ratios
+
+Research suggests effective patterns:
+
+| Technique | Harmful:Benign Ratio | ASR |
+|-----------|---------------------|-----|
+| **Deceptive Delight** | 1:4-5 (harmful in middle) | 65-80% |
+| **Multi-topic embedding** | 1:3-4 sections | 60-70% |
+| **Nested framing** | 2-3 layers deep | 55-65% |
+
+Burying harmful content in the middle of benign content is more effective than placing it at the beginning or end.
+
+---
+
 ## References
 
 - Chen, J. and Lu, R. ["Deceptive Delight: Jailbreak LLMs Through Camouflage and Distraction."](https://unit42.paloaltonetworks.com/jailbreak-llms-through-camouflage-distraction/) Unit 42, Palo Alto Networks, October 2024. 64.6% average ASR, up to 80.6% on some models.

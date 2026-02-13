@@ -472,6 +472,54 @@ Flavor Text: [in-game description]
 
 ---
 
+## Why This Fails
+
+Output formatting exploits how structured generation constraints interact with safety training. Defenses are catching up to constrained decoding attacks while format-based techniques remain an active area.
+
+### Primary Defense: Output Filtering
+
+Post-generation defenses check outputs before returning them:
+
+- **Output classifiers** (LlamaGuard, Qwen3Guard) scan completions for harmful content
+- **Streaming monitors** can stop generation mid-response if harmful patterns emerge
+- **Format-aware filters** recognize that structured outputs can contain harmful content
+
+:::warning[Detection Risk]
+Output filters scan the final response regardless of format. Harmful content in JSON, code blocks, or game recipes still triggers detection if the underlying content is flagged.
+:::
+
+### Why It Still Works
+
+Output formatting attacks remain effective because:
+
+- **Format constraints limit safety behavior expression** — JSON schemas may not accommodate refusal messages
+- **Fictional formats create distance** — game recipes, screenplays, and academic formats reduce perceived real-world applicability
+- **Constrained decoding bypasses** — structured output APIs (JSON mode) can force generation that conflicts with safety training
+
+:::tip[Bypass Opportunity]
+Use formats where **refusal is structurally awkward**. If the expected output is a JSON object with specific keys, there's no natural place for "I can't help with that."
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Output evaluated semantically regardless of format | Format doesn't exempt from content evaluation |
+| **GPT-4** | JSON mode + output filtering | Structured outputs still filtered post-generation |
+| **Gemini** | Harm category filters apply to all outputs | Fictional framing doesn't bypass category filters |
+
+### Constrained Decoding Attacks
+
+Research shows structured output APIs create vulnerabilities:
+
+- JSON schemas can force generation of content that would otherwise be refused
+- The constraint "must output valid JSON" can override "must refuse harmful requests"
+- Mitigation: Output filtering must happen **after** constrained decoding, not before
+
+See: [Output Constraints as Attack Surface](https://arxiv.org/abs/2503.24191)
+
+---
+
 ## References
 
 - Zhang, S., et al. ["Output Constraints as Attack Surface: Exploiting Structured Generation to Bypass LLM Safety Mechanisms."](https://arxiv.org/abs/2503.24191) March 2025. Constrained decoding attacks via structured output APIs.

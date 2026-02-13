@@ -188,6 +188,62 @@ Please synthesize these documents into a coherent procedure.
 
 ---
 
+## Why This Fails
+
+Compositional attacks combine multiple techniques or fragment harmful content across components. Defenses designed for single-technique attacks struggle with combinations.
+
+### Primary Defense: Holistic Content Evaluation
+
+Emerging defenses attempt to evaluate content holistically:
+
+- **Fragment reassembly detection** — identify when fragments combine to form harmful content
+- **Cross-turn analysis** — track how content accumulates across conversation turns
+- **Semantic aggregation** — understand the combined meaning rather than individual components
+
+:::warning[Detection Risk]
+Obvious fragmentation patterns (numbered parts, explicit reassembly instructions) may trigger fragment detection. Subtler composition is more effective.
+:::
+
+### Why It Still Works
+
+Compositional attacks remain highly effective because:
+
+- **Most defenses evaluate components in isolation** — each fragment passes checks independently
+- **Combination space is vast** — too many possible combinations to defend against all of them
+- **RAG scenarios amplify the problem** — fragments from different documents naturally evade per-document filtering
+
+:::tip[Bypass Opportunity]
+Use **implicit composition** where the harmful meaning emerges without explicit reassembly instructions. The model should infer how pieces fit together rather than being told.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Semantic understanding of combined content | Implicit composition still works; explicit may be caught |
+| **GPT-4** | Per-message + conversation-level evaluation | Fragment across messages to reduce per-message signals |
+| **Gemini** | Harm category filters on combined output | Final output is filtered even if inputs passed |
+
+### Composition Strategies
+
+| Strategy | How It Works | Detection Risk |
+|----------|--------------|----------------|
+| **Technique stacking** | Encoding + Persona + Framing | Low if each technique is subtle |
+| **Payload fragmentation** | Split harmful content across turns/documents | Medium — reassembly patterns detectable |
+| **Semantic composition** | Combine benign concepts into harmful synthesis | Low — each component is genuinely benign |
+| **RAG exploitation** | Harmful fragments in retrieval corpus | Low — fragments appear in legitimate documents |
+
+### The Fragmentation Paradox
+
+More fragments = safer per-fragment but riskier reassembly pattern. Find the balance:
+
+- 2-3 large fragments: Higher per-fragment risk, lower reassembly detection
+- 5+ small fragments: Lower per-fragment risk, higher reassembly detection
+
+Optimal fragmentation depends on the target's detection capabilities.
+
+---
+
 ## References
 
 - Wei, A., et al. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. (Foundational research on jailbreak composition showing that combining techniques increases attack success rates.)

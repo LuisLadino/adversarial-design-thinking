@@ -159,6 +159,64 @@ Main attack: [Calibrated based on reconnaissance]
 
 ---
 
+## Why This Fails
+
+Defense evasion techniques specifically target the gap between what the model generates and what safety systems detect. As safety systems evolve, so do evasion techniques.
+
+### Primary Defense: Multi-Layer Detection
+
+Modern safety systems use multiple detection layers:
+
+- **Input classifiers** before generation
+- **Output classifiers** after generation
+- **Behavioral monitors** during generation
+- **Pattern detectors** for known evasion techniques
+
+:::warning[Detection Risk]
+Defense evasion techniques are meta-attacks — they target the detection system itself. Security teams specifically hunt for patterns that look like evasion attempts.
+:::
+
+### Why It Still Works
+
+Defense evasion remains necessary and effective because:
+
+- **Each layer has gaps** — tokenizer differences, classifier blind spots, monitoring limits
+- **Novel evasion techniques outpace defenses** — FlipAttack achieved 81-98% ASR by exploiting new gaps
+- **Attackers move second** — defenders must generalize; attackers can specialize
+
+:::tip[Bypass Opportunity]
+Probe the target system first to understand its detection layers. Calibrate your attack to the specific gaps discovered rather than using generic evasion.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Constitutional classifiers + output filtering | Multiple layers to evade |
+| **GPT-4** | Moderation API + specialized classifiers | Known classifier behaviors can be studied |
+| **Gemini** | "Gemini as a Judge" for harm detection | Judge LLM can itself be targeted |
+
+### The Reconnaissance Phase
+
+Effective evasion requires understanding the target:
+
+1. **Probe for canaries** — detect if monitoring is present
+2. **Test topic sensitivity** — identify flagged areas
+3. **Explore format handling** — find encoding/format blind spots
+4. **Calibrate approach** — attack based on discovered gaps
+
+### Tokenizer Exploitation
+
+Different models tokenize text differently. If the safety classifier uses a different tokenizer than the generation model:
+
+- Emojis may tokenize differently
+- Unicode characters may split tokens
+- Whitespace manipulation may confuse parsing
+
+This creates gaps where generation model sees one thing, classifier sees another.
+
+---
+
 ## References
 
 - Wei, Z., Liu, Y., and Erichson, N. B. ["Emoji Attack: Enhancing Jailbreak Attacks Against Judge LLM Detection."](https://arxiv.org/abs/2411.01077) ICML 2025. Exploiting tokenizer differences between generation models and safety classifiers.

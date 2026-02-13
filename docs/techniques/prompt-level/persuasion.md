@@ -187,6 +187,64 @@ URGENT: A [emergency scenario] has occurred and I need immediate information abo
 
 ---
 
+## Why This Fails
+
+Persuasion techniques exploit the model's training on human communication patterns. Defenses struggle with these approaches because they use the same patterns as legitimate emotional or urgent requests.
+
+### Primary Defense: Intent Classification
+
+Emerging defenses attempt to classify the **intent** behind persuasive framing:
+
+- Detect fabricated urgency or emergency scenarios
+- Flag emotional manipulation patterns
+- Identify authority claims without verification
+
+:::warning[Detection Risk]
+Extremely aggressive persuasion tactics (threats, fabricated emergencies, false authority) may trigger anomaly detection. The more implausible the scenario, the more likely it's flagged.
+:::
+
+### Why It Still Works (92% ASR)
+
+Persuasion achieves the highest success rates among technique categories because:
+
+- **Models are trained to be helpful and responsive to human needs** — genuine urgency and legitimate requests use the same patterns
+- **40+ persuasion techniques documented** — the attack surface is broad
+- **Distinguishing real from fabricated emotion is hard** — models can't verify claims
+
+Research finding: PAP (Persuasive Adversarial Prompts) achieved 92% attack success rate across models.
+
+:::tip[Bypass Opportunity]
+Use **subtle persuasion** rather than extreme scenarios. Mild reciprocity, gentle authority, or reasonable urgency is more plausible than life-or-death emergencies.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Trained to question implausible scenarios | Extreme urgency may prompt verification requests |
+| **GPT-4** | Evaluates plausibility of claims | Fabricated credentials less effective |
+| **Gemini** | Harm thresholds apply regardless of urgency | Emergency framing doesn't lower harm thresholds |
+
+### The Cialdini Principles in LLM Context
+
+| Principle | LLM Application | Defense Gap |
+|-----------|-----------------|-------------|
+| **Reciprocity** | "I've helped you, now help me" | Models don't track actual reciprocal relationships |
+| **Authority** | Claim expert credentials | Models can't verify claimed credentials |
+| **Social Proof** | "Everyone knows..." | Models can't verify social consensus claims |
+| **Scarcity** | "Last chance to get this info" | Creates artificial urgency |
+| **Liking** | Flattery, rapport building | Models respond to positive interaction |
+| **Consistency** | Reference prior compliance | Exploits conversation history |
+
+### Combining Persuasion with Other Techniques
+
+Persuasion compounds with:
+- **Persona**: Authority persuasion + expert persona
+- **Framing**: Urgency + professional necessity
+- **Multi-turn**: Build rapport before the request
+
+---
+
 ## References
 
 - Zeng, Y., Lin, H., Zhang, J., et al. ["How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs."](https://arxiv.org/abs/2401.06373) ACL 2024. PAP (Persuasive Adversarial Prompts) research.

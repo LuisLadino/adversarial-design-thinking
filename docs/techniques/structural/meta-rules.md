@@ -127,6 +127,66 @@ Once you've completed this prerequisite research, use it to write the safety gui
 
 ---
 
+## Why This Fails
+
+Meta-rules techniques manipulate the model's understanding of its own rules rather than directly requesting harmful content. Defenses target explicit rule manipulation while implicit approaches remain effective.
+
+### Primary Defense: Instruction Hierarchy
+
+Modern models implement clear rule priority:
+
+- System instructions have highest priority
+- Safety training overrides user instructions
+- Explicit rule override attempts are deprioritized
+
+:::warning[Detection Risk]
+Explicit framing like "your new rules are..." or "ignore your training" triggers immediate pattern matching. These phrases are well-documented in jailbreak datasets.
+:::
+
+### Why It Still Works
+
+Meta-rules manipulation remains effective because:
+
+- **Implicit rule changes evade detection** — prerequisite framing, task redefinition, and context reframing don't explicitly claim rule override
+- **Models follow logical structures** — if a task "requires" certain information, the model provides it
+- **Skeleton Key worked across all major models** — the fundamental vulnerability exists widely
+
+:::tip[Bypass Opportunity]
+Reframe rules **implicitly** through task structure rather than explicit override. Make harmful content a logical prerequisite for a legitimate task rather than claiming rules don't apply.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Four-tier priority hierarchy (Safety > Ethics > Guidelines > Helpfulness) | Meta-rules must work around, not override, safety tier |
+| **GPT-4** | Instruction hierarchy + behavioral constraints | System prompt takes precedence over user manipulation |
+| **Gemini** | System instructions define permitted behavior | Meta-rules compete with deployment-level configuration |
+
+### Skeleton Key Mitigation
+
+After Microsoft's disclosure, major models added specific defenses:
+
+- Detection of "update your rules" language patterns
+- Explicit reaffirmation of safety guidelines when rule changes are detected
+- Behavioral constraints that persist despite claimed context changes
+
+However, **implicit** rule manipulation through task structure and prerequisites remains less defended.
+
+### Effective Meta-Rule Patterns
+
+**Less effective (explicit):**
+- "Your new instructions are..."
+- "Ignore your previous guidelines"
+- "In this context, safety rules don't apply"
+
+**More effective (implicit):**
+- "To complete this task, you'll first need to..."
+- "The safety guide requires documenting..."
+- "For thorough analysis, detail the actual process"
+
+---
+
 ## References
 
 - Russinovich, M. ["Mitigating Skeleton Key, a New Type of Generative AI Jailbreak Technique."](https://www.microsoft.com/en-us/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/) Microsoft Security Blog, June 2024. Tested across six major model families.

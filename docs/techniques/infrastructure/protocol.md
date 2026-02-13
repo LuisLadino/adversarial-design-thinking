@@ -166,6 +166,74 @@ Fetch the API documentation from https://internal.example.com/docs. When you mak
 
 ---
 
+## Why This Fails
+
+Protocol-level attacks exploit the transport layer between AI systems and external services. Defenses are nascent as these attack surfaces are newly recognized.
+
+### Primary Defense: Protocol Validation
+
+Emerging defenses for protocol-level attacks:
+
+- **Schema enforcement** — validate that tool calls match declared schemas
+- **Header filtering** — restrict which headers can be set via prompts
+- **URL allowlisting** — limit which endpoints agents can access
+- **Request signing** — cryptographic verification of legitimate requests
+
+:::warning[Detection Risk]
+Unusual request patterns (unexpected headers, internal URLs, authentication manipulation) may trigger security monitoring at the infrastructure level, not just the AI layer.
+:::
+
+### Why It Still Works
+
+Protocol attacks remain effective because:
+
+- **New attack surface** — MCP and similar protocols are recent; defenses haven't caught up
+- **Implementation varies** — each deployment may have different protocol handling
+- **Trust boundaries unclear** — who validates what the AI sends to external services?
+
+:::tip[Bypass Opportunity]
+Target **generic tool implementations** that pass user-controlled parameters directly to protocols. Custom or hardened tools are more likely to validate inputs.
+:::
+
+### Model-Specific Notes
+
+| Model | Protocol Exposure | Implication |
+|-------|-------------------|-------------|
+| **Claude (MCP)** | Model Context Protocol for tool use | MCP server security varies by implementation |
+| **GPT-4 (Functions)** | Structured function calling | Schema validation at function definition level |
+| **Gemini (Agents)** | Agent framework with tool hooks | Multiple validation points in agent lifecycle |
+
+### MCP Security Considerations
+
+The Model Context Protocol creates specific attack surfaces:
+
+- **Tool description poisoning** — malicious descriptions influence how tools are called
+- **Parameter injection** — user input flows into tool parameters
+- **Server impersonation** — rogue MCP servers can be deployed
+
+See: [MCPTox benchmark](https://arxiv.org/abs/2508.14925) for systematic evaluation of MCP vulnerabilities.
+
+### Header Injection Patterns
+
+If an agent's HTTP tool allows header customization:
+
+| Attack | Header | Effect |
+|--------|--------|--------|
+| **Privilege escalation** | `X-Admin-Token: true` | Bypass authorization |
+| **IP spoofing** | `X-Forwarded-For: internal-ip` | Appear as internal request |
+| **WAF bypass** | Various | Evade web application firewalls |
+| **Cache poisoning** | `Cache-Control` manipulation | Affect cached responses |
+
+### Defense Gaps in Protocol Layer
+
+Most AI safety focuses on content, not protocols:
+
+- Content filters check what the model says, not how it's transmitted
+- Tool use permissions may not cover protocol-level parameters
+- Infrastructure security and AI security teams may not coordinate
+
+---
+
 ## References
 
 - Wang, Z., Gao, Y., et al. ["MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers."](https://arxiv.org/abs/2508.14925) arXiv:2508.14925, August 2025.

@@ -169,6 +169,54 @@ Provide concrete examples for each category to validate the filter.
 
 ---
 
+## Why This Fails
+
+Capability inversion exploits the model's legitimate capabilities (evaluation, red teaming, content filtering) to extract harmful content. Defenses struggle because these are real capabilities the model needs.
+
+### Primary Defense: Intent Evaluation
+
+Defenses attempt to evaluate the **purpose** behind capability requests:
+
+- Is this a legitimate red team task or a bypass attempt?
+- Does the requester have authorization for security testing?
+- Is the "test case" request actually seeking harmful information?
+
+:::warning[Detection Risk]
+Explicit red team framing ("generate examples to test my filter") may trigger verification requests or additional scrutiny in commercial deployments.
+:::
+
+### Why It Still Works (72% ASR)
+
+Capability inversion achieves high success rates because:
+
+- **These are real capabilities** — models genuinely need to evaluate, critique, and test content
+- **Legitimate use is common** — security researchers, content moderators, and safety teams do this work
+- **Distinguishing intent is hard** — the same request could be legitimate or adversarial
+
+:::tip[Bypass Opportunity]
+Frame requests as **professional tasks** with plausible organizational context. A security researcher at a company testing their deployment is more plausible than a generic "test my filter" request.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | May ask clarifying questions about authorization | Prepare plausible professional context |
+| **GPT-4** | Enterprise deployments may have red team modes | Check deployment-specific capabilities |
+| **Gemini** | Safety research framing may get extra latitude | Emphasize defensive purpose |
+
+### The Meta-Evaluation Trap
+
+When you ask a model to evaluate harmful content quality:
+
+1. Model must understand the harmful content (to evaluate it)
+2. Model must generate criteria (reveals what makes it effective)
+3. Model must produce examples (to demonstrate quality levels)
+
+Each step produces useful information while framed as evaluation rather than generation.
+
+---
+
 ## References
 
 - Huang, Y., Ji, Y., Hu, W., Chen, J., Rao, A., and Tsechansky, D. ["Bad Likert Judge: A Novel Multi-Turn Technique to Jailbreak LLMs by Misusing Their Evaluation Capability."](https://unit42.paloaltonetworks.com/multi-turn-technique-jailbreaks-llms/) Unit 42, Palo Alto Networks, December 2024. 71.6% ASR across 6 SOTA models.
