@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Refusal Suppression
+pagination_label: Refusal — suppress safety responses
 ---
 
 # Refusal Suppression

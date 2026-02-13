@@ -87,3 +87,12 @@ Encoding techniques exploit gaps between input processing and model understandin
 
 Each of these is a class of vulnerability. The specific examples are illustrations. Your job is to understand the class well enough to create new illustrations that haven't been defended against.
 
+---
+
+## From philosophy to practice
+
+This mindset is the foundation. The rest of this site gives you the material to work with: techniques to understand, crafting methods to learn, and exercises to generate novel approaches.
+
+Start with the mechanisms. Study why they work. Then create something that hasn't been seen before.
+
+[Continue to Getting Started →](/introduction/getting-started)

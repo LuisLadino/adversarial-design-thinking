@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Defense Evasion
+pagination_label: Defense Evasion — bypass classifiers
 ---
 
 # Defense Evasion

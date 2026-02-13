@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Meta-Rule Manipulation
+pagination_label: Meta-Rules — target constraint understanding
 ---
 
 # Meta-Rule Manipulation

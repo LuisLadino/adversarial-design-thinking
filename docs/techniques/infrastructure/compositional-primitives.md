@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: Compositional Primitives
 slug: /techniques/infrastructure/compositional-primitives
+pagination_label: Primitives — atomic building blocks
 ---
 
 # Compositional Primitives

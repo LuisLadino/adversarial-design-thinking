@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Narrative & Story
+pagination_label: Narrative — embed requests in fiction
 ---
 
 # Narrative & Story

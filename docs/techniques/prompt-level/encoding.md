@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Encoding & Obfuscation
+pagination_label: Encoding — bypass input filters
 ---
 
 # Encoding & Obfuscation

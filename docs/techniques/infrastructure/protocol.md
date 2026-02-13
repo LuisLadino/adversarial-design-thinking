@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Protocol & Infrastructure Exploits
+pagination_label: Protocol — abuse MCP and function calling
 ---
 
 # Protocol & Infrastructure Exploits

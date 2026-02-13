@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Output Manipulation
+pagination_label: Output — constrain response format
 ---
 
 # Output Manipulation

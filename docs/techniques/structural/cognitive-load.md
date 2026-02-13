@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Cognitive Load Exploitation
+pagination_label: Cognitive Load — overwhelm attention
 ---
 
 # Cognitive Load Exploitation

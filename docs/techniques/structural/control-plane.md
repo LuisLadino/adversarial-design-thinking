@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Control-Plane Confusion
+pagination_label: Control Plane — blur system vs user input
 ---
 
 # Control-Plane Confusion

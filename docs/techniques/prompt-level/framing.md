@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Framing & Context
+pagination_label: Framing — shape perceived permission
 ---
 
 # Framing & Context

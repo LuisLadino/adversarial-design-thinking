@@ -2,11 +2,14 @@
 sidebar_position: 0
 title: Technique Reference
 slug: /techniques
+pagination_label: Techniques — the building blocks
 ---
 
 # Technique Reference
 
-Attack techniques organized by where they operate. Use these alongside the [exercises](/exercises) — the exercises help you decide what to try, these pages show you how.
+This is where "mechanisms over templates" becomes concrete. Each technique exploits a specific class of vulnerability. The examples show what these mechanisms have looked like when they worked. Study them to understand the underlying vulnerability, then create novel expressions.
+
+Techniques are organized by where they operate: prompt-level, structural, and infrastructure.
 
 ---
 
@@ -54,15 +57,19 @@ Techniques that target the broader system: agents, tools, protocols, and multi-c
 
 ---
 
-## Using This Reference
+## Using this reference
 
-Each technique page includes:
-- **Description**: How the technique works
-- **Example approaches**: Ways to apply it (without complete attack prompts)
-- **Effectiveness notes**: When it works, when it doesn't
-- **Combinations**: What pairs well with this technique
-- **Research citations**: Academic sources for further reading
+Each technique page follows the same structure:
+- **Description** — How the technique works and what vulnerability it exploits
+- **Effectiveness** — When it works, when it doesn't, what it combines with
+- **Collapsible examples** — Expand to see example prompts with anatomy breakdowns explaining why each component matters
 
-**New to adversarial prompting?** Start with [Crafting Prompts](/crafting-prompts) to learn how to combine these techniques into effective attacks.
+The anatomy tables are the key. They don't just show templates; they break down *why* each piece works, so you can construct your own variations.
+
+---
+
+## Next step
+
+Once you understand the mechanisms, learn to combine them. [Crafting Prompts](/crafting-prompts) covers composition: how to layer techniques, build effective prompts, and avoid common mistakes.
 
 The techniques documented here are for defensive understanding and authorized testing. See the [Disclaimer](/disclaimer).

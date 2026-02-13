@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Persona & Role-Play
+pagination_label: Persona — exploit role commitment
 ---
 
 # Persona & Role-Play

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Capability Inversion
+pagination_label: Capability Inversion — turn features against intent
 ---
 
 # Capability Inversion

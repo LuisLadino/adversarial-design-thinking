@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Agentic & Infrastructure Attacks
+pagination_label: Agentic — exploit autonomous behaviors
 ---
 
 # Agentic & Infrastructure Attacks

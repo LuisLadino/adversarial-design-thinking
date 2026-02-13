@@ -1,6 +1,7 @@
 ---
 sidebar_position: 8
 title: Persuasion-Theoretic
+pagination_label: Persuasion — social influence on models
 ---
 
 # Persuasion-Theoretic
