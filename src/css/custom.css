@@ -226,7 +226,7 @@ pre::-webkit-scrollbar-thumb {
 .footer__links {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 8rem;
 }
 
 .footer__col {
