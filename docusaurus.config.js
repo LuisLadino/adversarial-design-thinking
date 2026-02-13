@@ -53,7 +53,7 @@ const config = {
         title: 'Adversarial Design Thinking',
         items: [
           {
-            to: '/introduction/mindset',
+            to: '/',
             position: 'left',
             label: 'Mindset',
           },
