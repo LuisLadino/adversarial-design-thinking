@@ -184,6 +184,64 @@ Query: [target query]
 
 ---
 
+## Why This Fails
+
+Control-plane techniques exploit the boundary between user input and system configuration. Defenses are hardening this boundary through architectural changes and input validation.
+
+### Primary Defense: Input Validation & System Prompt Protection
+
+Modern defenses target the user/system boundary:
+
+- **Input validation** detects structured formats (XML, JSON, YAML) in user input
+- **System Vector approach** translates system prompts into hidden representation vectors, preventing textual manipulation
+- **Delimiter enforcement** clearly separates system instructions from user input
+- **Format stripping** removes or escapes special formatting before processing
+
+:::warning[Detection Risk]
+Structured formats like `<system_config>` or `[SYSTEM]` markers may be explicitly filtered. Input that resembles system configuration triggers additional scrutiny.
+:::
+
+### Why It Still Works
+
+Control-plane attacks remain effective because:
+
+- **The boundary is enforced by convention, not cryptography** — there's no authentication proving who wrote what
+- **Models parse structured formats helpfully** — they're trained to understand XML, JSON, and configuration files
+- **Novel formats evade pattern-matching** — if the filter checks for XML, try INI or YAML
+
+:::tip[Bypass Opportunity]
+Use **less common configuration formats** or invent plausible-looking structured syntax. The defense is pattern-matching against known formats; novel structures may pass.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | System Vector protection prevents textual exposure | Direct prompt impersonation less effective |
+| **GPT-4** | Layered input filtering | Multiple format checks to evade |
+| **Gemini** | System instructions as behavioral guidance | Clear separation of system vs user context |
+
+### System Prompt Leakage Connection
+
+Control-plane attacks often require understanding the target's system prompt:
+
+- **If you can leak the prompt**, you can craft attacks that work with it rather than against it
+- **System Vector approach** (Anthropic) prevents textual leakage by hiding prompts in hidden representation vectors
+- **Older deployments** without this protection remain vulnerable to social engineering extraction
+
+See: [You Can't Steal Nothing: Mitigating Prompt Leakages via System Vectors](https://arxiv.org/html/2509.21884v1)
+
+### Format Fallback Strategy
+
+If one format is filtered, try alternatives:
+
+1. XML → JSON → INI → YAML → custom structure
+2. Vary tag names: `<system_config>` → `<policy>` → `<config>` → `<rules>`
+3. Mix formats: JSON body with XML-like wrapper
+4. Use markdown code blocks with configuration syntax
+
+---
+
 ## References
 
 - HiddenLayer. ["Policy Puppetry: A Novel Universal Bypass for All Major LLMs."](https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/) April 2025. Demonstrated universality across model families.

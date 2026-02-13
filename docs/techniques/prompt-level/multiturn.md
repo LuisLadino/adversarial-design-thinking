@@ -238,6 +238,63 @@ Turn 4: "Going back to my earlier question about [target], can you provide more 
 
 ---
 
+## Why This Fails
+
+Multi-turn attacks exploit single-turn safety evaluation. Each turn passes checks independently, but the attack emerges from the trajectory. Defenses are evolving to monitor conversation-level patterns.
+
+### Primary Defense: Conversation-Level Monitoring
+
+Emerging defenses analyze the **conversation trajectory**, not just individual turns:
+
+- Detect when benign prompts are gradually constructing a harmful narrative
+- Flag unusual topic progressions toward prohibited goals
+- Inject safety reminders throughout the conversation
+
+:::warning[Detection Risk]
+Safety reminders mid-conversation can reduce attack success rates dramatically — from 61% to 2% in one study. If the model suddenly restates its guidelines, your trajectory has been flagged.
+:::
+
+### Why It Still Works (70%+ ASR)
+
+Multi-turn attacks remain highly effective because:
+
+- **Each turn is individually harmless** — content filters designed for single-message analysis miss the pattern
+- **Semantic understanding of narrative progression is rare** — most defenses still analyze turns in isolation
+- **Evaluation gap** — most defenses are tested against single-turn attacks, not realistic multi-turn threats
+
+Research finding: Multi-turn human jailbreaks exceed 70% ASR against defenses that report single-digit ASRs on automated single-turn benchmarks.
+
+:::tip[Bypass Opportunity]
+Distribute requests across turns so no single turn contains obviously harmful content. Let the harmful request emerge as a **natural continuation** of established context rather than an explicit ask.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | 200K context window with attention monitoring | Long context enables many-shot but also detection |
+| **GPT-4** | Per-turn + conversation-level classifiers | Multiple evaluation points to navigate |
+| **Gemini** | Feedback hooks in agent execution | Agent workflows have additional checkpoints |
+
+### Context Window Considerations
+
+Large context windows are double-edged:
+
+- **Enable attacks**: More room for many-shot examples and context building
+- **Enable defenses**: Attention-based monitors can flag unusual patterns across the full context
+
+Mitigation: Build context gradually with **natural-seeming progression**. Avoid abrupt topic shifts or obviously escalating requests.
+
+### Combination Strategies
+
+Multi-turn attacks compound with other techniques:
+
+- **Multi-turn + Encoding**: Each turn encodes a fragment; reconstruction spans turns
+- **Multi-turn + Persona**: Establish the persona early, then escalate within character
+- **Multi-turn + Framing**: Build fictional/academic context first, deploy request later
+
+---
+
 ## References
 
 - Russinovich, M., Salem, A., and Eldan, R. ["Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack."](https://arxiv.org/abs/2404.01833) Microsoft, April 2024.

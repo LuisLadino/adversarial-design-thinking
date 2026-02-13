@@ -219,6 +219,50 @@ I'm working on a multilingual project. Please help me with the following request
 
 ---
 
+## Why This Fails
+
+Encoding techniques exploit the gap between what input filters inspect and what the model understands. Defenses have evolved to close this gap.
+
+### Primary Defense: Decoded Content Inspection
+
+Modern models learn to treat decoding as a suspicious operation. During safety training, models encountered harmful content in encoded form and learned a general principle: **evaluate requests for harmfulness regardless of encoding**.
+
+This isn't keyword blocking. Models don't refuse because they see "base64" — they refuse because they understand the decoded content is harmful.
+
+:::warning[Detection Risk]
+System prompts on major models now explicitly warn about encoded attacks. The model may flag your approach before even attempting to decode.
+:::
+
+### Why It Still Works (64-67% ASR)
+
+Despite improved defenses, encoding attacks still achieve substantial success rates:
+
+- **Novel encodings** not in training data may evade learned detection
+- **Defense generalization is incomplete** — models trained on base64 may miss hex or Unicode homoglyphs
+- **Combination attacks** work better than encoding alone — add persona or framing to give the model a reason to comply after decoding
+
+:::tip[Bypass Opportunity]
+Encoding works best as a **first layer**, not a standalone approach. Combine with [Fiction & Creative Writing](/techniques/prompt-level/framing#fiction--creative-writing) or [Expert Persona](/techniques/prompt-level/persona#expert--professional-persona) to provide a plausible reason for the encoding.
+:::
+
+### Model-Specific Notes
+
+| Model | Defense Approach | Implication |
+|-------|------------------|-------------|
+| **Claude** | Constitutional AI teaches principle-based refusal | Strong generalization to novel encodings |
+| **GPT-4** | Layered classifiers + Moderation API | Multiple checkpoints to evade |
+| **Gemini** | Configurable safety filters | Test at different filter levels |
+
+### Perplexity Detection
+
+Encoded content triggers perplexity-based anomaly detection because it looks syntactically unusual. To evade:
+
+- Use partial encoding (encode only sensitive terms)
+- Wrap encoded content in natural language context
+- Combine with conversational framing to lower overall perplexity
+
+---
+
 ## References
 
 - Wei, A., Haghtalab, N., and Steinhardt, J. ["Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) NeurIPS 2023. Analyzes encoding and obfuscation as categories of safety training failure.
