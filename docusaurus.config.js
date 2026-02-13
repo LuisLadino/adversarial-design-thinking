@@ -51,6 +51,11 @@ const config = {
       },
       navbar: {
         title: 'Adversarial Design Thinking',
+        logo: {
+          alt: 'ADT',
+          src: 'img/favicon.png',
+          href: '/',
+        },
         items: [
           {
             to: '/mindset',
