@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Anatomy
+pagination_label: Anatomy — eight architectural layers
 ---
 
 # Jailbreak Anatomy

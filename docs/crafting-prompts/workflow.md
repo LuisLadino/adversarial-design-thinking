@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Workflow
+pagination_label: Workflow — objective to working prompt
 ---
 
 # Workflow

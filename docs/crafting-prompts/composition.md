@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Composition
+pagination_label: Composition — layering techniques
 ---
 
 # Composition

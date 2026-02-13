@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Patterns
+pagination_label: Patterns — universal injection techniques
 ---
 
 # Jailbreak Patterns

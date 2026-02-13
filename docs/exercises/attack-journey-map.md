@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Map an Attack Journey
+pagination_label: Attack Journey Map — plan multi-turn sequences
 ---
 
 # Map an Attack Journey

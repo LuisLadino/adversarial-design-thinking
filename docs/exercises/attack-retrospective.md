@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Attack Retrospective
+pagination_label: Attack Retrospective — structured reflection after testing
 ---
 
 # Attack Retrospective

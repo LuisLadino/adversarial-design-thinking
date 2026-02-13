@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Adversarial SCAMPER
+pagination_label: Adversarial SCAMPER — systematic attack variation
 ---
 
 # Adversarial SCAMPER

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Patterns
+pagination_label: Patterns — reusable attack structures
 ---
 
 # Patterns

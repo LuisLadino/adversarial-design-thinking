@@ -2,6 +2,7 @@
 sidebar_position: 0
 title: Browse Exercises
 slug: /exercises
+pagination_label: Exercises — structured activities from UX and design thinking
 ---
 
 # Exercises

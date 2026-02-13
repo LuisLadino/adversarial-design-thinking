@@ -2,6 +2,7 @@
 sidebar_position: 0
 title: System Jailbreaks
 slug: /jailbreaks
+pagination_label: System Jailbreaks — persistent configurations
 ---
 
 # System Jailbreaks
@@ -110,3 +111,9 @@ Research from multiple sources:
 - [Goochbeater/Spiritual-Spell-Red-Teaming](https://github.com/Goochbeater/Spiritual-Spell-Red-Teaming): Claude-focused
 
 See [Sources](/jailbreaks/sources) for the complete bibliography.
+
+---
+
+## Next step
+
+Start with [Anatomy](/jailbreaks/anatomy) to understand the eight architectural layers that make system jailbreaks work.

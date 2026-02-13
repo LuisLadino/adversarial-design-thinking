@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Anti-Patterns
+pagination_label: Anti-Patterns — what doesn't work
 ---
 
 # Anti-Patterns

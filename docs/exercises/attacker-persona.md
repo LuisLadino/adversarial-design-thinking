@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Build an Attacker Persona
+pagination_label: Attacker Persona — profile adversarial actors
 ---
 
 # Build an Attacker Persona

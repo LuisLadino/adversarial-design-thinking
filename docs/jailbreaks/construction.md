@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Construction
+pagination_label: Construction — five-component architecture
 ---
 
 # Jailbreak Construction

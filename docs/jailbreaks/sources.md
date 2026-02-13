@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Sources
+pagination_label: Sources — repos, papers, community resources
 ---
 
 # Sources

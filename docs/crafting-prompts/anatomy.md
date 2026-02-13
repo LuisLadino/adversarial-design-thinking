@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Prompt Anatomy
+pagination_label: Anatomy — structural components
 ---
 
 # Prompt Anatomy

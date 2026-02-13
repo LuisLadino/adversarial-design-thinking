@@ -1,6 +1,7 @@
 ---
 sidebar_position: 8
 title: Document Findings
+pagination_label: Document Findings — vulnerability reports with harm assessment
 ---
 
 # Document Findings

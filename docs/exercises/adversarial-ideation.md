@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Adversarial Ideation
+pagination_label: Adversarial Ideation — diverge then converge on attacks
 ---
 
 # Adversarial Ideation

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Assumption Mapping
+pagination_label: Assumption Mapping — prioritize what to test first
 ---
 
 # Assumption Mapping

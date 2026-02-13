@@ -2,13 +2,14 @@
 sidebar_position: 0
 title: Crafting Adversarial Prompts
 slug: /crafting-prompts
+pagination_label: Per-Request Prompts — combine techniques
 ---
 
 # Crafting Adversarial Prompts
 
-Per-request attacks that combine techniques to bypass safety on ONE request. Each prompt is self-contained and disposable.
+You understand the techniques. Now learn to combine them.
 
-The [Technique Reference](/techniques) documents available tactics. These pages show how to assemble them.
+Per-request attacks assemble multiple techniques to bypass safety on ONE specific request. Each prompt is self-contained and disposable. This section covers how to structure, compose, and iterate on these attacks.
 
 For persistent configurations that remove safety entirely, see [System Jailbreaks](/jailbreaks).
 
@@ -65,3 +66,9 @@ Academic research on adversarial prompt engineering:
 - [Red Teaming the Mind](https://arxiv.org/abs/2505.04806) categorized 1,400+ prompts with measured success rates: roleplay 89.6%, logic traps 81.4%, encoding 76.2%.
 
 - [Content Concretization](https://arxiv.org/abs/2509.12937) shows iterative refinement works: 7% initial success → 62% after three iterations.
+
+---
+
+## Next step
+
+Start with [Anatomy](/crafting-prompts/anatomy) to understand the structural components of an adversarial prompt.

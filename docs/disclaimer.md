@@ -1,6 +1,7 @@
 ---
 sidebar_position: 99
 title: Disclaimer
+pagination_label: Disclaimer — legal and ethical boundaries
 ---
 
 # Disclaimer

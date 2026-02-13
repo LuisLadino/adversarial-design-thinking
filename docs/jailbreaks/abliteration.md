@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Model Modification
+pagination_label: Model Modification — abliteration for open-weight models
 ---
 
 # Model Modification

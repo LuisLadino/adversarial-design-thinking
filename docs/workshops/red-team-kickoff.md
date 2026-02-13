@@ -1,3 +1,8 @@
+---
+title: "Workshop: Red Team Kickoff"
+pagination_label: Workshop — full team planning session
+---
+
 # Workshop: Red Team Kickoff
 
 Planning exercises for adversarial testing, adapted from UX design methods.

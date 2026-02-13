@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 title: Persistence
+pagination_label: Persistence — multi-turn and memory attacks
 ---
 
 # Persistence
