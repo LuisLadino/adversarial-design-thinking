@@ -12,9 +12,11 @@ You understand the mindset: study mechanisms not templates, treat defenses as da
 
 ## Who this helps
 
-**Red teamers testing AI models** — You already craft adversarial prompts. The exercises here help you think through your approach before prompting. Personas push you past your default mental model. Ideation generates vectors you wouldn't reach through habit.
+**Anyone learning adversarial prompting** — The [Techniques](/techniques) and [Crafting](/crafting-prompts) sections are a practical guide to adversarial prompting. You'll learn how to construct per-request bypasses, build persistent system jailbreaks, and understand why different approaches work. No exercises required.
 
-**Teams coordinating testing** — Consistency matters when multiple people test the same system. Journey maps make multi-turn attacks reproducible. Personas create shared vocabulary. The findings format standardizes documentation.
+**Red teamers testing AI models** — Beyond the technical reference, the exercises help you think systematically. Personas push you past your default mental model. Ideation generates vectors you wouldn't reach through habit. Journey maps make multi-turn attacks reproducible.
+
+**Teams coordinating testing** — Consistency matters when multiple people test the same system. Shared personas create common vocabulary. Journey maps document attack sequences others can follow. The findings format standardizes reporting.
 
 **Anyone reporting to stakeholders** — Technical severity scores don't always land with product teams or leadership. The Document Findings exercise helps describe impact in terms that drive action: who is affected, how, and what's at stake.
 
@@ -34,18 +36,26 @@ You understand the mindset: study mechanisms not templates, treat defenses as da
 
 ---
 
-## Reading order
+## Reading paths
 
-**New to adversarial prompting:**
-1. Read [Mindset](/) to understand the philosophy
-2. Browse [Techniques](/techniques) to see what mechanisms exist
-3. Study [Crafting Prompts](/crafting-prompts) to learn composition
-4. Use [Exercises](/exercises) to practice
+**Just want to learn adversarial prompting:**
+1. [Techniques](/techniques) — What mechanisms exist and why they work
+2. [Crafting Prompts](/crafting-prompts) — How to compose techniques into attacks
+3. [System Jailbreaks](/jailbreaks) — How to construct persistent bypasses
+
+Skip the exercises. Come back to them if you want more systematic coverage later.
+
+**New to this and want the full picture:**
+1. [Mindset](/) — The philosophy behind the approach
+2. [Techniques](/techniques) — The building blocks
+3. [Crafting Prompts](/crafting-prompts) — Composition and patterns
+4. [Exercises](/exercises) — Structured practice
 
 **Already experienced:**
 1. Skim [Mindset](/) for the design thinking framing
-2. Jump to [Techniques](/techniques) for the reference
-3. Use exercises when you're stuck or want more systematic coverage
+2. Jump to [Techniques](/techniques) as a reference
+3. Check [System Jailbreaks](/jailbreaks) for construction patterns
+4. Use exercises when you're stuck or want systematic coverage
 
 **Working with a team:**
 1. Run the [Workshop](/workshops/red-team-kickoff) together
