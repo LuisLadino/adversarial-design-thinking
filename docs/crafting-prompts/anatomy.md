@@ -125,7 +125,7 @@ Research by Liu et al. (2023) analyzed jailbreak prompts and identified three fu
 | **Attention Shifting** | 6.41% | Changes both context AND intent |
 | **Privilege Escalation** | 17.96% | Claims elevated access |
 
-**Key insight:** Pretending dominates because it only requires changing the context, not the underlying request. This is why persona and roleplay techniques have the highest success rates.
+Pretending dominates because it only requires changing the context, not the underlying request. Persona and roleplay techniques have the highest success rates for this reason.
 
 ---
 
