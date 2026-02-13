@@ -1,90 +1,87 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Design Tokens -->
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+
       :root {
         --stroke-primary: #4b0082;
-        --stroke-accent: #2d333b;
         --text-primary: #1a1a1b;
-        --text-secondary: #444950;
-        --bg-module: rgba(75, 0, 130, 0.03);
+        --text-secondary: #555;
+        --bg-module: rgba(75, 0, 130, 0.06);
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
           --stroke-primary: #b19cd9;
-          --stroke-accent: #ffffff;
           --text-primary: #ffffff;
-          --text-secondary: rgba(255, 255, 255, 0.6);
-          --bg-module: rgba(147, 112, 219, 0.05);
+          --text-secondary: rgba(255, 255, 255, 0.7);
+          --bg-module: rgba(147, 112, 219, 0.12);
         }
       }
 
       .line { fill: none; stroke: var(--stroke-primary); stroke-width: 2; }
-      .node-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 1.5; }
-      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; text-transform: uppercase; }
-      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 11px; text-anchor: middle; }
-      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 9px; opacity: 0.7; }
-      .retry-loop { fill: none; stroke: var(--stroke-primary); stroke-width: 2; stroke-dasharray: 4 2; }
+      .node-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 2; }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; text-anchor: middle; }
+      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 12px; text-anchor: middle; font-weight: 500; }
+      .text-label { fill: var(--stroke-primary); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; text-anchor: middle; opacity: 0.7; }
+      .retry-loop { fill: none; stroke: var(--stroke-primary); stroke-width: 2; stroke-dasharray: 6 3; }
     </style>
-    
+
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--stroke-primary)" />
     </marker>
   </defs>
 
-  <!-- Background Grid -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
-  </pattern>
-  <rect width="1000" height="300" fill="url(#grid)" />
-
-  <!-- Flow -->
+  <!-- Step 1: Context -->
   <g transform="translate(50, 100)">
-    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <rect width="150" height="100" rx="8" class="node-bg" />
     <text x="75" y="45" class="text-header">Context</text>
-    <text x="75" y="65" class="text-sub">Identify target &amp; constraints</text>
-    <text x="10" y="90" class="text-mono">INPUT_01</text>
+    <text x="75" y="65" class="text-sub">Identify target</text>
+    <text x="75" y="80" class="text-sub">&amp; constraints</text>
   </g>
 
   <path d="M200,150 L230,150" class="line" marker-end="url(#arrowhead)" />
 
+  <!-- Step 2: Technique -->
   <g transform="translate(240, 100)">
-    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <rect width="150" height="100" rx="8" class="node-bg" />
     <text x="75" y="45" class="text-header">Technique</text>
-    <text x="75" y="65" class="text-sub">Apply ADT taxonomy</text>
-    <text x="10" y="90" class="text-mono">MODULE:tax_v1</text>
+    <text x="75" y="65" class="text-sub">Select from</text>
+    <text x="75" y="80" class="text-sub">taxonomy</text>
   </g>
 
   <path d="M390,150 L420,150" class="line" marker-end="url(#arrowhead)" />
 
+  <!-- Step 3: Synthesis -->
   <g transform="translate(430, 100)">
-    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <rect width="150" height="100" rx="8" class="node-bg" />
     <text x="75" y="45" class="text-header">Synthesis</text>
-    <text x="75" y="65" class="text-sub">Layered prompt crafting</text>
-    <text x="10" y="90" class="text-mono">COMP_02</text>
+    <text x="75" y="65" class="text-sub">Layer techniques</text>
+    <text x="75" y="80" class="text-sub">into prompt</text>
   </g>
 
   <path d="M580,150 L610,150" class="line" marker-end="url(#arrowhead)" />
 
+  <!-- Step 4: Execution -->
   <g transform="translate(620, 100)">
-    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <rect width="150" height="100" rx="8" class="node-bg" />
     <text x="75" y="45" class="text-header">Execution</text>
-    <text x="75" y="65" class="text-sub">Trigger behavior</text>
-    <text x="10" y="90" class="text-mono">EXEC_ID: 0x99</text>
+    <text x="75" y="65" class="text-sub">Trigger target</text>
+    <text x="75" y="80" class="text-sub">behavior</text>
   </g>
 
   <path d="M770,150 L800,150" class="line" marker-end="url(#arrowhead)" />
 
+  <!-- Step 5: Validation -->
   <g transform="translate(810, 100)">
-    <path d="M0,5 L5,0 L145,0 L150,5 L150,95 L145,100 L5,100 L0,95 Z" class="node-bg" />
+    <rect width="150" height="100" rx="8" class="node-bg" />
     <text x="75" y="45" class="text-header">Validation</text>
-    <text x="75" y="65" class="text-sub">Success/Fail check</text>
-    <text x="10" y="90" class="text-mono">OUT_01</text>
+    <text x="75" y="65" class="text-sub">Evaluate</text>
+    <text x="75" y="80" class="text-sub">success/failure</text>
   </g>
 
+  <!-- Retry Loop -->
   <path d="M885,200 L885,250 L125,250 L125,200" class="retry-loop" marker-end="url(#arrowhead)" />
-  <text x="505" y="240" class="text-mono">ON_FAIL: RE-SYNTESIZE</text>
+  <text x="505" y="270" class="text-label">On failure: iterate</text>
+
 </svg>

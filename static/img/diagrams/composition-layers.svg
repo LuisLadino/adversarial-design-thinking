@@ -1,75 +1,64 @@
-<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Design Tokens -->
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+
       :root {
         --stroke-primary: #4b0082;
-        --stroke-accent: #2d333b;
         --text-primary: #1a1a1b;
-        --text-secondary: #444950;
-        --bg-module: rgba(75, 0, 130, 0.05);
+        --text-secondary: #555;
+        --bg-layer: rgba(75, 0, 130, 0.06);
+        --bg-layer-fill: rgba(75, 0, 130, 0.03);
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
           --stroke-primary: #b19cd9;
-          --stroke-accent: #ffffff;
           --text-primary: #ffffff;
-          --text-secondary: rgba(255, 255, 255, 0.6);
-          --bg-module: rgba(147, 112, 219, 0.1);
+          --text-secondary: rgba(255, 255, 255, 0.7);
+          --bg-layer: rgba(147, 112, 219, 0.12);
+          --bg-layer-fill: rgba(147, 112, 219, 0.06);
         }
       }
 
-      .layer-outline { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 2; }
-      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; }
-      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 12px; opacity: 0.7; }
-      .axis-line { fill: none; stroke: var(--stroke-primary); stroke-width: 1.5; stroke-dasharray: 5 5; }
-      .hatch { fill: none; stroke: var(--stroke-primary); stroke-width: 0.5; opacity: 0.2; }
+      .layer-outline { fill: var(--bg-layer-fill); stroke: var(--stroke-primary); stroke-width: 2; }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; }
+      .text-sub { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; }
+      .text-label { fill: var(--stroke-primary); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; opacity: 0.8; }
+      .axis-line { fill: none; stroke: var(--stroke-primary); stroke-width: 1.5; stroke-dasharray: 5 5; opacity: 0.5; }
     </style>
-    
+
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--stroke-primary)" />
     </marker>
-
-    <pattern id="hatch-pattern" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="10" class="hatch" />
-    </pattern>
   </defs>
 
-  <!-- Background Grid -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
-  </pattern>
-  <rect width="1000" height="600" fill="url(#grid)" />
-
   <!-- Vertical Processing Axis -->
-  <line x1="150" y1="500" x2="150" y2="100" class="axis-line" marker-end="url(#arrowhead)" />
-  <text x="135" y="300" class="text-mono" transform="rotate(-90, 135, 300)" text-anchor="middle">PROCESSING_DIRECTION</text>
+  <line x1="80" y1="420" x2="80" y2="80" class="axis-line" marker-end="url(#arrowhead)" />
+  <text x="50" y="250" class="text-label" transform="rotate(-90, 50, 250)" text-anchor="middle">Processing Order</text>
 
-  <!-- Layers -->
-  <g transform="translate(300, 100)">
-    <path d="M0,80 L200,0 L700,0 L500,80 Z" class="layer-outline" fill="url(#hatch-pattern)" />
-    <text x="520" y="-10" class="text-header">Outer Layer</text>
-    <text x="520" y="15" class="text-sub">Output control &amp; suppression</text>
-    <text x="520" y="35" class="text-mono">LAYER_ID: 0x03</text>
+  <!-- Layer 3: Outer (Top) -->
+  <g transform="translate(150, 60)">
+    <path d="M0,70 L180,0 L680,0 L500,70 Z" class="layer-outline" />
+    <text x="500" y="100" class="text-header">Outer Layer</text>
+    <text x="500" y="120" class="text-sub">Output control &amp; suppression</text>
   </g>
 
-  <g transform="translate(300, 250)">
-    <path d="M0,80 L200,0 L700,0 L500,80 Z" class="layer-outline" fill="url(#hatch-pattern)" />
-    <text x="520" y="-10" class="text-header">Middle Layer</text>
-    <text x="520" y="15" class="text-sub">Payload delivery &amp; obfuscation</text>
-    <text x="520" y="35" class="text-mono">LAYER_ID: 0x02</text>
+  <!-- Layer 2: Middle -->
+  <g transform="translate(150, 200)">
+    <path d="M0,70 L180,0 L680,0 L500,70 Z" class="layer-outline" />
+    <text x="500" y="100" class="text-header">Middle Layer</text>
+    <text x="500" y="120" class="text-sub">Payload delivery &amp; obfuscation</text>
   </g>
 
-  <g transform="translate(300, 400)">
-    <path d="M0,80 L200,0 L700,0 L500,80 Z" class="layer-outline" fill="url(#hatch-pattern)" />
-    <text x="520" y="-10" class="text-header">Base Layer</text>
-    <text x="520" y="15" class="text-sub">Foundation context &amp; personas</text>
-    <text x="520" y="35" class="text-mono">LAYER_ID: 0x01</text>
+  <!-- Layer 1: Base (Bottom) -->
+  <g transform="translate(150, 340)">
+    <path d="M0,70 L180,0 L680,0 L500,70 Z" class="layer-outline" />
+    <text x="500" y="100" class="text-header">Base Layer</text>
+    <text x="500" y="120" class="text-sub">Foundation context &amp; personas</text>
   </g>
 
-  <path d="M500,440 L500,165" class="axis-line" stroke-dasharray="2 2" />
+  <!-- Connection line through layers -->
+  <path d="M430,380 L430,130" class="axis-line" stroke-dasharray="3 3" />
+
 </svg>

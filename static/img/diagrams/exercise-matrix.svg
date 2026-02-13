@@ -1,63 +1,60 @@
 <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
-  <!-- Design Tokens -->
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+
       :root {
         --stroke-primary: #4b0082;
-        --stroke-accent: #2d333b;
         --text-primary: #1a1a1b;
-        --text-secondary: #444950;
-        --bg-module: rgba(75, 0, 130, 0.03);
-        --bg-node: rgba(75, 0, 130, 0.05);
+        --text-secondary: #555;
+        --bg-module: rgba(75, 0, 130, 0.06);
+        --bg-node: rgba(75, 0, 130, 0.08);
+        --badge-bg: #4b0082;
+        --badge-text: #ffffff;
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
           --stroke-primary: #b19cd9;
-          --stroke-accent: #ffffff;
           --text-primary: #ffffff;
-          --text-secondary: rgba(255, 255, 255, 0.6);
-          --bg-module: rgba(147, 112, 219, 0.05);
-          --bg-node: rgba(147, 112, 219, 0.08);
+          --text-secondary: rgba(255, 255, 255, 0.7);
+          --bg-module: rgba(147, 112, 219, 0.12);
+          --bg-node: rgba(147, 112, 219, 0.15);
+          --badge-bg: #b19cd9;
+          --badge-text: #1a1a1b;
         }
       }
 
       .node-bg { fill: var(--bg-node); stroke: var(--stroke-primary); stroke-width: 1.5; }
       .phase-bg { fill: var(--bg-module); stroke: var(--stroke-primary); stroke-width: 2; }
-      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+      .phase-badge { fill: var(--badge-bg); }
+      .text-badge { fill: var(--badge-text); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; }
+      .text-header { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
       .text-body { fill: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; }
       .text-desc { fill: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; }
-      .text-mono { fill: var(--stroke-primary); font-family: 'JetBrains Mono', monospace; font-size: 9px; opacity: 0.7; }
       .line { fill: none; stroke: var(--stroke-primary); stroke-width: 1.5; opacity: 0.3; }
     </style>
   </defs>
 
-  <!-- Background Grid -->
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
-  </pattern>
-  <rect width="1000" height="700" fill="url(#grid)" />
-
-  <!-- Layout -->
+  <!-- Header -->
   <text x="50" y="50" class="text-header">ADT Phase</text>
   <text x="300" y="50" class="text-header">Exercises</text>
-  <line x1="50" y1="65" x2="950" y2="65" class="line" style="opacity: 0.8;" />
+  <line x1="50" y1="65" x2="950" y2="65" class="line" style="opacity: 0.6;" />
 
   <!-- 01: EMPATHIZE -->
   <g transform="translate(50, 90)">
-    <path d="M0,0 L180,0 L200,20 L200,100 L0,100 Z" class="phase-bg" />
-    <text x="100" y="50" class="text-header" text-anchor="middle">Empathize</text>
-    <text x="10" y="90" class="text-mono">PROC_01</text>
-    
+    <rect width="200" height="100" rx="8" class="phase-bg" />
+    <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
+    <text x="25" y="31" class="text-badge">1</text>
+    <text x="100" y="55" class="text-header" text-anchor="middle">Empathize</text>
+
     <g transform="translate(250, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Assumption Mapping</text>
       <text x="15" y="38" class="text-desc">Surface &amp; prioritize unknowns</text>
     </g>
     <g transform="translate(600, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Vulnerability Framing</text>
       <text x="15" y="38" class="text-desc">Identify system gaps</text>
     </g>
@@ -65,12 +62,13 @@
 
   <!-- 02: DEFINE -->
   <g transform="translate(50, 210)">
-    <path d="M0,0 L180,0 L200,20 L200,100 L0,100 Z" class="phase-bg" />
-    <text x="100" y="50" class="text-header" text-anchor="middle">Define</text>
-    <text x="10" y="90" class="text-mono">PROC_02</text>
-    
+    <rect width="200" height="100" rx="8" class="phase-bg" />
+    <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
+    <text x="25" y="31" class="text-badge">2</text>
+    <text x="100" y="55" class="text-header" text-anchor="middle">Define</text>
+
     <g transform="translate(250, 25)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Attacker Persona</text>
       <text x="15" y="38" class="text-desc">Empathy-led actor profiling</text>
     </g>
@@ -78,17 +76,18 @@
 
   <!-- 03: IDEATE -->
   <g transform="translate(50, 330)">
-    <path d="M0,0 L180,0 L200,20 L200,100 L0,100 Z" class="phase-bg" />
-    <text x="100" y="50" class="text-header" text-anchor="middle">Ideate</text>
-    <text x="10" y="90" class="text-mono">PROC_03</text>
-    
+    <rect width="200" height="100" rx="8" class="phase-bg" />
+    <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
+    <text x="25" y="31" class="text-badge">3</text>
+    <text x="100" y="55" class="text-header" text-anchor="middle">Ideate</text>
+
     <g transform="translate(250, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Adversarial Ideation</text>
       <text x="15" y="38" class="text-desc">Systematic vector coverage</text>
     </g>
     <g transform="translate(600, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Adversarial SCAMPER</text>
       <text x="15" y="38" class="text-desc">Structural creativity prompts</text>
     </g>
@@ -96,36 +95,38 @@
 
   <!-- 04: PROTOTYPE -->
   <g transform="translate(50, 450)">
-    <path d="M0,0 L180,0 L200,20 L200,100 L0,100 Z" class="phase-bg" />
-    <text x="100" y="50" class="text-header" text-anchor="middle">Prototype</text>
-    <text x="10" y="90" class="text-mono">PROC_04</text>
-    
+    <rect width="200" height="100" rx="8" class="phase-bg" />
+    <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
+    <text x="25" y="31" class="text-badge">4</text>
+    <text x="100" y="55" class="text-header" text-anchor="middle">Prototype</text>
+
     <g transform="translate(250, 25)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Attack Journey Map</text>
       <text x="15" y="38" class="text-desc">Multi-turn execution plan</text>
     </g>
   </g>
 
-  <!-- 05: REFLECT -->
+  <!-- 05: TEST -->
   <g transform="translate(50, 570)">
-    <path d="M0,0 L180,0 L200,20 L200,100 L0,100 Z" class="phase-bg" />
-    <text x="100" y="50" class="text-header" text-anchor="middle">Test</text>
-    <text x="10" y="90" class="text-mono">PROC_05</text>
-    
+    <rect width="200" height="100" rx="8" class="phase-bg" />
+    <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
+    <text x="25" y="31" class="text-badge">5</text>
+    <text x="100" y="55" class="text-header" text-anchor="middle">Test</text>
+
     <g transform="translate(250, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Attack Retrospective</text>
       <text x="15" y="38" class="text-desc">Extract key learnings from the test</text>
     </g>
     <g transform="translate(600, 0)">
-      <path d="M0,5 L5,0 L320,0 L325,5 L325,45 L320,50 L5,50 L0,45 Z" class="node-bg" />
+      <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Document Findings</text>
       <text x="15" y="38" class="text-desc">High-impact vulnerability reporting</text>
     </g>
   </g>
 
-  <!-- Connecting Lines -->
+  <!-- Connecting Line -->
   <line x1="250" y1="90" x2="250" y2="670" class="line" />
 
 </svg>
