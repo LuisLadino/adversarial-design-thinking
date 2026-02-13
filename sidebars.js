@@ -97,7 +97,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Practice',
+      label: 'Process',
       items: [
         {
           type: 'category',

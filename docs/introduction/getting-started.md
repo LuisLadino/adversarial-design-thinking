@@ -30,8 +30,8 @@ You understand the mindset: study mechanisms not templates, treat defenses as da
 - *Per-Request Prompts* — Compose techniques to bypass safety on one specific request. Covers anatomy, workflow, composition, patterns, and anti-patterns.
 - *System Jailbreaks* — Construct persistent configurations that remove safety entirely. Covers architecture, construction, patterns, persistence, and model modification.
 
-**[Practice](/exercises)** — Apply what you learned.
-- *Exercises* — Structured activities for each phase: planning, persona creation, ideation, execution, and reflection.
+**[Process](/exercises)** — Structured methodology for systematic testing.
+- *Exercises* — Activities adapted from UX and design thinking: assumption mapping, persona creation, ideation, journey mapping, and retrospectives.
 - *Workshop* — Full facilitated session combining exercises into a 3-4 hour red team kickoff.
 
 ---
