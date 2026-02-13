@@ -16,8 +16,6 @@ The process from objective to working prompt.
 Objective → Target Analysis → Technique Selection → Draft → Test & Iterate → Working Prompt
 ```
 
-![Adversarial Workflow Pipeline](/img/diagrams/adversarial-workflow.svg)
-
 ---
 
 ## Step 1: Define Objective

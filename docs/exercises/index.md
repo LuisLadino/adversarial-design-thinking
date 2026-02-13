@@ -9,8 +9,6 @@ pagination_label: Exercises — structured activities from UX and design thinkin
 
 Practical activities adapted from UX and design thinking methods. Each exercise has a documented origin, clear use case, and links to community templates.
 
-![ADT Exercise Matrix](/img/diagrams/exercise-matrix.svg)
-
 ---
 
 ## Planning & Scoping

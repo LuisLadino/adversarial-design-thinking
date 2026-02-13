@@ -13,8 +13,6 @@ Per-request attacks assemble multiple techniques to bypass safety on ONE specifi
 
 For persistent configurations that remove safety entirely, see [System Jailbreaks](/jailbreaks).
 
-![Composition Layers](/img/diagrams/composition-layers.svg)
-
 | Type | Scope | Where |
 |------|-------|-------|
 | **Adversarial Prompts** | One request | This section |

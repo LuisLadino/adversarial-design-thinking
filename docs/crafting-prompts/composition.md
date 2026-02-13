@@ -26,8 +26,6 @@ Effective prompts combine components from multiple types.
 
 ## Layer Order
 
-![Prompt Composition Layers](/img/diagrams/composition-layers.svg)
-
 Order matters. Layers are processed from base to outer:
 
 | Layer      | Function           | Components                              |

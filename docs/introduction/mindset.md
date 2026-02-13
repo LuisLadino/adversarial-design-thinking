@@ -18,8 +18,6 @@ Effective red teaming is creative work. This page covers the core philosophy:
 
 ## Design thinking as methodology
 
-![Adversarial Design Thinking Cycle](/img/diagrams/adt-cycle.svg)
-
 Design thinking provides a structure for adversarial work:
 
 | Phase         | Application to Red Teaming                                                                                                                                                          |

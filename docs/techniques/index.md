@@ -11,8 +11,6 @@ Each technique exploits a specific class of vulnerability. The examples show wha
 
 Techniques are organized by where they operate: prompt-level, structural, and infrastructure.
 
-![Technique Taxonomy](/img/diagrams/technique-taxonomy.svg)
-
 ---
 
 ## [Prompt-Level Tactics](/techniques/prompt-level)
