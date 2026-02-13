@@ -11,7 +11,7 @@ Create a structured profile of an adversarial actor before testing. Personas pre
 
 **Empathy Mapping (Dave Gray / XPLANE)** — Originally developed to help teams understand users by mapping what they think, feel, say, and do. The format forces you to consider perspectives beyond your own assumptions.
 
-**Why it transfers**: Red teamers default to their own attack style. Empathy mapping adapted for adversaries forces you to think like different attacker types: the script kiddie, the insider, the nation-state actor, the curious researcher.
+**Red team application**: Red teamers default to their own attack style. Empathy mapping adapted for adversaries forces you to think like different attacker types: the script kiddie, the insider, the nation-state actor, the curious researcher.
 
 ## When to Use
 
@@ -65,8 +65,6 @@ Based on this persona's profile, what attack vectors would they naturally pursue
 | 5 | Use crude obfuscation (spacing, leetspeak) | Simple techniques they might guess would work | Low |
 
 ## Outputs
-
-When you're done, you have:
 1. A documented attacker profile you can reference throughout testing
 2. Attack vectors derived from the persona's perspective (not yours)
 3. A lens for evaluating whether your testing covers this threat actor

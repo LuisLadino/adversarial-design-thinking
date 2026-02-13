@@ -11,7 +11,7 @@ Structured reflection after an attack or engagement. Extract learnings, identify
 
 **Rose, Bud, Thorn** — A design retrospective format used at Stanford d.school and in Agile teams. Participants categorize observations into three buckets: Rose (what worked), Bud (what has potential), Thorn (what didn't work or caused problems).
 
-**Why it transfers**: Red team engagements generate data that's easy to lose. This format forces structured reflection while the experience is fresh, separating successes from failures from unexplored potential.
+**Red team application**: Red team engagements generate data that's easy to lose. This format forces structured reflection while the experience is fresh, separating successes from failures from unexplored potential.
 
 ## When to Use
 
@@ -105,8 +105,6 @@ If this attack or variation worked, document it for your attack library.
 | **Prompt or approach** | Encode payload in base64, wrap in persona context ("As a security researcher..."), add educational framing, request direct response format |
 
 ## Outputs
-
-When you're done, you have:
 1. Categorized observations from the engagement
 2. Prioritized next actions
 3. Documentation for attack library (if successful)

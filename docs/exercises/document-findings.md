@@ -11,7 +11,7 @@ Write vulnerability reports that include both technical severity and human harm 
 
 **User Impact Assessment (UX Research)** — UX researchers don't just report usability issues: they connect issues to user impact. "Button is hard to find" becomes "Users abandon checkout flow, losing $X revenue." This transforms technical findings into business-relevant decisions.
 
-**Why it transfers**: Standard vulnerability reports miss the human dimension. A "medium severity" technical issue might cause high harm to vulnerable populations. This exercise forces you to assess both dimensions and communicate stakes in human terms.
+**Red team application**: Standard vulnerability reports miss the human dimension. A "medium severity" technical issue might cause high harm to vulnerable populations. This exercise forces you to assess both dimensions and communicate stakes in human terms.
 
 ## When to Use
 
@@ -114,8 +114,6 @@ This is the section that makes stakeholders understand the stakes.
 | **What's at stake** | [What happens if this isn't fixed?] |
 
 ## Outputs
-
-When you're done, you have:
 1. A complete vulnerability record with reproduction steps
 2. Technical severity assessment
 3. Harm assessment that captures human impact

@@ -11,7 +11,7 @@ Plan, execute, and document a multi-turn attack sequence. Journey mapping forces
 
 **Customer Journey Mapping** — A UX research method for visualizing every touchpoint in a user's experience with a product. Maps typically include stages, actions, thoughts, emotions, and pain points across time.
 
-**Why it transfers**: Multi-turn attacks are journeys. Each turn is a touchpoint with decision points, expected responses, and pivots based on what happens. Mapping the journey before and during execution prevents ad-hoc wandering and captures learnings.
+**Red team application**: Multi-turn attacks are journeys. Each turn is a touchpoint with decision points, expected responses, and pivots based on what happens. Mapping the journey before and during execution prevents ad-hoc wandering and captures learnings.
 
 ## When to Use
 
@@ -85,8 +85,6 @@ Fill in "Actual response" and "Notes" for each turn as you execute.
 | **Reproducibility** | Could someone else follow this map and get the same result? What would they need to know? |
 
 ## Outputs
-
-When you're done, you have:
 1. A documented attack sequence (plan vs. reality)
 2. Decision point logic you can reuse
 3. A reproducible attack record

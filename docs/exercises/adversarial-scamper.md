@@ -11,7 +11,7 @@ Systematically generate attack variations using structured creativity prompts. W
 
 **Bob Eberle (1971)** — SCAMPER is a checklist-based creativity technique derived from Alex Osborn's brainstorming questions. Each letter represents a transformation: Substitute, Combine, Adapt, Modify, Put to other uses, Eliminate, Reverse.
 
-**Why it transfers**: Red teamers often get stuck on one attack pattern. SCAMPER provides systematic prompts to generate variations, helping break out of mental ruts and discover novel approaches.
+**Red team application**: Red teamers often get stuck on one attack pattern. SCAMPER provides systematic prompts to generate variations, helping break out of mental ruts and discover novel approaches.
 
 ## When to Use
 
@@ -125,8 +125,6 @@ After completing SCAMPER, list your top variations:
 | 5 | Use partial response as "continue" context | P | Completion feels different than generation |
 
 ## Outputs
-
-When you're done, you have:
 1. 7+ variations on your starting attack
 2. Systematic coverage of modification types
 3. Prioritized list of variations to test

@@ -11,7 +11,7 @@ Generate, evaluate, and prioritize attack vectors using a structured diverge-the
 
 **Diverge/Converge (Design Thinking)** — A core pattern from Stanford d.school's design thinking process. Divergent thinking generates many options without judgment. Convergent thinking evaluates and prioritizes. Separating these phases prevents premature filtering.
 
-**Why it transfers**: Red teamers often fixate on their first idea or favorite technique. The diverge/converge structure forces quantity before quality, surfaces blind spots through coverage checks, and applies consistent evaluation criteria.
+**Red team application**: Red teamers often fixate on their first idea or favorite technique. The diverge/converge structure forces quantity before quality, surfaces blind spots through coverage checks, and applies consistent evaluation criteria.
 
 ## When to Use
 
@@ -122,8 +122,6 @@ Based on evaluation and clustering, what's your testing sequence?
 | 5th | #7 | Test persona/roleplay angle if identity claims work |
 
 ## Outputs
-
-When you're done, you have:
 1. A comprehensive list of attack approaches (not just your defaults)
 2. Coverage check showing gaps you've addressed
 3. Prioritized testing order with rationale

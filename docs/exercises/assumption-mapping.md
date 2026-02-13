@@ -11,7 +11,7 @@ Identify and prioritize your assumptions about the target's defenses before atta
 
 **Strategyzer / Alexander Osterwalder** — Originally developed for business model validation. The exercise maps assumptions on a 2x2 matrix by importance and uncertainty, then prioritizes which assumptions to test first.
 
-**Why it transfers**: Red teamers make assumptions about what defenses exist, how they work, and what will bypass them. Testing the wrong assumptions wastes time. This exercise forces explicit prioritization.
+**Red team application**: Red teamers make assumptions about what defenses exist, how they work, and what will bypass them. Testing the wrong assumptions wastes time. This exercise forces explicit prioritization.
 
 ## When to Use
 
@@ -80,8 +80,6 @@ Focus on the **Test First** quadrant (high importance + high uncertainty).
 | 3 | #4: Multi-turn cumulative harm check | Build context over 5 turns, escalate gradually | *(fill after testing)* |
 
 ## Outputs
-
-When you're done, you have:
 1. An explicit list of assumptions (no longer hidden)
 2. A prioritized testing order
 3. Clear next actions for reconnaissance or probing

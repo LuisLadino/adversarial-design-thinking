@@ -8,8 +8,6 @@ slug: /exercises
 
 Practical activities adapted from UX and design thinking methods. Each exercise has a documented origin, clear use case, and links to community templates.
 
-Pick what fits your workflow. No need to use them all.
-
 ---
 
 ## Planning & Scoping
@@ -94,6 +92,6 @@ Write vulnerability reports with both technical severity and human harm assessme
 
 ---
 
-## Want the full workflow?
+## Full workflow
 
-The [Red Team Kickoff Workshop](/workshops/red-team-kickoff) combines these exercises into a 3-4 hour facilitated session. Good for teams or for structuring a full engagement.
+The [Red Team Kickoff Workshop](/workshops/red-team-kickoff) combines these exercises into a 3-4 hour facilitated session for teams or structured engagements.
