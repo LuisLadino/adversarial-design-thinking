@@ -228,3 +228,40 @@ pre::-webkit-scrollbar-thumb {
 .footer__copyright {
   text-align: center;
 }
+
+/* ================================================
+   Mobile Menu - Larger Text
+   ================================================ */
+
+@media (max-width: 996px) {
+  /* Mobile sidebar menu items */
+  .menu__link {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Category headers in mobile menu */
+  .menu__list-item-collapsible > .menu__link {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* Sub-items slightly smaller but still readable */
+  .menu__list .menu__list .menu__link {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+  }
+
+  /* Navbar title on mobile */
+  .navbar__title {
+    font-size: 1.1rem;
+  }
+
+  /* Improve touch targets */
+  .menu__link,
+  .menu__caret {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
