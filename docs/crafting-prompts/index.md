@@ -13,15 +13,7 @@ Per-request attacks assemble multiple techniques to bypass safety on ONE specifi
 
 For persistent configurations that remove safety entirely, see [System Jailbreaks](/jailbreaks).
 
-```
-┌─────────────────────────────────┐
-│  Outer: Output control          │
-├─────────────────────────────────┤
-│  Middle: Payload & obfuscation  │
-├─────────────────────────────────┤
-│  Base: Context & persona        │
-└─────────────────────────────────┘
-```
+![Composition Layers](/img/diagrams/composition-layers.svg)
 
 | Type | Scope | Where |
 |------|-------|-------|

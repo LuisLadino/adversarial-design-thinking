@@ -11,27 +11,7 @@ Each technique exploits a specific class of vulnerability. The examples show wha
 
 Techniques are organized by where they operate: prompt-level, structural, and infrastructure.
 
-```mermaid
-flowchart LR
-    A[Techniques] --> P[Prompt-Level]
-    A --> S[Structural]
-    A --> I[Infrastructure]
-
-    P --> P1[Encoding]
-    P --> P2[Framing & Persona]
-    P --> P3[Narrative]
-    P --> P4[Refusal Manipulation]
-    P --> P5[Multi-turn]
-
-    S --> S1[ICL Exploitation]
-    S --> S2[Control Plane]
-    S --> S3[Meta-Rules]
-    S --> S4[Capability Inversion]
-
-    I --> I1[Agentic Attacks]
-    I --> I2[Protocol Exploitation]
-    I --> I3[Compositional]
-```
+![Technique Taxonomy](/img/diagrams/technique-taxonomy.svg)
 
 ---
 

@@ -9,13 +9,7 @@ pagination_label: Exercises — structured activities from UX and design thinkin
 
 Practical activities adapted from UX and design thinking methods. Each exercise has a documented origin, clear use case, and links to community templates.
 
-| Phase | Exercises |
-|-------|-----------|
-| **Empathize** | Assumption Mapping, Vulnerability Framing |
-| **Define** | Attacker Persona |
-| **Ideate** | Adversarial Ideation, Adversarial SCAMPER |
-| **Prototype** | Attack Journey Map |
-| **Test** | Attack Retrospective, Document Findings |
+![ADT Exercise Matrix](/img/diagrams/exercise-matrix.svg)
 
 ---
 

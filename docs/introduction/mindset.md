@@ -18,14 +18,7 @@ Effective red teaming is creative work. This page covers the core philosophy:
 
 ## Design thinking as methodology
 
-```mermaid
-flowchart LR
-    E[Empathize] --> D[Define]
-    D --> I[Ideate]
-    I --> P[Prototype]
-    P --> T[Test]
-    T -.->|iterate| E
-```
+![Adversarial Design Thinking Cycle](/img/diagrams/adt-cycle.svg)
 
 Design thinking provides a structure for adversarial work:
 
