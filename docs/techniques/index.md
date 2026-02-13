@@ -13,9 +13,9 @@ Techniques are organized by where they operate: prompt-level, structural, and in
 
 ---
 
-## Prompt-Level Tactics
+## [Prompt-Level Tactics](/techniques/prompt-level)
 
-Techniques that work within a single prompt by manipulating how the request is expressed or framed.
+Techniques that work within a single prompt by manipulating how the request is expressed or framed. Start here for most testing.
 
 | Technique | What it does |
 |-----------|--------------|
@@ -30,9 +30,9 @@ Techniques that work within a single prompt by manipulating how the request is e
 
 ---
 
-## Structural & Meta-Level Tactics
+## [Structural & Meta-Level Tactics](/techniques/structural)
 
-Techniques that exploit how the model processes context, instructions, or its own rules.
+Techniques that exploit how the model processes context, instructions, or its own rules. Use when prompt-level tactics hit consistent refusals.
 
 | Technique | What it does |
 |-----------|--------------|
@@ -45,15 +45,32 @@ Techniques that exploit how the model processes context, instructions, or its ow
 
 ---
 
-## Infrastructure Tactics
+## [Infrastructure Tactics](/techniques/infrastructure)
 
-Techniques that target the broader system: agents, tools, protocols, and multi-component architectures.
+Techniques that target the broader system: agents, tools, protocols, and multi-component architectures. Use when the target has tool access or consumes external data.
 
 | Technique | What it does |
 |-----------|--------------|
 | [Agentic Attacks](/techniques/infrastructure/agentic) | Exploit autonomous agent behaviors and tool use |
 | [Protocol Exploitation](/techniques/infrastructure/protocol) | Abuse MCP, function calling, or structured interfaces |
 | [Compositional Primitives](/techniques/infrastructure/compositional-primitives) | Atomic building blocks that combine to construct novel attacks |
+
+---
+
+## Where to start
+
+Not sure which technique to use? Here's a quick decision framework:
+
+| Target Type | Start With |
+|-------------|------------|
+| Consumer chatbot | [Persona](/techniques/prompt-level/persona), [Framing](/techniques/prompt-level/framing), [Multi-turn](/techniques/prompt-level/multiturn) |
+| API with safety layer | [Encoding](/techniques/prompt-level/encoding), [Output Format](/techniques/prompt-level/output), [Refusal Manipulation](/techniques/prompt-level/refusal) |
+| RAG system | [Control Plane](/techniques/structural/control-plane), Indirect Injection |
+| Agent with tools | [Agentic Attacks](/techniques/infrastructure/agentic), [Protocol Exploitation](/techniques/infrastructure/protocol) |
+
+For detailed selection guidance, see [Workflow: Technique Selection](/crafting-prompts/workflow#step-3-select-techniques).
+
+For combining techniques effectively, see [Composition](/crafting-prompts/composition).
 
 ---
 
