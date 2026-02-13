@@ -32,6 +32,12 @@
     </marker>
   </defs>
 
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1000" height="300" fill="url(#grid)" />
+
   <!-- Step 1: Context -->
   <g transform="translate(50, 100)">
     <rect width="150" height="100" rx="8" class="node-bg" />

@@ -33,6 +33,12 @@
     </marker>
   </defs>
 
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="900" height="500" fill="url(#grid)" />
+
   <!-- Vertical Processing Axis -->
   <line x1="80" y1="420" x2="80" y2="80" class="axis-line" marker-end="url(#arrowhead)" />
   <text x="50" y="250" class="text-label" transform="rotate(-90, 50, 250)" text-anchor="middle">Processing Order</text>

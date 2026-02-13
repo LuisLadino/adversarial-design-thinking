@@ -28,6 +28,12 @@
     </style>
   </defs>
 
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)" />
+
   <!-- Root -->
   <rect x="30" y="185" width="130" height="55" rx="6" class="node" />
   <text x="95" y="220" class="text-root">Techniques</text>

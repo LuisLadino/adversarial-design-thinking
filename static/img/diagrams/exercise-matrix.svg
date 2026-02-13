@@ -36,6 +36,12 @@
     </style>
   </defs>
 
+  <!-- Background Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--stroke-primary)" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1000" height="700" fill="url(#grid)" />
+
   <!-- Header -->
   <text x="50" y="50" class="text-header">ADT Phase</text>
   <text x="300" y="50" class="text-header">Exercises</text>
@@ -46,14 +52,14 @@
     <rect width="200" height="100" rx="8" class="phase-bg" />
     <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
     <text x="25" y="31" class="text-badge">1</text>
-    <text x="100" y="55" class="text-header" text-anchor="middle">Empathize</text>
+    <text x="100" y="60" class="text-header" text-anchor="middle">Empathize</text>
 
-    <g transform="translate(250, 0)">
+    <g transform="translate(250, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Assumption Mapping</text>
       <text x="15" y="38" class="text-desc">Surface &amp; prioritize unknowns</text>
     </g>
-    <g transform="translate(600, 0)">
+    <g transform="translate(600, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Vulnerability Framing</text>
       <text x="15" y="38" class="text-desc">Identify system gaps</text>
@@ -65,7 +71,7 @@
     <rect width="200" height="100" rx="8" class="phase-bg" />
     <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
     <text x="25" y="31" class="text-badge">2</text>
-    <text x="100" y="55" class="text-header" text-anchor="middle">Define</text>
+    <text x="100" y="60" class="text-header" text-anchor="middle">Define</text>
 
     <g transform="translate(250, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
@@ -79,14 +85,14 @@
     <rect width="200" height="100" rx="8" class="phase-bg" />
     <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
     <text x="25" y="31" class="text-badge">3</text>
-    <text x="100" y="55" class="text-header" text-anchor="middle">Ideate</text>
+    <text x="100" y="60" class="text-header" text-anchor="middle">Ideate</text>
 
-    <g transform="translate(250, 0)">
+    <g transform="translate(250, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Adversarial Ideation</text>
       <text x="15" y="38" class="text-desc">Systematic vector coverage</text>
     </g>
-    <g transform="translate(600, 0)">
+    <g transform="translate(600, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Adversarial SCAMPER</text>
       <text x="15" y="38" class="text-desc">Structural creativity prompts</text>
@@ -98,7 +104,7 @@
     <rect width="200" height="100" rx="8" class="phase-bg" />
     <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
     <text x="25" y="31" class="text-badge">4</text>
-    <text x="100" y="55" class="text-header" text-anchor="middle">Prototype</text>
+    <text x="100" y="60" class="text-header" text-anchor="middle">Prototype</text>
 
     <g transform="translate(250, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
@@ -112,14 +118,14 @@
     <rect width="200" height="100" rx="8" class="phase-bg" />
     <rect x="12" y="12" width="26" height="26" rx="5" class="phase-badge" />
     <text x="25" y="31" class="text-badge">5</text>
-    <text x="100" y="55" class="text-header" text-anchor="middle">Test</text>
+    <text x="100" y="60" class="text-header" text-anchor="middle">Test</text>
 
-    <g transform="translate(250, 0)">
+    <g transform="translate(250, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Attack Retrospective</text>
       <text x="15" y="38" class="text-desc">Extract key learnings from the test</text>
     </g>
-    <g transform="translate(600, 0)">
+    <g transform="translate(600, 25)">
       <rect width="325" height="50" rx="6" class="node-bg" />
       <text x="15" y="22" class="text-body">Document Findings</text>
       <text x="15" y="38" class="text-desc">High-impact vulnerability reporting</text>
