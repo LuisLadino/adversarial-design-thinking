@@ -1,0 +1,44 @@
+# Stack Configuration
+# Run /sync-stack to auto-detect and populate
+
+name: ""
+version: "1.0.0"
+description: ""
+
+# Tech Stack
+stack:
+  framework: ""           # React, Next.js, Vue, Astro, etc.
+  framework_version: ""
+  language: ""            # TypeScript, JavaScript, Python, etc.
+  styling: ""             # Tailwind, CSS Modules, etc.
+  testing: ""             # Vitest, Jest, Playwright, etc.
+  package_manager: ""     # npm, pnpm, yarn, bun
+
+# Active Specs
+# Listed specs are loaded by /start-task before coding
+# /sync-stack populates this based on your stack
+specs:
+  coding: []
+    # - typescript-specs
+    # - react-specs
+  architecture: []
+    # - project-structure  # Created by /init-project or /sync-stack
+  config:
+    - version-control
+    - deployment
+    - environment
+    - testing
+
+# Project Settings
+project:
+  import_alias: "@/"
+  components_dir: "src/components"
+  tests_dir: "tests"
+
+# Quality Gates (run before commit)
+quality:
+  - format
+  - lint
+  - type_check
+  # - test
+  # - build
