@@ -238,6 +238,162 @@ const REASONING_CHECKPOINTS = [
       /can you show me how/i
     ],
     reminder: 'CHECK DOCS: Use context7 to get current documentation and examples. Patterns change between versions.'
+  },
+  {
+    patterns: [
+      /context7/i,
+      /look up.*(docs|documentation)/i,
+      /check.*(docs|documentation)/i,
+      /\/(astro|react|next|tailwind|typescript)/i
+    ],
+    reminder: 'CONTEXT7: Use direct library IDs instead of resolve-library-id. Common IDs: /withastro/astro, /facebook/react, /vercel/next.js, /tailwindlabs/tailwindcss, /microsoft/typescript, /motiondivision/motion'
+  }
+];
+
+// Methodology enforcement - reinforce teaching mode based on context
+// These fire IN ADDITION to reasoning checkpoints (complementary)
+// ORDER MATTERS: More specific patterns (CPMAI) before general (AI Technical Fluency)
+const METHODOLOGY_ENFORCEMENT = [
+  // CPMAI DOMAINS FIRST (specific AI project management contexts)
+  {
+    patterns: [
+      // CPMAI Domain 1: Responsible AI
+      /\b(bias|fairness|ethic|transparent|accountab|audit|compliance|regulat)\b/i,
+      /\b(responsible|trustworthy) ai\b/i
+    ],
+    reminder: `[CPMAI: RESPONSIBLE AI - Domain 1 (15%)]
+- Bias assessment: Check models, data, AND algorithms
+- Transparency: Can you explain data and algorithm selection?
+- Compliance: What regulations apply? Document audit trails.
+- Privacy/security: How is data protected?
+
+The CPMAI question: "Would this pass an AI ethics review?"`
+  },
+  {
+    patterns: [
+      // CPMAI Domain 2: Business Needs
+      /\b(feasib|roi|business case|success metric|kpi|stakeholder persona)\b/i,
+      /\bshould (we|I) (use|build|implement) ai\b/i,
+      /\bis ai (the right|necessary|needed)\b/i,
+      /\bai (solution|project|initiative)\b/i
+    ],
+    reminder: `[CPMAI: BUSINESS NEEDS - Domain 2 (26%)]
+- Problem assessment: Does AI actually solve this?
+- Feasibility: Technical and organizational readiness?
+- ROI: What's the business value vs cost?
+- Success metrics: How will we know it worked?
+
+The CPMAI question: "Is AI the right solution, or are we assuming it?"`
+  },
+  {
+    patterns: [
+      // CPMAI Domain 3: Data Needs
+      /\b(data quality|data requirement|data source|data infrastructure|data compliance)\b/i,
+      /\b(training data|dataset|data pipeline|data access)\b/i,
+      /\bdo we have (the |enough )?data\b/i
+    ],
+    reminder: `[CPMAI: DATA NEEDS - Domain 3 (26%)]
+- Requirements: What data do we actually need?
+- Sources: Where does it come from? Access permissions?
+- Quality: Is it accurate, complete, representative?
+- Compliance: Privacy, consent, retention policies?
+
+The CPMAI question: "Does our data meet solution requirements?"`
+  },
+  {
+    patterns: [
+      // CPMAI Domain 4: Model Development & Evaluation
+      /\b(model (select|evaluat|valid|train|develop))/i,
+      /\b(qa.?qc|quality assurance|model performance|accuracy|precision|recall|f1)\b/i,
+      /\bwhich model (should|to use)\b/i,
+      /\b(baseline|benchmark|ground truth)\b/i
+    ],
+    reminder: `[CPMAI: MODEL DEV & EVAL - Domain 4 (16%)]
+- Technique selection: Why this model approach?
+- QA/QC: How are we validating quality?
+- Evaluation metrics: What are we actually measuring?
+- Deployment readiness: Does data quality support deployment?
+
+The CPMAI question: "How do we know this model is ready?"`
+  },
+  {
+    patterns: [
+      // CPMAI Domain 5: Operationalization
+      /\b(mlops|model governance|monitor|drift|maintenance)\b/i,
+      /\b(operationalize|productionize|roll.?out)\b/i,
+      /\bafter (we |it )?(deploy|launch|ship)/i,
+      /\bin production\b/i
+    ],
+    reminder: `[CPMAI: OPERATIONALIZATION - Domain 5 (17%)]
+- Deployment: What's the rollout plan?
+- Governance: Who owns this model in production?
+- Monitoring: How do we detect drift/degradation?
+- Contingency: What if it fails?
+
+The CPMAI question: "What's the plan for day 2 and beyond?"`
+  },
+  // GENERAL AI TECHNICAL (after CPMAI specifics)
+  {
+    patterns: [
+      // AI/ML technical topics (not project management)
+      /\b(llm|gpt|claude|transformer|attention|embedding|rag|fine.?tun|rlhf|alignment|hallucination|inference)\b/i,
+      /\b(machine learning|deep learning|neural)\b/i,
+      /\b(vector|semantic|retrieval|generation|token)\b/i
+    ],
+    reminder: `[TEACHING MODE: AI TECHNICAL FLUENCY]
+Explain HOW it works, not just WHAT it does.
+- Mechanisms: Why does this happen? What's the underlying process?
+- Failure modes: How can this break? What are the edge cases?
+- Trade-offs: What are the costs of this approach?
+
+Don't say "RAG helps with hallucinations."
+Say "RAG reduces hallucination by grounding generation in retrieved context. The model relies less on parametric memory. But retrieval quality matters - garbage in, garbage out."`
+  },
+  {
+    patterns: [
+      // Coding/building
+      /\b(error|exception|bug|issue|problem)\s*(handling|recovery|catching|fix)\b/i,
+      /\b(add|implement|write|create)\s+(a |an |the )?(function|component|handler|service|endpoint)\b/i,
+      /\bvalidat(e|ion|ing)\b/i,
+      /\brefactor/i
+    ],
+    reminder: `[TEACHING MODE: DISCIPLINE FRAMING]
+Name the concept and connect to disciplines:
+- What's this called in UX/PM/AI terms?
+- How does it fit the design thinking cycle?
+- What's the PM question (is this worth the investment)?
+
+"This is defensive design (UX) - anticipating errors. Nielsen's heuristic #9. The PM question: is this error common enough to justify complexity?"`
+  },
+  {
+    patterns: [
+      // Planning/prioritization (no trailing \b so "prioritize" matches "priorit")
+      /\b(priorit|roadmap|scope|requirement|stakeholder|tradeoff|trade-off)/i,
+      /\bwhich (one|approach|option|way)\b/i,
+      /\b(plan|strategy|decision) (for|about|on)\b/i
+    ],
+    reminder: `[TEACHING MODE: PM FRAMEWORKS]
+Make the framework visible:
+- Name the prioritization approach (RICE, MoSCoW, impact/effort)
+- Surface trade-offs explicitly
+- What would a PM ask here?
+
+The PM skill is making decisions transparent so stakeholders understand trade-offs.`
+  },
+  {
+    patterns: [
+      // Research/investigation
+      /\b(understand|investigate|research|explore|figure out|look into)\b/i,
+      /\bwhy (does|is|do|are|did|was|isn't|doesn't)\b/i,
+      /\bwhat('s| is) (happening|going on|wrong|the issue|causing)\b/i
+    ],
+    reminder: `[METHODOLOGY: DESIGN THINKING]
+Start with Understand:
+- What's actually happening? What are the constraints?
+- Define precisely. Not symptoms, root causes.
+- Research before acting. Read the code/docs first.
+
+The check: "Would a PM with UX foundations and AI technical fluency approach it this way?"`
   }
 ];
 
@@ -264,11 +420,34 @@ const CONTENT_WRITING_PATTERNS = [
   /\bhow (should|would) (I|this) (say|phrase|word)\b/i
 ];
 
+// Ideation/drafting detection - inject identity + voice BEFORE writing starts
+const IDEATION_PATTERNS = [
+  // Brainstorming
+  /\b(brainstorm|ideate|ideas for|concepts for)\b/i,
+  /\blet'?s (think about|explore|figure out)\b/i,
+  /\bwhat (should|could) (I|we|this) (say|include|cover|show|demonstrate)\b/i,
+  // Page/content planning
+  /\b(page|section|narrative|story|message) (for|about|structure|outline)\b/i,
+  /\bhow (should|do) (I|we) (present|position|frame|tell)\b/i,
+  /\bwhat'?s the (story|narrative|angle|message)\b/i,
+  // Portfolio/professional content
+  /\b(portfolio|case study|project page)\b/i,
+  /\b(showcase|demonstrate|highlight|feature) (my|this)\b/i,
+  /\bhow do I (show|demonstrate|prove|convey)\b/i,
+  // Drafting phases
+  /\b(draft|outline|sketch out|rough out|v1|first pass)\b/i,
+  /\bwork on (the |my )?(content|copy|page|narrative)\b/i,
+  // Strategy/positioning
+  /\bhow (should|do) (I|we) (approach|structure|organize)\b/i,
+  /\bwhat (tone|angle|approach)\b/i,
+  /\bwho is the audience\b/i
+];
+
 const HOME = process.env.HOME || process.env.USERPROFILE;
 const VOICE_PROFILE_PATH = path.join(HOME, '.gemini/antigravity/brain/voice-profile.md');
+const IDENTITY_PATH = path.join(HOME, 'Repositories/Personal/my-brain/CLAUDE.md');
 
 const {
-  findWorkspaceBrain,
   getSessionId,
   loadSessionTracking,
   saveSessionTracking
@@ -283,14 +462,69 @@ function loadVoiceProfile() {
 }
 
 /**
+ * Load identity context for ideation
+ * Extracts: who Luis is, his goals, what he's trying to demonstrate
+ */
+function loadIdentityContext() {
+  try {
+    const content = fs.readFileSync(IDENTITY_PATH, 'utf8');
+
+    const sections = [];
+
+    // Extract key sections for ideation context
+    const summaryMatch = content.match(/Design thinker[^\n]+/);
+    if (summaryMatch) {
+      sections.push(`**Who:** ${summaryMatch[0].trim()}`);
+    }
+
+    const currentMatch = content.match(/\*\*Current work:\*\*([^\n]+)/);
+    if (currentMatch) {
+      sections.push(`**Current work:** ${currentMatch[1].trim()}`);
+    }
+
+    const goalsSection = content.match(/\*\*In progress:\*\*\n([\s\S]*?)\n\n/);
+    if (goalsSection) {
+      const goals = goalsSection[1]
+        .split('\n')
+        .filter(line => line.startsWith('-'))
+        .map(line => line.trim())
+        .slice(0, 5);
+      if (goals.length > 0) {
+        sections.push(`**Goals:**\n${goals.join('\n')}`);
+      }
+    }
+
+    const approachMatch = content.match(/\*\*Approach:\*\*([^\n]+)/);
+    if (approachMatch) {
+      sections.push(`**Approach:** ${approachMatch[1].trim()}`);
+    }
+
+    const valuesSection = content.match(/\*\*Values:\*\*\n([\s\S]*?)\n\n\*\*Mindset/);
+    if (valuesSection) {
+      const values = valuesSection[1]
+        .split('\n')
+        .filter(line => line.startsWith('-'))
+        .map(line => line.replace(/^-\s*/, '').split(':')[0].trim());
+      if (values.length > 0) {
+        sections.push(`**Values:** ${values.join(', ')}`);
+      }
+    }
+
+    if (sections.length === 0) return null;
+
+    return sections.join('\n\n');
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Log what inject-context.js does for observability
  * This lets us verify the system is actually working
  */
 function logInjection(sessionId, actions) {
   try {
-    const cwd = process.cwd();
-    const brainPath = findWorkspaceBrain(cwd);
-    const tracking = loadSessionTracking(brainPath, sessionId);
+    const tracking = loadSessionTracking(sessionId);
 
     if (!tracking.injections) {
       tracking.injections = [];
@@ -301,7 +535,7 @@ function logInjection(sessionId, actions) {
       ...actions
     });
 
-    saveSessionTracking(brainPath, sessionId, tracking);
+    saveSessionTracking(sessionId, tracking);
   } catch (e) {
     // Don't fail the hook if logging fails
   }
@@ -431,9 +665,46 @@ function handleHook(data) {
     }
   }
 
-  // Check for content writing - inject voice profile
+  // Methodology enforcement - reinforce teaching mode based on context
+  // These fire regardless of command suggestion (always remind about methodology)
+  let methodologyReminders = [];
+  for (const enforcement of METHODOLOGY_ENFORCEMENT) {
+    const matches = enforcement.patterns.some(pattern => pattern.test(prompt));
+    if (matches) {
+      methodologyReminders.push(enforcement.reminder);
+    }
+  }
+  // Limit to 1 methodology reminder (the most specific match wins)
+  if (methodologyReminders.length > 0) {
+    contextParts.push(methodologyReminders[0]);
+  }
+
+  // Check for ideation - inject identity + voice profile BEFORE creative work starts
+  const isIdeation = IDEATION_PATTERNS.some(pattern => pattern.test(prompt));
+  let identityLoaded = false;
+
+  if (isIdeation) {
+    const identity = loadIdentityContext();
+    const voiceProfile = loadVoiceProfile();
+
+    if (identity) {
+      identityLoaded = true;
+      contextParts.push(`[IDEATION CONTEXT - WHO IS LUIS]\n\nYou are ideating/drafting content for Luis. Keep this context in mind:\n\n${identity}\n\n**What to consider:**
+- What is Luis trying to demonstrate or prove?
+- Who is the audience for this content?
+- How does this connect to his goals?
+- What expertise should come through?`);
+    }
+
+    if (voiceProfile) {
+      voiceProfileLoaded = true;
+      contextParts.push(`[VOICE PROFILE - MAINTAIN THROUGHOUT]\n\nEven during ideation, think in Luis's voice:\n\n${voiceProfile}`);
+    }
+  }
+
+  // Check for content writing - inject voice profile (if not already loaded)
   const isContentWriting = CONTENT_WRITING_PATTERNS.some(pattern => pattern.test(prompt));
-  if (isContentWriting) {
+  if (isContentWriting && !voiceProfileLoaded) {
     const voiceProfile = loadVoiceProfile();
     if (voiceProfile) {
       voiceProfileLoaded = true;
@@ -479,6 +750,8 @@ Would Luis actually say this? If not, rewrite.`);
     };
     if (commandSuggested) actions.commandSuggested = commandSuggested;
     if (reasoningCheckpoints.length > 0) actions.reasoningCheckpoints = reasoningCheckpoints.length;
+    if (methodologyReminders.length > 0) actions.methodologyEnforced = true;
+    if (identityLoaded) actions.identityLoaded = true;
     if (voiceProfileLoaded) actions.voiceProfileLoaded = voiceProfileLoaded;
     if (specsLoaded.length > 0) actions.specsLoaded = specsLoaded;
 

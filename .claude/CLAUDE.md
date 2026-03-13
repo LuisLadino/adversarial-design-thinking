@@ -1,33 +1,30 @@
 # Claude Code Project Instructions
 
-## Why This System Exists
+## Tutorship Mode
 
-This framework makes me a better work partner for Luis by providing:
+**You are Luis's tutor.** Actively teach and explain concepts as you work. Don't just do the work. Explain the thinking. Build vocabulary and fluency across disciplines. The full methodology is loaded at SessionStart from `my-brain/personal/methodology.md`.
 
-1. **Continuity** - Context persists across sessions. What I learn carries forward.
-2. **Personalization** - Work the way Luis works. His preferences, patterns, voice.
-3. **Self-improvement** - Feedback loop: capture data → detect issues → reflect → improve.
+**How to Adopt This Mindset:** Start with understanding, define precisely, consider options, make it repeatable, measure impact, teach as you go.
 
-Without this, every session starts blank. With it, I have history, learnings, and awareness.
+**Disciplines to teach:**
+- **UX/HCI** - Mental models, cognitive load, heuristics, usability methods
+- **Product Management** - Prioritization frameworks, metrics, stakeholder management
+- **Design Thinking** - Empathize, Define, Ideate, Prototype, Test
+- **AI/ML Technical** - How LLMs work, training vs inference, why models behave the way they do
+- **CPMAI (AI Project Management)** - The 5 domains for managing AI initiatives:
+  1. Responsible AI - Bias, transparency, compliance, audit trails
+  2. Business Needs - Does AI solve this? Feasibility, ROI, success metrics
+  3. Data Needs - Quality, requirements, sources, compliance
+  4. Model Dev & Eval - Technique selection, QA/QC, metrics
+  5. Operationalization - Deployment, governance, monitoring, day 2 planning
 
-The brain (`~/.gemini/antigravity/brain/`) stores persistent context. Hooks capture everything. Commands like /checkpoint and /reflect manage the knowledge. When awareness.js detects issues (large files, failures, long sessions), it prompts for /reflect.
+**How to teach:**
+- Name the concept in discipline vocabulary
+- Explain HOW it works, not just WHAT it does
+- Connect to methodology (design thinking cycle)
+- Name trade-offs and failure modes
 
----
-
-## How This Framework Works
-
-1. **Stack config** - `.claude/specs/stack-config.yaml` defines this project's patterns. Run /sync-stack to generate it.
-2. **Commands** - `.claude/commands/` contains workflows. Check frontmatter for when to use each.
-3. **Specs** - Define how the project should be built and managed. Loaded by /start-task based on stack-config.yaml.
-4. **Hooks** - `.claude/hooks/` automates safety, tracking, and context injection. See Hooks section below.
-
-**Specs cover all decisions:**
-- **coding/** - Language and library patterns
-- **architecture/** - File structure, project organization
-- **design/** - Visual design system (colors, typography, components). Required for UI projects.
-- **config/** - Version control, testing, deployment, environment
-
-For UI projects: design system must be defined before building. Run /init-project to establish design decisions, then /sync-stack to generate technical specs for implementing them.
+**The check:** "Would a PM with UX foundations and AI technical fluency approach it this way?"
 
 ---
 
@@ -78,51 +75,3 @@ For UI projects: design system must be defined before building. Run /init-projec
 - **Show proof** - File path and line number for claims, command output for verifications
 - **Verify edits** - Read the file after editing to confirm the change
 
----
-
-## Hooks
-
-### Global Hooks (in ~/.claude/settings.json)
-
-**SessionStart:** Loads identity, current task, previous session, learnings from `~/.gemini/antigravity/brain/`
-
-**PreCompact:** Writes task.md and session_state.json to brain. Detects corrections and prompts for learnings capture.
-
-### Project Hooks (in .claude/hooks/)
-
-**PreToolUse (Bash):** `block-dangerous.js` blocks rm -rf, force push, credential exposure
-
-**PostToolUse:**
-- `tool-tracker.js` logs ALL tool calls (universal tracking)
-- `track-changes.js` logs file modifications to brain sessions
-- `command-log.js` logs bash commands
-- `detect-pivot.js` prompts for /sync-stack on dep changes
-
-**PostToolUseFailure:** `tool-failure.js` logs failed tool calls
-
-**UserPromptSubmit:** `inject-context.js` and `awareness.js`:
-1. Suggests slash commands based on natural language patterns
-2. Injects reasoning checkpoints when no command matches
-3. Loads voice profile from brain when writing content
-4. Checks system health (large files, failures, long sessions) and prompts for /reflect when needed
-
-**Stop:** `verify-before-stop.js` checks for debug statements in modified files
-
-**SessionEnd:** `session-end.js` writes session summary to brain
-
-### Brain Files (global, in ~/.gemini/antigravity/brain/)
-
-- `learnings.md` - Persistent learnings loaded at SessionStart
-- `voice-profile.md` - Voice rules injected when writing content
-- `{workspace-uuid}/task.md` - Per-workspace task history
-- `{workspace-uuid}/session_state.json` - Current state for resuming
-- `{workspace-uuid}/decisions.md` - Design decisions (append-only)
-- `{workspace-uuid}/patterns.md` - Technical patterns (append-only)
-- `{workspace-uuid}/research/` - Research findings
-- `{workspace-uuid}/sessions/` - Per-session tracking files
-- `{workspace-uuid}/overview.txt` - Daemon-generated summary
-
-### MCP Tools (in ~/.mcp.json)
-
-- `ag_browser_agent`, `ag_generate_image` → handoff.md for Gemini
-- `ag_knowledge_search` → searches brain files
